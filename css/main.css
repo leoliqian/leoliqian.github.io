@@ -1171,6 +1171,12 @@ pre .javascript .function {
   padding: 2px;
   border-radius: 50%;
 }
+.site-author-image {
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
+}
 .site-author-name {
   color: var(--text-color);
   font-weight: 600;
@@ -1197,7 +1203,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3659ff;
+  background: #1454ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2594,7 +2600,7 @@ ul.breadcrumb li + li:last-child {
 }
 .header-inner {
   box-shadow: 0 0 14px #cacbcb;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   overflow: hidden;
   padding: 0;
   position: absolute;
@@ -2606,6 +2612,14 @@ ul.breadcrumb li + li:last-child {
   background: 0 0;
   background-image: url("/images/leoYSSA.png");
   background-size: cover;
+}
+.site-title {
+  font-family: Title;
+  font-size: 1.5em;
+}
+.site-subtitle {
+  color: #fff;
+  font-size: 0.8em;
 }
 .site-author-image {
   border: 3px solid #eee;
@@ -2621,14 +2635,21 @@ ul.breadcrumb li + li:last-child {
 }
 .sidebar-inner {
   padding: 10px 10px 10px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   border-radius: 10px;
 }
 .post-block {
   margin-bottom: 20px;
   padding: 20px;
   box-shadow: 0 0 14px #cacbcb;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+}
+.post-block + .post-block {
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 14px #cacbcb;
+  background: rgba(255,255,255,0.85);
   border-radius: 10px;
 }
 .content-wrap {
@@ -2643,4 +2664,24 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+}
+@font-face {
+  font-family: Title;
+  src: url("/fonts/xingshu.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: STLITI;
+  src: url("/fonts/STLITI.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: mmt-eg;
+  src: url("/fonts/mmt-eg.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: MMT_579767_SOAJO;
+  src: url("/fonts/MMT_579767_SOAJO.ttf");
+  font-weight: normal;
 }

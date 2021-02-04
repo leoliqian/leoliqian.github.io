@@ -1,4 +1,3 @@
-
 <!--崩溃欺骗-->
  var OriginTitle = document.title;
  var titleTime;
