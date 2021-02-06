@@ -1203,7 +1203,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #867a1f;
+  background: #ffdbf9;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2183,6 +2183,106 @@ ul.breadcrumb li + li:last-child {
 .tag-cloud a:hover {
   color: var(--link-hover-color) !important;
 }
+.search-pop-overlay {
+  background: rgba(0,0,0,0);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: visibility 0s linear 0.2s, background 0.2s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1400;
+}
+.search-pop-overlay.search-active {
+  background: rgba(0,0,0,0.3);
+  transition: background 0.2s;
+  visibility: visible;
+}
+.search-popup {
+  background: var(--card-bg-color);
+  border-radius: 5px;
+  height: 80%;
+  left: calc(50% - 350px);
+  position: fixed;
+  top: 10%;
+  transform: scale(0);
+  transition: transform 0.2s;
+  width: 700px;
+  z-index: 1500;
+}
+.search-active .search-popup {
+  transform: scale(1);
+}
+@media (max-width: 767px) {
+  .search-popup {
+    border-radius: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+.search-popup .search-icon,
+.search-popup .popup-btn-close {
+  color: #999;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.search-popup .popup-btn-close {
+  cursor: pointer;
+}
+.search-popup .popup-btn-close:hover .fa {
+  color: #222;
+}
+.search-popup .search-header {
+  background: #eee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  padding: 5px;
+}
+.search-popup input.search-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+.search-popup input.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-popup .search-input-container {
+  flex-grow: 1;
+  padding: 2px;
+}
+.search-popup ul.search-result-list {
+  margin: 0 5px;
+  padding: 0;
+  width: 100%;
+}
+.search-popup p.search-result {
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 0;
+}
+.search-popup a.search-result-title {
+  font-weight: bold;
+}
+.search-popup .search-keyword {
+  border-bottom: 1px dashed #ff2a2a;
+  color: #ff2a2a;
+  font-weight: bold;
+}
+.search-popup #search-result {
+  display: flex;
+  height: calc(100% - 55px);
+  overflow: auto;
+  padding: 5px 25px;
+}
+.search-popup #no-result {
+  color: #ccc;
+  margin: auto;
+}
 .header {
   margin: 0 auto;
   position: relative;
@@ -2613,13 +2713,20 @@ ul.breadcrumb li + li:last-child {
   background-image: url("/images/leoYSSA.png");
   background-size: cover;
 }
+.site-meta {
+  padding: 0;
+}
 .site-title {
   font-family: Title;
   font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .site-subtitle {
   color: #fff;
   font-size: 0.8em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .site-author-image {
   border: 3px solid #eee;
@@ -2634,6 +2741,7 @@ ul.breadcrumb li + li:last-child {
   border-radius: 10px;
 }
 .sidebar-inner {
+  box-shadow: 0 0 14px #cacbcb;
   padding: 10px 10px 10px;
   background: rgba(255,255,255,0.85);
   border-radius: 10px;
@@ -2654,7 +2762,7 @@ ul.breadcrumb li + li:last-child {
 }
 .content-wrap {
   background: rgba(255,255,255,0.5);
-  box-shadow: initial;
+  box-shadow: 0 0 14px #cacbcb;
   padding: 20px 20px;
   border-radius: 10px;
 }
@@ -2664,6 +2772,24 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
+}
+.post-copyright {
+  background: var(--card-bg-color);
+  border-left: 3px solid #e91e63;
+  list-style: none;
+  margin: 2em 0 0;
+  padding: 0.5em 1em;
+}
+.reward-container button {
+  background: transparent;
+  border: 1px solid #e91e63;
+  border-radius: 0;
+  color: #e91e63;
+  cursor: pointer;
+  line-height: 2;
+  outline: 0;
+  padding: 0 15px;
+  vertical-align: text-top;
 }
 @font-face {
   font-family: Title;

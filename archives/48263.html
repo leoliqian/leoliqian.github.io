@@ -19,13 +19,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"leoliqian.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="词：黄俊郎 曲：周杰伦 麻烦给我的爱人来一杯Mojito 我喜欢阅读她微醺时的眼眸 而我的咖啡 糖不用太多 这世界已经因为她甜得过头">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Mojito》 - 周杰伦 (Jay Chou)">
-<meta property="og:url" content="http://example.com/2021/02/03/Mojito/index.html">
+<meta property="og:url" content="http://leoliqian.com/archives/48263.html">
 <meta property="og:site_name" content="我  梦">
 <meta property="og:description" content="词：黄俊郎 曲：周杰伦 麻烦给我的爱人来一杯Mojito 我喜欢阅读她微醺时的眼眸 而我的咖啡 糖不用太多 这世界已经因为她甜得过头">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
 <meta property="article:author" content="李谦 LeoLi">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/02/03/Mojito/">
+<link rel="canonical" href="http://leoliqian.com/archives/48263.html">
 
 
 <script id="page-configurations">
@@ -85,6 +85,7 @@
     <div class="headband"></div>
 <a href="https://github.com/leoliqian/leoliqian.github.io" 
 	class="github-corner" 
+	title="万水千山总是情,给个star行不行?"
 	target="万水千山总是情，给个star行不行？" 
 	aria-label="万水千山总是情，给个star行不行？">
 
@@ -115,6 +116,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -131,7 +133,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -154,11 +156,38 @@
     <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -182,12 +211,12 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/03/Mojito/">
+    <link itemprop="mainEntityOfPage" href="http://leoliqian.com/archives/48263.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="李谦 LeoLi">
-      <meta itemprop="description" content="我得到过太多的温暖，我是幸运的，我想把这份温暖传递下去。有一分热，便发一分光，不必等候火炬。">
+      <meta itemprop="description" content="我有幸得到过太多的温暖，我是幸运的。我想把这温暖传递下去，有一分热，便发一分光，不必等候火炬。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -216,7 +245,7 @@
               </span>
 
           
-            <span id="/2021/02/03/Mojito/" class="post-meta-item leancloud_visitors" data-flag-title="《Mojito》 - 周杰伦 (Jay Chou)" title="阅读次数">
+            <span id="/archives/48263.html" class="post-meta-item leancloud_visitors" data-flag-title="《Mojito》 - 周杰伦 (Jay Chou)" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -286,7 +315,7 @@
    <div>
      <div>
     
-        <div style="text-align:center;color: #ccc;font-size:13px;">- - - - - - 哇咔咔！帅气迷人无敌好看的你<i class="fa fa-paw"></i>坚持读完了这篇宇宙无敌超级难(cai)的文章，不禁，你在我心中的形象又高大了几分！！<i class="fa fa-thumbs-up"></i> - - - - - -</div>
+        <div style="text-align:center;color: #999;font-size:13px;">- - - - - - 哇咔咔！帅气迷人无敌好看的你<i class="fa fa-paw"></i>坚持读完了这篇宇宙无敌超级难(cai)的文章，不禁，你在我心中的形象又高大了几分！！<i class="fa fa-thumbs-up"></i> - - - - - -</div>
     
 </div>
    </div>
@@ -320,7 +349,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2021/02/03/Mojito/" title="《Mojito》 - 周杰伦 (Jay Chou)">http://example.com/2021/02/03/Mojito/</a>
+    <a href="http://leoliqian.com/archives/48263.html" title="《Mojito》 - 周杰伦 (Jay Chou)">http://leoliqian.com/archives/48263.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -337,10 +366,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/02/02/%E6%88%91%E4%BC%9A%E9%87%87%E6%9B%B4%E5%A4%9A%E7%9A%84%E8%8F%8A/" rel="prev" title="《我会采更多的菊》">
+    <a href="/archives/61643.html" rel="prev" title="《我会采更多的菊》">
       <i class="fa fa-chevron-left"></i> 《我会采更多的菊》
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/archives/48263.html" rel="next" title="《一颗开花的书》">
+      《一颗开花的书》 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -408,14 +440,14 @@
     <img class="site-author-image" itemprop="image" alt="李谦 LeoLi"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">李谦 LeoLi</p>
-  <div class="site-description" itemprop="description">我得到过太多的温暖，我是幸运的，我想把这份温暖传递下去。有一分热，便发一分光，不必等候火炬。</div>
+  <div class="site-description" itemprop="description">我有幸得到过太多的温暖，我是幸运的。我想把这温暖传递下去，有一分热，便发一分光，不必等候火炬。</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -460,12 +492,10 @@
   </span>
   <span class="author" itemprop="copyrightHolder">李谦 LeoLi</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 732 字</span>
+  <span class="post-count">全站共 914 字</span>
 </div>
         
 
@@ -589,6 +619,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -603,9 +637,11 @@
   
 
   
+
+  
+  <!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
 
 </body>
 </html>
 
-<!--崩溃欺骗-->
-<script type="text/javascript" src="/js/src/crash_cheat.js"></script>

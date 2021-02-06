@@ -1,17 +1,16 @@
 <!--崩溃欺骗-->
- var OriginTitle = document.title;
- var titleTime;
- document.addEventListener('visibilitychange', function () {
-     if (document.hidden) {
-         $('[rel="icon"]').attr('href', "/img/TEP.ico");
-         document.title = '?今晚月色真美';
-         clearTimeout(titleTime);
-     }
-     else {
-         $('[rel="icon"]').attr('href', "/favicon.ico");
-         document.title = '☀像你一样' + OriginTitle;
-         titleTime = setTimeout(function () {
-             document.title = OriginTitle;
-         }, 2000);
-     }
- });
+var oldTitle = document.title;
+var titleTime; //標題恢復計時器
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) {
+    document.querySelector("[rel='icon']").setAttribute("href", "/images/icons/favicon-32.png");
+    document.title = '今 晚 月 色 真 美！🌙';
+    clearTimeout(titleTime);
+  } else {
+    document.title = '像 你 一 样！❤';
+    document.querySelector("[rel='icon']").setAttribute("href", "/images/icons/crash.png");
+    titleTime = setTimeout(function () {
+      document.title = oldTitle;
+    }, 2000);
+  }
+});
