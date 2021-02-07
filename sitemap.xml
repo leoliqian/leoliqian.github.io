@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://leoliqian.com/posts/18145/</loc>
-    
-    <lastmod>2021-02-06</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://leoliqian.com/posts/48263/</loc>
-    
-    <lastmod>2021-02-06</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://leoliqian.com/archives/index.html</loc>
     
     <lastmod>2021-02-06</lastmod>
@@ -37,9 +23,37 @@
   </url>
   
   <url>
+    <loc>https://leoliqian.com/posts/2802668681/</loc>
+    
+    <lastmod>2021-02-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://leoliqian.com/posts/303255476/</loc>
+    
+    <lastmod>2021-02-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://leoliqian.com/404.html</loc>
     
     <lastmod>2021-02-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://leoliqian.com/posts/2643675631/</loc>
+    
+    <lastmod>2021-02-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://leoliqian.com/posts/435292665/</loc>
+    
+    <lastmod>2021-02-02</lastmod>
     
   </url>
   
@@ -60,7 +74,7 @@
 
   <url>
     <loc>https://leoliqian.com/</loc>
-    <lastmod>2021-02-06</lastmod>
+    <lastmod>2021-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -68,21 +82,7 @@
   
   <url>
     <loc>https://leoliqian.com/tags/poetry/</loc>
-    <lastmod>2021-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://leoliqian.com/tags/zhimouxu/</loc>
-    <lastmod>2021-02-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://leoliqian.com/tags/murongxi/</loc>
-    <lastmod>2021-02-06</lastmod>
+    <lastmod>2021-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -90,8 +90,8 @@
 
   
   <url>
-    <loc>https://leoliqian.com/categories/Literature/</loc>
-    <lastmod>2021-02-06</lastmod>
+    <loc>https://leoliqian.com/categories/literature/</loc>
+    <lastmod>2021-02-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
