@@ -131,12 +131,12 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-tasks fa-fw"></i>分类<span class="badge">1</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-tasks fa-fw"></i>分类<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -204,6 +204,294 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://leoliqian.com/posts/2497748203/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="李谦 LeoLi">
+      <meta itemprop="description" content="我有幸得到过太多的温暖，我是幸运的。我想把这温暖传递下去，有一分热，便发一分光，不必等候火炬。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我  梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/2497748203/" class="post-title-link" itemprop="url">Java基础通识1.1.1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-11 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-11T00:00:00+08:00">2021-02-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/2497748203/" class="post-meta-item leancloud_visitors" data-flag-title="Java基础通识1.1.1" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+			
+			<span class="post-meta-divider">|</span>
+<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1.6k</span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/2497748203/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/2497748203/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>一、Java的编译基础<ul>
+<li>java简介</li>
+<li>Java程序执行过程</li>
+<li>JVM（Java virtual machine）</li>
+<li>JRE（Java Runtime Environment）</li>
+<li>JDK（Java Development Kit）</li>
+<li>Java平台</li>
+</ul>
+</li>
+<li>二、Java程序实际执行细节</li>
+</ul>
+<h3 id="一、Java的编译基础"><a href="#一、Java的编译基础" class="headerlink" title="一、Java的编译基础"></a>一、Java的编译基础</h3><h4 id="Java简介"><a href="#Java简介" class="headerlink" title="Java简介"></a>Java简介</h4><ul>
+<li>JAVA是一门面向对象的程序设计语言。</li>
+<li>1995年由sun公司发布。</li>
+<li>2010年sun公司被Oracle公司收购。</li>
+</ul>
+<h4 id="Java程序执行过程"><a href="#Java程序执行过程" class="headerlink" title="Java程序执行过程"></a>Java程序执行过程</h4><p>源文件（Program.java）→编译器（compiler）→字节码文件Program.class→解释器（interpreter）→程序（Program）。</p>
+<p><img src="D:\Backup\桌面\Java程序执行过程.png" alt="Java程序执行过程"></p>
+<p>“.java为后缀的源文件”通过“编译器”进行编译后生成“.class为后缀的字节码文件”字节码文件交由“解释器”进行执行，从而程序得以体现。<br>     这个跨平台解释.class文件的过程是由Java虚拟机进行完成，Java虚拟机解释执行编译过程中生成的字节码文件，把字节码文件解释执行成具体平台上的机器指令执行。<br>     因为我们的计算机只能识别0和1这样的二进制指令，所以把字节码解释成具体平台上的机器指令执行以后，Java就能实现一次编译，到处执行。</p>
+<h4 id="JVM（Java-virtual-machine）"><a href="#JVM（Java-virtual-machine）" class="headerlink" title="JVM（Java virtual machine）"></a>JVM（Java virtual machine）</h4><ul>
+<li>JVM（Java virtual machine），Java虚拟机。</li>
+<li>JVM是Java平台无关性实现的关键 。</li>
+</ul>
+<h4 id="JRE（Java-Runtime-Environment）"><a href="#JRE（Java-Runtime-Environment）" class="headerlink" title="JRE（Java Runtime Environment）"></a>JRE（Java Runtime Environment）</h4><ul>
+<li>包括Java虚拟机（JVM，即Java virtual machine）、java核心类库和支持文件。JVM是Java实现平台无关性的关键，实现一次编译，到处运行。</li>
+<li>如果只需要运行Java程序，下载并安装JRE即可。（JRE面对使用人员）如果开发Java软件，需要下载JDK。（JDK 面对开发人员）。</li>
+<li>在JDK中附带有JRE。</li>
+</ul>
+<h4 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h4><p> JDK（Java Development Kit），Java语言的软件开发工具包.</p>
+<p>两个主要组件：</p>
+<ul>
+<li>-javac–编译器，将源程序转成字节码。同时也是编译命令。</li>
+<li>-java–运行编译后的java程序（.class后缀的）。</li>
+</ul>
+<p><img src="D:\Backup\桌面\三者关系.png" alt="三者关系"></p>
+<p><strong>Java平台</strong></p>
+<ul>
+<li>Java SE–桌面程序–Java标准版</li>
+<li>Java EE–Web程序–Jave企业版</li>
+<li>Jave ME–移动设备–Java微型版</li>
+</ul>
+<p><strong>选择练习</strong></p>
+<p>下面选项中关于JDK的说法正确的是（  ）（选一项）<br>A.  JRE中包含JDK，JDK中包含JVM<br>B.  JDK是Java运行时环境的简称<br>C.  Java实现平台无关性的关键是JDK<br>D.  javac ，java 等命令是JDK中的命令</p>
+<p>正确答案： D </p>
+<p><strong>参考解析：</strong></p>
+<p>本题考查的是对Java代码编译及运行环境的认知，D选项正确。<br>A选项错误，应该是JDK包含JRE，JRE中包含JVM虚拟机<br>B选项错误，JRE是Java运行时环境的简称，JDK是软件开发工具包<br>C选项错误，JVM是Java实现平台无关性的关键，实现一次编译，到处运行</p>
+<h3 id="二、Java程序实际执行细节"><a href="#二、Java程序实际执行细节" class="headerlink" title="二、Java程序实际执行细节"></a>二、Java程序实际执行细节</h3><p>以下执行程序仅作为记录了解，无需刻意学习掌握，现开发流程主要还是使用开发工具完成相关工作。</p>
+<p>记事本编写程序</p>
+<p><img src="D:\Backup\桌面\记事本编写程序.png" alt="记事本编写程序"></p>
+<p>存储方式：保存前设置文件夹显示程序扩展名。<br>方法一：&quot;HelloImooc.java&quot;        //英文状态下双引号+class后类名+.java</p>
+<p><img src="D:\Backup\桌面\设置文件夹显示扩展名.png" alt="设置文件夹显示扩展名"></p>
+<p>方法二：保存类型选择“所有文件”</p>
+<p><img src="D:\Backup\桌面\保存类型选择.png" alt="保存类型选择"></p>
+<p>执行程序<br>控制台输入：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cmd</span>+回车</span><br></pre></td></tr></table></figure>
+<p>目录切换到e盘：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">e:        //这里不区分大小写</span></span><br></pre></td></tr></table></figure>
+<p>转到java文件夹下：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> java        //这里不区分大小写</span><br></pre></td></tr></table></figure>
+<p>想看java文件夹下都有哪些文件：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span></span><br></pre></td></tr></table></figure>
+<p>编译程序：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac HelloImooc.java        //注意区分大小写</span><br></pre></td></tr></table></figure>
+<p>编译完成后，文件夹会生成j以.class结尾的二进制字节码文件。</p>
+<p>解释执行二进制字节码文件：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java HelloImooc        //执行程序时，文件名没有后缀</span><br></pre></td></tr></table></figure>
+<p>![1 [3]](D:\Backup\桌面\1 [3].png)</p>
+<h4 id="环境变量的配置及简单Java程序的编写。"><a href="#环境变量的配置及简单Java程序的编写。" class="headerlink" title="环境变量的配置及简单Java程序的编写。"></a>环境变量的配置及简单Java程序的编写。</h4><p>在桌面计算机图标右键–属性–高级系统设置–高级–环境变量–将javac的目录复制到环境变量内。</p>
+<ul>
+<li>在保存Java文件时注意它的扩展名。</li>
+<li>在执行程序时，文件名没有后缀扩展名。</li>
+<li>环境变量设置前如果已经开启了命令行窗口，在设置完需要重启才能成功执行程序。</li>
+</ul>
+<h4 id="多选题"><a href="#多选题" class="headerlink" title="多选题"></a>多选题</h4><p>下面选项中说法正确的是：（选两项）<br>A.  Java文件的编译命令是java。<br>B.  配置环境变量Path时，要配置到JDK安装目录下的bin目录。<br>C.  在命令行窗口输入cd  java命令，可以显示java文件夹下的所有文件。<br>D.  在命令行中执行Java代码时，配置好环境变量后，要重启命令行窗口才能生效。</p>
+<p>正确答案： B,D </p>
+<p><strong>参考解析：</strong><br>本题考查的是对Java程序执行流程和常用操作命令的认知，BD选项是正确的。A选项错误，Java文件的编译命令是javac，解释执行命令是java。C选项错误，在命令行窗口输入cd  java命令，可以切换到java文件夹。dir才是显示该文件夹下所有文件。</p>
+<h4 id="Java程序的结构"><a href="#Java程序的结构" class="headerlink" title="Java程序的结构"></a>Java程序的结构</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloImooc</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(&amp;quot;Hello,imooc!&amp;quot;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>1和5行的“class HelloImooc{}”是类，英文为“class”，后面的内容为类的定义。大括号可以先写完一对，以防止忘记。高亮区域为类的命名，可根据情况改变。</p>
+<p>2和5行的“public ststic void main(String[] args){}”是主方法，主方法之程序执行的入口，是开始的地方。高亮区域为主方法的命名，可根据情况改变。3行是主方法的方法体的内容，即输出语句。</p>
+<h4 id="选择练习"><a href="#选择练习" class="headerlink" title="选择练习"></a>选择练习</h4><p>单选题以下定义了主方法的代码中，有几处错误（选一项）</p>
+<p><img src="D:\Backup\桌面\34.png" alt="34"></p>
+<p>A.  1处错误<br>B.  2处错误<br>C.  3处错误<br>D.  没有错误</p>
+<p>正确答案： B </p>
+<p><strong>参考解析：</strong><br>本题考查的是对Java程序结构的认知， 本段代码共有两处错误：<br>第2行处，主方法的名字应该是main，而题目中是mian ，主方法的名称必须是main<br>第3行处，输出语句中![1 [2]](D:\Backup\桌面\1 [2].png)<br>应该改成println所以B选项是正确的</p>
+<h3 id="三、使用eclipse开发Java程序"><a href="#三、使用eclipse开发Java程序" class="headerlink" title="三、使用eclipse开发Java程序"></a>三、使用eclipse开发Java程序</h3><h4 id="eclipse简介"><a href="#eclipse简介" class="headerlink" title="eclipse简介"></a>eclipse简介</h4><p>推荐小白先装JDK再装Eclipse。</p>
+<p>eclipse下载地址：<a target="_blank" rel="noopener" href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a>      </p>
+<p><img src="D:\Backup\桌面\41.png" alt="41"></p>
+<h4 id="在eclipse下开发Java程序"><a href="#在eclipse下开发Java程序" class="headerlink" title="在eclipse下开发Java程序"></a>在eclipse下开发Java程序</h4><ul>
+<li>包（package）的名字一般是域名反写，如com.imooc（小数点前后是两个文件夹，com文件夹内包含imooc文件夹）。</li>
+<li>保存就是编译的过程。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+  
+  
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://leoliqian.com/posts/4025597166/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="李谦 LeoLi">
+      <meta itemprop="description" content="我有幸得到过太多的温暖，我是幸运的。我想把这温暖传递下去，有一分热，便发一分光，不必等候火炬。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="我  梦">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/4025597166/" class="post-title-link" itemprop="url">《我会采更多的菊》 纳丁·斯特尔</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-10 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-10T00:00:00+08:00">2021-02-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/literature/" itemprop="url" rel="index"><span itemprop="name">诗词美文</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/posts/4025597166/" class="post-meta-item leancloud_visitors" data-flag-title="《我会采更多的菊》 纳丁·斯特尔" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+			
+			<span class="post-meta-divider">|</span>
+<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 787</span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/4025597166/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/4025597166/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="译文："><a href="#译文：" class="headerlink" title="译文："></a>译文：</h4><p>如果我能够从头活过，<br>我会试着犯更多的错。<br>我会放松一点，我会灵活一点。<br>我会比这一趟过得傻。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/4025597166/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+  
+  
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
       
   
   
@@ -683,14 +971,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -1011,7 +1299,7 @@ if(canvas.getContext){
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 1.4k 字</span>
+  <span class="post-count">全站共 3.8k 字</span>
 </div>
         
 

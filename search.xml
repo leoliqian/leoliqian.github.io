@@ -1,6 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java基础通识1.1.1</title>
+    <url>/posts/2497748203/</url>
+    <content><![CDATA[<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>一、Java的编译基础<ul>
+<li>java简介</li>
+<li>Java程序执行过程</li>
+<li>JVM（Java virtual machine）</li>
+<li>JRE（Java Runtime Environment）</li>
+<li>JDK（Java Development Kit）</li>
+<li>Java平台</li>
+</ul>
+</li>
+<li>二、Java程序实际执行细节</li>
+</ul>
+<h3 id="一、Java的编译基础"><a href="#一、Java的编译基础" class="headerlink" title="一、Java的编译基础"></a>一、Java的编译基础</h3><h4 id="Java简介"><a href="#Java简介" class="headerlink" title="Java简介"></a>Java简介</h4><ul>
+<li>JAVA是一门面向对象的程序设计语言。</li>
+<li>1995年由sun公司发布。</li>
+<li>2010年sun公司被Oracle公司收购。</li>
+</ul>
+<h4 id="Java程序执行过程"><a href="#Java程序执行过程" class="headerlink" title="Java程序执行过程"></a>Java程序执行过程</h4><p>源文件（Program.java）→编译器（compiler）→字节码文件Program.class→解释器（interpreter）→程序（Program）。</p>
+<p><img src="D:\Backup\桌面\Java程序执行过程.png" alt="Java程序执行过程"></p>
+<p>“.java为后缀的源文件”通过“编译器”进行编译后生成“.class为后缀的字节码文件”字节码文件交由“解释器”进行执行，从而程序得以体现。<br>     这个跨平台解释.class文件的过程是由Java虚拟机进行完成，Java虚拟机解释执行编译过程中生成的字节码文件，把字节码文件解释执行成具体平台上的机器指令执行。<br>     因为我们的计算机只能识别0和1这样的二进制指令，所以把字节码解释成具体平台上的机器指令执行以后，Java就能实现一次编译，到处执行。</p>
+<h4 id="JVM（Java-virtual-machine）"><a href="#JVM（Java-virtual-machine）" class="headerlink" title="JVM（Java virtual machine）"></a>JVM（Java virtual machine）</h4><ul>
+<li>JVM（Java virtual machine），Java虚拟机。</li>
+<li>JVM是Java平台无关性实现的关键 。</li>
+</ul>
+<h4 id="JRE（Java-Runtime-Environment）"><a href="#JRE（Java-Runtime-Environment）" class="headerlink" title="JRE（Java Runtime Environment）"></a>JRE（Java Runtime Environment）</h4><ul>
+<li>包括Java虚拟机（JVM，即Java virtual machine）、java核心类库和支持文件。JVM是Java实现平台无关性的关键，实现一次编译，到处运行。</li>
+<li>如果只需要运行Java程序，下载并安装JRE即可。（JRE面对使用人员）如果开发Java软件，需要下载JDK。（JDK 面对开发人员）。</li>
+<li>在JDK中附带有JRE。</li>
+</ul>
+<h4 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h4><p> JDK（Java Development Kit），Java语言的软件开发工具包.</p>
+<p>两个主要组件：</p>
+<ul>
+<li>-javac–编译器，将源程序转成字节码。同时也是编译命令。</li>
+<li>-java–运行编译后的java程序（.class后缀的）。</li>
+</ul>
+<p><img src="D:\Backup\桌面\三者关系.png" alt="三者关系"></p>
+<p><strong>Java平台</strong></p>
+<ul>
+<li>Java SE–桌面程序–Java标准版</li>
+<li>Java EE–Web程序–Jave企业版</li>
+<li>Jave ME–移动设备–Java微型版</li>
+</ul>
+<p><strong>选择练习</strong></p>
+<p>下面选项中关于JDK的说法正确的是（  ）（选一项）<br>A.  JRE中包含JDK，JDK中包含JVM<br>B.  JDK是Java运行时环境的简称<br>C.  Java实现平台无关性的关键是JDK<br>D.  javac ，java 等命令是JDK中的命令</p>
+<p>正确答案： D </p>
+<p><strong>参考解析：</strong></p>
+<p>本题考查的是对Java代码编译及运行环境的认知，D选项正确。<br>A选项错误，应该是JDK包含JRE，JRE中包含JVM虚拟机<br>B选项错误，JRE是Java运行时环境的简称，JDK是软件开发工具包<br>C选项错误，JVM是Java实现平台无关性的关键，实现一次编译，到处运行</p>
+<h3 id="二、Java程序实际执行细节"><a href="#二、Java程序实际执行细节" class="headerlink" title="二、Java程序实际执行细节"></a>二、Java程序实际执行细节</h3><p>以下执行程序仅作为记录了解，无需刻意学习掌握，现开发流程主要还是使用开发工具完成相关工作。</p>
+<p>记事本编写程序</p>
+<p><img src="D:\Backup\桌面\记事本编写程序.png" alt="记事本编写程序"></p>
+<p>存储方式：保存前设置文件夹显示程序扩展名。<br>方法一：&quot;HelloImooc.java&quot;        //英文状态下双引号+class后类名+.java</p>
+<p><img src="D:\Backup\桌面\设置文件夹显示扩展名.png" alt="设置文件夹显示扩展名"></p>
+<p>方法二：保存类型选择“所有文件”</p>
+<p><img src="D:\Backup\桌面\保存类型选择.png" alt="保存类型选择"></p>
+<p>执行程序<br>控制台输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cmd</span>+回车</span><br></pre></td></tr></table></figure>
+<p>目录切换到e盘：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="function">e:        //这里不区分大小写</span></span><br></pre></td></tr></table></figure>
+<p>转到java文件夹下：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> java        //这里不区分大小写</span><br></pre></td></tr></table></figure>
+<p>想看java文件夹下都有哪些文件：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span></span><br></pre></td></tr></table></figure>
+<p>编译程序：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">javac HelloImooc.java        //注意区分大小写</span><br></pre></td></tr></table></figure>
+<p>编译完成后，文件夹会生成j以.class结尾的二进制字节码文件。</p>
+<p>解释执行二进制字节码文件：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">java HelloImooc        //执行程序时，文件名没有后缀</span><br></pre></td></tr></table></figure>
+<p>![1 [3]](D:\Backup\桌面\1 [3].png)</p>
+<h4 id="环境变量的配置及简单Java程序的编写。"><a href="#环境变量的配置及简单Java程序的编写。" class="headerlink" title="环境变量的配置及简单Java程序的编写。"></a>环境变量的配置及简单Java程序的编写。</h4><p>在桌面计算机图标右键–属性–高级系统设置–高级–环境变量–将javac的目录复制到环境变量内。</p>
+<ul>
+<li>在保存Java文件时注意它的扩展名。</li>
+<li>在执行程序时，文件名没有后缀扩展名。</li>
+<li>环境变量设置前如果已经开启了命令行窗口，在设置完需要重启才能成功执行程序。</li>
+</ul>
+<h4 id="多选题"><a href="#多选题" class="headerlink" title="多选题"></a>多选题</h4><p>下面选项中说法正确的是：（选两项）<br>A.  Java文件的编译命令是java。<br>B.  配置环境变量Path时，要配置到JDK安装目录下的bin目录。<br>C.  在命令行窗口输入cd  java命令，可以显示java文件夹下的所有文件。<br>D.  在命令行中执行Java代码时，配置好环境变量后，要重启命令行窗口才能生效。</p>
+<p>正确答案： B,D </p>
+<p><strong>参考解析：</strong><br>本题考查的是对Java程序执行流程和常用操作命令的认知，BD选项是正确的。A选项错误，Java文件的编译命令是javac，解释执行命令是java。C选项错误，在命令行窗口输入cd  java命令，可以切换到java文件夹。dir才是显示该文件夹下所有文件。</p>
+<h4 id="Java程序的结构"><a href="#Java程序的结构" class="headerlink" title="Java程序的结构"></a>Java程序的结构</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloImooc</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(&amp;quot;Hello,imooc!&amp;quot;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>1和5行的“class HelloImooc{}”是类，英文为“class”，后面的内容为类的定义。大括号可以先写完一对，以防止忘记。高亮区域为类的命名，可根据情况改变。</p>
+<p>2和5行的“public ststic void main(String[] args){}”是主方法，主方法之程序执行的入口，是开始的地方。高亮区域为主方法的命名，可根据情况改变。3行是主方法的方法体的内容，即输出语句。</p>
+<h4 id="选择练习"><a href="#选择练习" class="headerlink" title="选择练习"></a>选择练习</h4><p>单选题以下定义了主方法的代码中，有几处错误（选一项）</p>
+<p><img src="D:\Backup\桌面\34.png" alt="34"></p>
+<p>A.  1处错误<br>B.  2处错误<br>C.  3处错误<br>D.  没有错误</p>
+<p>正确答案： B </p>
+<p><strong>参考解析：</strong><br>本题考查的是对Java程序结构的认知， 本段代码共有两处错误：<br>第2行处，主方法的名字应该是main，而题目中是mian ，主方法的名称必须是main<br>第3行处，输出语句中![1 [2]](D:\Backup\桌面\1 [2].png)<br>应该改成println所以B选项是正确的</p>
+<h3 id="三、使用eclipse开发Java程序"><a href="#三、使用eclipse开发Java程序" class="headerlink" title="三、使用eclipse开发Java程序"></a>三、使用eclipse开发Java程序</h3><h4 id="eclipse简介"><a href="#eclipse简介" class="headerlink" title="eclipse简介"></a>eclipse简介</h4><p>推荐小白先装JDK再装Eclipse。</p>
+<p>eclipse下载地址：<a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a>      </p>
+<p><img src="D:\Backup\桌面\41.png" alt="41"></p>
+<h4 id="在eclipse下开发Java程序"><a href="#在eclipse下开发Java程序" class="headerlink" title="在eclipse下开发Java程序"></a>在eclipse下开发Java程序</h4><ul>
+<li>包（package）的名字一般是域名反写，如com.imooc（小数点前后是两个文件夹，com文件夹内包含imooc文件夹）。</li>
+<li>保存就是编译的过程。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>《一颗开花的树》席慕蓉</title>
     <url>/posts/303255476/</url>
     <content><![CDATA[<h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>如何让你遇见我，<br>在我最美丽的时刻。</p>
@@ -47,6 +147,35 @@
 <p>各个软件总体来说都有自己的局限性，文字、图片、视频、PDF、代码块、网站引用连接等等，要么就是这个功能缺失，要么就是那个字数、文件大小、或者是文件类型有限制，反正总是有不尽人意的地方，在个人博客中，想用什么全看自己，没有的功能也可以根据自己的需求增加，并且一处编写，随处引用，这样就方便了很多了。</p>
 <p>2.3&emsp;先上传些诗词美文，用作测试。以便确定相关功能正常运行。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>《我会采更多的菊》 纳丁·斯特尔</title>
+    <url>/posts/4025597166/</url>
+    <content><![CDATA[<h4 id="译文："><a href="#译文：" class="headerlink" title="译文："></a>译文：</h4><p>如果我能够从头活过，<br>我会试着犯更多的错。<br>我会放松一点，我会灵活一点。<br>我会比这一趟过得傻。</p>
+<a id="more"></a>
+
+<p>很少有什么事情能让我当真。<br>我会疯狂一些，我会少讲点卫生。<br>我会冒更多的险。我会更经常的旅行。<br>我会爬更多的山，游更多的河，看更多的日落。<br>我会多吃冰激凌，少吃豆子。<br>我会惹更多的麻烦，可是不在想象中担忧。</p>
+<p>你看，我小心翼翼地稳健地理智地活着。<br>一个又一个小时，一天又一天。<br>噢，我有过难忘的时刻。<br>如果我能够重来一次，我会要更多这样的时刻。</p>
+<p>事实上，我不需要别的什么，<br>仅仅是时刻，一个接着一个。<br>而不是每天都操心着以后的漫长日子。</p>
+<p>我曾经不论到哪里都不忘记带上：<br>温度计，热水壶，雨衣和降落伞。<br>如果我能够重来一次，<br>我会到处走走，什么都试试，并且轻装上阵。</p>
+<p>如果我能够重头活过，<br>我会延长打赤脚的时光。<br>从尽早的春天到尽晚的秋天。<br>我会更经常的逃学。<br>我不会考那么高的分数，除非是一不小心。<br>我会多骑些旋转木马，<br>我会采更多的雏菊。</p>
+<h4 id="阅读随机："><a href="#阅读随机：" class="headerlink" title="阅读随机："></a>阅读随机：</h4><p>诗词永远是诗词，诗词是艺术的一种形式，而艺术是经过人刻意加工，有意识得去放大、缩小某些局部特性的，这无关好坏对错，这就是艺术，来源于生活，但永远不是生活。</p>
+<p>至于高不高于生活？我的态度：艺术仅是生活的一部分，即不高，也不低。它值得人民向往、期盼、欣赏。但不值得崇拜、神化、迷醉其中。</p>
+<p>此诗歌中的意境无意是轻松的、愉悦的、令人神往的。这是无可厚非且无需过多探讨的。</p>
+<p>但更想讨论的是，从现实意义出发，我个人的主观观点：</p>
+<p>如果我能从头活过，我会努力犯更少的错。</p>
+<p>原因无它，现实世界是有因有果，具有客观的事物发展规律的，且我们每个人和这个世界有着千丝万缕的联系，我少犯点错误，就能让别人少因我遭受些牵连、麻烦、甚至是痛苦，至少让和我亲近的人少受些。</p>
+<p>我指的这些牵连、麻烦、甚至是痛苦，是指那些无妄之灾，人在家中坐，锅从天上来的那种。</p>
+<p>虽然，我从小到大也没有给家中惹什么大麻烦，比较愧疚的是自己以前没努力学习，上了个三本大学，让家里承受了更多的经济压力，这是比较内疚的，让父母为我犯的错去买单，也有负于整个家庭对我的付出与关爱！</p>
+<p>少犯些错，也是为自己负责。尽量少的犯错，才能不断的向良性的方向发展，才能越来越好。</p>
+<p>加油！</p>
+]]></content>
+      <categories>
+        <category>诗词美文</category>
+      </categories>
+      <tags>
+        <tag>诗词</tag>
+      </tags>
   </entry>
   <entry>
     <title>《断章》卞之琳</title>
