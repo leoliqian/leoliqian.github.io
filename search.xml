@@ -8,6 +8,8 @@
 <li>二、Java程序实际执行细节</li>
 <li>三、使用eclipse开发Java程序</li>
 </ul>
+<a id="more"></a>
+
 <h3 id="一、Java的编译基础"><a href="#一、Java的编译基础" class="headerlink" title="一、Java的编译基础"></a>一、Java的编译基础</h3><h4 id="Java简介"><a href="#Java简介" class="headerlink" title="Java简介"></a>Java简介</h4><ul>
 <li>JAVA是一门面向对象的程序设计语言。</li>
 <li>1995年由sun公司发布。</li>
