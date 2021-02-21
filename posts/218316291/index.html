@@ -22,27 +22,19 @@
     var CONFIG = {"hostname":"leoliqian.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="目录 一、Java的编译基础 二、Java程序实际执行细节 三、使用eclipse开发Java程序">
+  <meta name="description" content="目录 一、Java基础  报警报错处理方案 Java基础语法 Java面对对象 Java常用工具类   二、JavaWeb  报警报错处理方案 HTML、CSS JavaScript Java Web   三、Java数据库  报警报错处理方案 数据库基础 MyBatis Redis数据库与Linux   四、Java框架  报错处理方案">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础通识1.1.1">
-<meta property="og:url" content="https://leoliqian.com/posts/2497748203/index.html">
+<meta property="og:title" content="Java报警报错处理方案记录">
+<meta property="og:url" content="https://leoliqian.com/posts/218316291/index.html">
 <meta property="og:site_name" content="我  梦">
-<meta property="og:description" content="目录 一、Java的编译基础 二、Java程序实际执行细节 三、使用eclipse开发Java程序">
+<meta property="og:description" content="目录 一、Java基础  报警报错处理方案 Java基础语法 Java面对对象 Java常用工具类   二、JavaWeb  报警报错处理方案 HTML、CSS JavaScript Java Web   三、Java数据库  报警报错处理方案 数据库基础 MyBatis Redis数据库与Linux   四、Java框架  报错处理方案">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="d:/Backup/桌面/Java程序执行过程.png">
-<meta property="og:image" content="d:/Backup/桌面/三者关系.png">
-<meta property="og:image" content="d:/Backup/桌面/记事本编写程序.png">
-<meta property="og:image" content="d:/Backup/桌面/设置文件夹显示扩展名.png">
-<meta property="og:image" content="d:/Backup/桌面/保存类型选择.png">
-<meta property="og:image" content="d:/Backup/桌面/34.png">
-<meta property="og:image" content="d:/Backup/桌面/41.png">
-<meta property="article:published_time" content="2021-02-10T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-02-10T16:00:00.000Z">
+<meta property="article:published_time" content="2021-02-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-02-12T16:00:00.000Z">
 <meta property="article:author" content="李谦 LeoLi">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="d:/Backup/桌面/Java程序执行过程.png">
 
-<link rel="canonical" href="https://leoliqian.com/posts/2497748203/">
+<link rel="canonical" href="https://leoliqian.com/posts/218316291/">
 
 
 <script id="page-configurations">
@@ -55,7 +47,7 @@
   };
 </script>
 
-  <title>Java基础通识1.1.1 | 我  梦</title>
+  <title>Java报警报错处理方案记录 | 我  梦</title>
   
 
 
@@ -219,7 +211,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://leoliqian.com/posts/2497748203/">
+    <link itemprop="mainEntityOfPage" href="https://leoliqian.com/posts/218316291/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -232,7 +224,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Java基础通识1.1.1
+          Java报警报错处理方案记录
         </h1>
 
         <div class="post-meta">
@@ -242,7 +234,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-02-11 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-11T00:00:00+08:00">2021-02-11</time>
+              <time title="创建时间：2021-02-13 00:00:00" itemprop="dateCreated datePublished" datetime="2021-02-13T00:00:00+08:00">2021-02-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,7 +247,7 @@
             </span>
 
           
-            <span id="/posts/2497748203/" class="post-meta-item leancloud_visitors" data-flag-title="Java基础通识1.1.1" title="阅读次数">
+            <span id="/posts/218316291/" class="post-meta-item leancloud_visitors" data-flag-title="Java报警报错处理方案记录" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -264,7 +256,7 @@
             </span>
 			
 			<span class="post-meta-divider">|</span>
-<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1.6k</span>
+<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 461</span>
   
   <span class="post-meta-item">
     
@@ -273,8 +265,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/posts/2497748203/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/posts/2497748203/" itemprop="commentCount"></span>
+    <a title="valine" href="/posts/218316291/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/218316291/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -290,92 +282,99 @@
 
       
         <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>一、Java的编译基础</li>
-<li>二、Java程序实际执行细节</li>
-<li>三、使用eclipse开发Java程序</li>
+<li>一、Java基础  报警报错处理方案<ul>
+<li>Java基础语法</li>
+<li>Java面对对象</li>
+<li>Java常用工具类</li>
+</ul>
+</li>
+<li>二、JavaWeb  报警报错处理方案<ul>
+<li>HTML、CSS</li>
+<li>JavaScript</li>
+<li>Java Web</li>
+</ul>
+</li>
+<li>三、Java数据库  报警报错处理方案<ul>
+<li>数据库基础</li>
+<li>MyBatis</li>
+<li>Redis数据库与Linux</li>
+</ul>
+</li>
+<li>四、Java框架  报错处理方案</li>
 </ul>
 <a id="more"></a>
 
-<h3 id="一、Java的编译基础"><a href="#一、Java的编译基础" class="headerlink" title="一、Java的编译基础"></a>一、Java的编译基础</h3><h4 id="Java简介"><a href="#Java简介" class="headerlink" title="Java简介"></a>Java简介</h4><ul>
-<li>JAVA是一门面向对象的程序设计语言。</li>
-<li>1995年由sun公司发布。</li>
-<li>2010年sun公司被Oracle公司收购。</li>
-</ul>
-<h4 id="Java程序执行过程"><a href="#Java程序执行过程" class="headerlink" title="Java程序执行过程"></a>Java程序执行过程</h4><p>源文件（Program.java）→编译器（compiler）→字节码文件Program.class→解释器（interpreter）→程序（Program）。</p>
-<p><img src="D:\Backup\桌面\Java程序执行过程.png" alt="Java程序执行过程"></p>
-<p>“.java为后缀的源文件”通过“编译器”进行编译后生成“.class为后缀的字节码文件”字节码文件交由“解释器”进行执行，从而程序得以体现。<br>     这个跨平台解释.class文件的过程是由Java虚拟机进行完成，Java虚拟机解释执行编译过程中生成的字节码文件，把字节码文件解释执行成具体平台上的机器指令执行。<br>     因为我们的计算机只能识别0和1这样的二进制指令，所以把字节码解释成具体平台上的机器指令执行以后，Java就能实现一次编译，到处执行。</p>
-<h4 id="JVM（Java-virtual-machine）"><a href="#JVM（Java-virtual-machine）" class="headerlink" title="JVM（Java virtual machine）"></a>JVM（Java virtual machine）</h4><ul>
-<li>JVM（Java virtual machine），Java虚拟机。</li>
-<li>JVM是Java平台无关性实现的关键 。</li>
-</ul>
-<h4 id="JRE（Java-Runtime-Environment）"><a href="#JRE（Java-Runtime-Environment）" class="headerlink" title="JRE（Java Runtime Environment）"></a>JRE（Java Runtime Environment）</h4><ul>
-<li>包括Java虚拟机（JVM，即Java virtual machine）、java核心类库和支持文件。JVM是Java实现平台无关性的关键，实现一次编译，到处运行。</li>
-<li>如果只需要运行Java程序，下载并安装JRE即可。（JRE面对使用人员）如果开发Java软件，需要下载JDK。（JDK 面对开发人员）。</li>
-<li>在JDK中附带有JRE。</li>
-</ul>
-<h4 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h4><p> JDK（Java Development Kit），Java语言的软件开发工具包.</p>
-<p>两个主要组件：</p>
+<p><strong>目录详则</strong></p>
 <ul>
-<li>-javac–编译器，将源程序转成字节码。同时也是编译命令。</li>
-<li>-java–运行编译后的java程序（.class后缀的）。</li>
+<li>一、Java基础  报警报错处理方案<ul>
+<li>Java基础语法<ul>
+<li>常量、变量</li>
+<li>运算符</li>
+<li>流程控制 – 选择结构</li>
+<li>流程控制 – 循环结构</li>
+<li>数组 – 一维数组</li>
+<li>数组 – 二维数组</li>
+<li>方法</li>
+<li>位移与统计</li>
 </ul>
-<p><img src="D:\Backup\桌面\三者关系.png" alt="三者关系"></p>
-<p><strong>Java平台</strong></p>
-<ul>
-<li>Java SE–桌面程序–Java标准版</li>
-<li>Java EE–Web程序–Jave企业版</li>
-<li>Jave ME–移动设备–Java微型版</li>
+</li>
+<li>Java面对对象<ul>
+<li>面向对象</li>
+<li>封装</li>
+<li>继承</li>
+<li>单例模式</li>
+<li>多态</li>
 </ul>
-<p><strong>选择练习</strong></p>
-<p>下面选项中关于JDK的说法正确的是（  ）（选一项）<br>A.  JRE中包含JDK，JDK中包含JVM<br>B.  JDK是Java运行时环境的简称<br>C.  Java实现平台无关性的关键是JDK<br>D.  javac ，java 等命令是JDK中的命令</p>
-<p>正确答案： D </p>
-<p><strong>参考解析：</strong></p>
-<p>本题考查的是对Java代码编译及运行环境的认知，D选项正确。<br>A选项错误，应该是JDK包含JRE，JRE中包含JVM虚拟机<br>B选项错误，JRE是Java运行时环境的简称，JDK是软件开发工具包<br>C选项错误，JVM是Java实现平台无关性的关键，实现一次编译，到处运行</p>
-<h3 id="二、Java程序实际执行细节"><a href="#二、Java程序实际执行细节" class="headerlink" title="二、Java程序实际执行细节"></a>二、Java程序实际执行细节</h3><p>以下执行程序仅作为记录了解，无需刻意学习掌握，现开发流程主要还是使用开发工具完成相关工作。</p>
-<p>记事本编写程序</p>
-<p><img src="D:\Backup\桌面\记事本编写程序.png" alt="记事本编写程序"></p>
-<p>存储方式：保存前设置文件夹显示程序扩展名。<br>方法一：&quot;HelloImooc.java&quot;        //英文状态下双引号+class后类名+.java</p>
-<p><img src="D:\Backup\桌面\设置文件夹显示扩展名.png" alt="设置文件夹显示扩展名"></p>
-<p>方法二：保存类型选择“所有文件”</p>
-<p><img src="D:\Backup\桌面\保存类型选择.png" alt="保存类型选择"></p>
-<p>执行程序<br>控制台输入：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cmd</span>+回车</span><br></pre></td></tr></table></figure></div>
-<p>目录切换到e盘：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">e:        //这里不区分大小写</span></span><br></pre></td></tr></table></figure></div>
-<p>转到java文件夹下：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> java        //这里不区分大小写</span><br></pre></td></tr></table></figure></div>
-<p>想看java文件夹下都有哪些文件：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">dir</span></span><br></pre></td></tr></table></figure></div>
-<p>编译程序：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac HelloImooc.java        //注意区分大小写</span><br></pre></td></tr></table></figure></div>
-<p>编译完成后，文件夹会生成j以.class结尾的二进制字节码文件。</p>
-<p>解释执行二进制字节码文件：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java HelloImooc        //执行程序时，文件名没有后缀</span><br></pre></td></tr></table></figure></div>
-<p>![1 [3]](D:\Backup\桌面\1 [3].png)</p>
-<h4 id="环境变量的配置及简单Java程序的编写。"><a href="#环境变量的配置及简单Java程序的编写。" class="headerlink" title="环境变量的配置及简单Java程序的编写。"></a>环境变量的配置及简单Java程序的编写。</h4><p>在桌面计算机图标右键–属性–高级系统设置–高级–环境变量–将javac的目录复制到环境变量内。</p>
-<ul>
-<li>在保存Java文件时注意它的扩展名。</li>
-<li>在执行程序时，文件名没有后缀扩展名。</li>
-<li>环境变量设置前如果已经开启了命令行窗口，在设置完需要重启才能成功执行程序。</li>
+</li>
+<li>Java常用工具类<ul>
+<li>异常</li>
+<li>包装类</li>
+<li>字符串</li>
+<li>集合、集合排序</li>
+<li>泛型</li>
+<li>多线程</li>
+<li>输入输出流</li>
 </ul>
-<h4 id="多选题"><a href="#多选题" class="headerlink" title="多选题"></a>多选题</h4><p>下面选项中说法正确的是：（选两项）<br>A.  Java文件的编译命令是java。<br>B.  配置环境变量Path时，要配置到JDK安装目录下的bin目录。<br>C.  在命令行窗口输入cd  java命令，可以显示java文件夹下的所有文件。<br>D.  在命令行中执行Java代码时，配置好环境变量后，要重启命令行窗口才能生效。</p>
-<p>正确答案： B,D </p>
-<p><strong>参考解析：</strong><br>本题考查的是对Java程序执行流程和常用操作命令的认知，BD选项是正确的。A选项错误，Java文件的编译命令是javac，解释执行命令是java。C选项错误，在命令行窗口输入cd  java命令，可以切换到java文件夹。dir才是显示该文件夹下所有文件。</p>
-<h4 id="Java程序的结构"><a href="#Java程序的结构" class="headerlink" title="Java程序的结构"></a>Java程序的结构</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloImooc</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(&amp;quot;Hello,imooc!&amp;quot;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p>1和5行的“class HelloImooc{}”是类，英文为“class”，后面的内容为类的定义。大括号可以先写完一对，以防止忘记。高亮区域为类的命名，可根据情况改变。</p>
-<p>2和5行的“public ststic void main(String[] args){}”是主方法，主方法之程序执行的入口，是开始的地方。高亮区域为主方法的命名，可根据情况改变。3行是主方法的方法体的内容，即输出语句。</p>
-<h4 id="选择练习"><a href="#选择练习" class="headerlink" title="选择练习"></a>选择练习</h4><p>单选题以下定义了主方法的代码中，有几处错误（选一项）</p>
-<p><img src="D:\Backup\桌面\34.png" alt="34"></p>
-<p>A.  1处错误<br>B.  2处错误<br>C.  3处错误<br>D.  没有错误</p>
-<p>正确答案： B </p>
-<p><strong>参考解析：</strong><br>本题考查的是对Java程序结构的认知， 本段代码共有两处错误：<br>第2行处，主方法的名字应该是main，而题目中是mian ，主方法的名称必须是main<br>第3行处，输出语句中![1 [2]](D:\Backup\桌面\1 [2].png)<br>应该改成println所以B选项是正确的</p>
-<h3 id="三、使用eclipse开发Java程序"><a href="#三、使用eclipse开发Java程序" class="headerlink" title="三、使用eclipse开发Java程序"></a>三、使用eclipse开发Java程序</h3><h4 id="eclipse简介"><a href="#eclipse简介" class="headerlink" title="eclipse简介"></a>eclipse简介</h4><p>推荐小白先装JDK再装Eclipse。</p>
-<p>eclipse下载地址：<a target="_blank" rel="noopener" href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a>      </p>
-<p><img src="D:\Backup\桌面\41.png" alt="41"></p>
-<h4 id="在eclipse下开发Java程序"><a href="#在eclipse下开发Java程序" class="headerlink" title="在eclipse下开发Java程序"></a>在eclipse下开发Java程序</h4><ul>
-<li>包（package）的名字一般是域名反写，如com.imooc（小数点前后是两个文件夹，com文件夹内包含imooc文件夹）。</li>
-<li>保存就是编译的过程。</li>
+</li>
 </ul>
+</li>
+<li>二、JavaWeb  报警报错处理方案<ul>
+<li>HTML、CSS</li>
+<li>JavaScript</li>
+<li>Java Web<ul>
+<li>xml</li>
+<li>Servlet</li>
+<li>JSP</li>
+<li>JSTL / EL表达式</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>三、Java数据库  报警报错处理方案<ul>
+<li>数据库基础<ul>
+<li>MySQL基础 – 数据类型</li>
+<li>MySQL基础 – 表的管理</li>
+<li>MySQL基础 – 数据管理</li>
+<li>MySQL基础 – 常用函数</li>
+<li>JDBC</li>
+<li>反射</li>
+</ul>
+</li>
+<li>MyBatis<ul>
+<li>Maven</li>
+<li>工厂模式</li>
+<li>MyBatis</li>
+</ul>
+</li>
+<li>Redis数据库与Linux</li>
+</ul>
+</li>
+<li>四、Java框架  报错处理方案</li>
+</ul>
+<h3 id="一、Java基础-报警报错处理方案"><a href="#一、Java基础-报警报错处理方案" class="headerlink" title="一、Java基础  报警报错处理方案"></a>一、Java基础  报警报错处理方案</h3><h3 id="二、JavaWeb-报警报错处理方案"><a href="#二、JavaWeb-报警报错处理方案" class="headerlink" title="二、JavaWeb  报警报错处理方案"></a>二、JavaWeb  报警报错处理方案</h3><h4 id="HTML、CSS"><a href="#HTML、CSS" class="headerlink" title="HTML、CSS"></a>HTML、CSS</h4><h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><h4 id="Java-Web"><a href="#Java-Web" class="headerlink" title="Java Web"></a>Java Web</h4><h3 id="三、Java数据库-报警报错处理方案"><a href="#三、Java数据库-报警报错处理方案" class="headerlink" title="三、Java数据库  报警报错处理方案"></a>三、Java数据库  报警报错处理方案</h3><h3 id="四、Java框架-报错处理方案"><a href="#四、Java框架-报错处理方案" class="headerlink" title="四、Java框架  报错处理方案"></a>四、Java框架  报错处理方案</h3><p>新建maven项目时，Run中报警告：No archetype found in remote catalog. Defaulting to internal catalog.【在远程目录中没有找到原型。默认为内部编录。】，如图：</p>
+<p>解决方案：</p>
+<p>1.可以不用管【因为使用了maven模版构建项目，要从网上获取模版，然而没有找到这个模版或者网络慢，导致获取失败 】，选择File —&gt; 再选择Close Project，关闭项目后重启就可以了。</p>
+<p>2.参考 <a href="https://link.zhihu.com/?target=https://www.cnblogs.com/loufangcheng/p/12861762.html">https://www.cnblogs.com/loufangcheng/p/12861762.html</a> 这篇文章</p>
 
     </div>
 
@@ -422,7 +421,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://leoliqian.com/posts/2497748203/" title="Java基础通识1.1.1">https://leoliqian.com/posts/2497748203/</a>
+    <a href="https://leoliqian.com/posts/218316291/" title="Java报警报错处理方案记录">https://leoliqian.com/posts/218316291/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -439,13 +438,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/4025597166/" rel="prev" title="《我会采更多的菊》 纳丁·斯特尔">
-      <i class="fa fa-chevron-left"></i> 《我会采更多的菊》 纳丁·斯特尔
+    <a href="/posts/2497748203/" rel="prev" title="Java基础通识1.1.1">
+      <i class="fa fa-chevron-left"></i> Java基础通识1.1.1
     </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/218316291/" rel="next" title="Java报警报错处理方案记录">
-      Java报警报错处理方案记录 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -506,7 +502,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81Java%E7%9A%84%E7%BC%96%E8%AF%91%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text">一、Java的编译基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java%E7%AE%80%E4%BB%8B"><span class="nav-number">2.1.</span> <span class="nav-text">Java简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B"><span class="nav-number">2.2.</span> <span class="nav-text">Java程序执行过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JVM%EF%BC%88Java-virtual-machine%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">JVM（Java virtual machine）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRE%EF%BC%88Java-Runtime-Environment%EF%BC%89"><span class="nav-number">2.4.</span> <span class="nav-text">JRE（Java Runtime Environment）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JDK%EF%BC%88Java-Development-Kit%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">JDK（Java Development Kit）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81Java%E7%A8%8B%E5%BA%8F%E5%AE%9E%E9%99%85%E6%89%A7%E8%A1%8C%E7%BB%86%E8%8A%82"><span class="nav-number">3.</span> <span class="nav-text">二、Java程序实际执行细节</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E9%85%8D%E7%BD%AE%E5%8F%8A%E7%AE%80%E5%8D%95Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%96%E5%86%99%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">环境变量的配置及简单Java程序的编写。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E9%80%89%E9%A2%98"><span class="nav-number">3.2.</span> <span class="nav-text">多选题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.3.</span> <span class="nav-text">Java程序的结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%89%E6%8B%A9%E7%BB%83%E4%B9%A0"><span class="nav-number">3.4.</span> <span class="nav-text">选择练习</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8eclipse%E5%BC%80%E5%8F%91Java%E7%A8%8B%E5%BA%8F"><span class="nav-number">4.</span> <span class="nav-text">三、使用eclipse开发Java程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#eclipse%E7%AE%80%E4%BB%8B"><span class="nav-number">4.1.</span> <span class="nav-text">eclipse简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8eclipse%E4%B8%8B%E5%BC%80%E5%8F%91Java%E7%A8%8B%E5%BA%8F"><span class="nav-number">4.2.</span> <span class="nav-text">在eclipse下开发Java程序</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81Java%E5%9F%BA%E7%A1%80-%E6%8A%A5%E8%AD%A6%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88"><span class="nav-number">2.</span> <span class="nav-text">一、Java基础  报警报错处理方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81JavaWeb-%E6%8A%A5%E8%AD%A6%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88"><span class="nav-number">3.</span> <span class="nav-text">二、JavaWeb  报警报错处理方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML%E3%80%81CSS"><span class="nav-number">3.1.</span> <span class="nav-text">HTML、CSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JavaScript"><span class="nav-number">3.2.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-Web"><span class="nav-number">3.3.</span> <span class="nav-text">Java Web</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81Java%E6%95%B0%E6%8D%AE%E5%BA%93-%E6%8A%A5%E8%AD%A6%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88"><span class="nav-number">4.</span> <span class="nav-text">三、Java数据库  报警报错处理方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81Java%E6%A1%86%E6%9E%B6-%E6%8A%A5%E9%94%99%E5%A4%84%E7%90%86%E6%96%B9%E6%A1%88"><span class="nav-number">5.</span> <span class="nav-text">四、Java框架  报错处理方案</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
