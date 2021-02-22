@@ -3,7 +3,7 @@
   <entry>
     <title>Java基础通识1.1.1</title>
     <url>/posts/2497748203/</url>
-    <content><![CDATA[<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
 <li>一、Java的编译基础</li>
 <li>二、Java程序实际执行细节</li>
 <li>三、使用eclipse开发Java程序</li>
@@ -15,9 +15,10 @@
 <li>1995年由sun公司发布。</li>
 <li>2010年sun公司被Oracle公司收购。</li>
 </ul>
-<h4 id="Java程序执行过程"><a href="#Java程序执行过程" class="headerlink" title="Java程序执行过程"></a>Java程序执行过程</h4><p>源文件（Program.java）→编译器（compiler）→字节码文件Program.class→解释器（interpreter）→程序（Program）。</p>
-<p><img src="D:\Backup\桌面\Java程序执行过程.png" alt="Java程序执行过程"></p>
-<p>“.java为后缀的源文件”通过“编译器”进行编译后生成“.class为后缀的字节码文件”字节码文件交由“解释器”进行执行，从而程序得以体现。<br>     这个跨平台解释.class文件的过程是由Java虚拟机进行完成，Java虚拟机解释执行编译过程中生成的字节码文件，把字节码文件解释执行成具体平台上的机器指令执行。<br>     因为我们的计算机只能识别0和1这样的二进制指令，所以把字节码解释成具体平台上的机器指令执行以后，Java就能实现一次编译，到处执行。</p>
+<h4 id="Java程序执行过程"><a href="#Java程序执行过程" class="headerlink" title="Java程序执行过程"></a>Java程序执行过程</h4><p>源文件（Program.java）–&gt; 编译器（compiler）–&gt; 字节码文件（Program.class）–&gt; 解释器（interpreter）–&gt; 最终电脑上展示的程序（Program）</p>
+<p><img src="/images/JavaProgramExecutionProcedures.png" alt="Java程序执行过程" title="Java程序执行过程"></p>
+<p>以 “.java” 为后缀的源文件，通过“编译器”进行编译后生成”.class”为后缀的字节码文件字节码文件交由“解释器”进行执行，从而程序得以体现。<br>     这个跨平台解释 “.class” 文</p>
+<p>件的过程是由Java虚拟机进行完成，Java虚拟机解释执行编译过程中生成的字节码文件，把字节码文件解释执行成具体平台上的机器指令执行。<br>     因为我们的计算机只能识别0和1这样的二进制指令，所以把字节码解释成具体平台上的机器指令执行以后，Java就能实现一次编译，到处执行。</p>
 <h4 id="JVM（Java-virtual-machine）"><a href="#JVM（Java-virtual-machine）" class="headerlink" title="JVM（Java virtual machine）"></a>JVM（Java virtual machine）</h4><ul>
 <li>JVM（Java virtual machine），Java虚拟机。</li>
 <li>JVM是Java平台无关性实现的关键 。</li>
@@ -31,9 +32,9 @@
 <p>两个主要组件：</p>
 <ul>
 <li>-javac–编译器，将源程序转成字节码。同时也是编译命令。</li>
-<li>-java–运行编译后的java程序（.class后缀的）。</li>
+<li>-java–运行编译后的java程序（ “.class” 后缀的）。</li>
 </ul>
-<p><img src="D:\Backup\桌面\三者关系.png" alt="三者关系"></p>
+<p><img src="/images/JVMJREJDK.png" alt="JVM、JRE、JDK三者关系" title="JVM、JRE、JDK三者关系"></p>
 <p><strong>Java平台</strong></p>
 <ul>
 <li>Java SE–桌面程序–Java标准版</li>
@@ -45,27 +46,27 @@
 <p>正确答案： D </p>
 <p><strong>参考解析：</strong></p>
 <p>本题考查的是对Java代码编译及运行环境的认知，D选项正确。<br>A选项错误，应该是JDK包含JRE，JRE中包含JVM虚拟机<br>B选项错误，JRE是Java运行时环境的简称，JDK是软件开发工具包<br>C选项错误，JVM是Java实现平台无关性的关键，实现一次编译，到处运行</p>
-<h3 id="二、Java程序实际执行细节"><a href="#二、Java程序实际执行细节" class="headerlink" title="二、Java程序实际执行细节"></a>二、Java程序实际执行细节</h3><p>以下执行程序仅作为记录了解，无需刻意学习掌握，现开发流程主要还是使用开发工具完成相关工作。</p>
+<h3 id="二、Java程序实际执行细节"><a href="#二、Java程序实际执行细节" class="headerlink" title="二、Java程序实际执行细节"></a>二、Java程序实际执行细节</h3><p><strong>注意：以下执行程序仅作为记录了解，无需刻意学习掌握，现开发流程主要还是使用开发工具完成相关工作。</strong></p>
 <p>记事本编写程序</p>
-<p><img src="D:\Backup\桌面\记事本编写程序.png" alt="记事本编写程序"></p>
-<p>存储方式：保存前设置文件夹显示程序扩展名。<br>方法一：&quot;HelloImooc.java&quot;        //英文状态下双引号+class后类名+.java</p>
-<p><img src="D:\Backup\桌面\设置文件夹显示扩展名.png" alt="设置文件夹显示扩展名"></p>
+<p><img src="/images/notebook1.png" alt="记事本编写程序" title="记事本编写程序"></p>
+<p>存储方式：保存前设置文件夹显示程序扩展名。<br>方法一："HelloImooc.java"        //英文状态下双引号+class后类名+.java</p>
+<p><img src="/images/displayExtension.png" alt="保存前设置文件夹显示程序扩展名" title="保存前设置文件夹显示程序扩展名"></p>
 <p>方法二：保存类型选择“所有文件”</p>
-<p><img src="D:\Backup\桌面\保存类型选择.png" alt="保存类型选择"></p>
+<p><img src="/images/selectSaveType.png" alt="保存类型选择“所有文件”" title="保存类型选择“所有文件”"></p>
 <p>执行程序<br>控制台输入：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cmd</span>+回车</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">cmd</span>+回车</span><br></pre></td></tr></tbody></table></figure></div>
 <p>目录切换到e盘：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="code"><pre><span class="line"><span class="function">e:        //这里不区分大小写</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">e:        //这里不区分大小写</span></span><br></pre></td></tr></tbody></table></figure></div>
 <p>转到java文件夹下：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> java        //这里不区分大小写</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> java        //这里不区分大小写</span><br></pre></td></tr></tbody></table></figure></div>
 <p>想看java文件夹下都有哪些文件：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span></span><br></pre></td></tr></tbody></table></figure></div>
 <p>编译程序：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="code"><pre><span class="line">javac HelloImooc.java        //注意区分大小写</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tbody><tr><td class="code"><pre><span class="line">javac HelloImooc.java        //注意区分大小写</span><br></pre></td></tr></tbody></table></figure></div>
 <p>编译完成后，文件夹会生成j以.class结尾的二进制字节码文件。</p>
 <p>解释执行二进制字节码文件：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="code"><pre><span class="line">java HelloImooc        //执行程序时，文件名没有后缀</span><br></pre></td></tr></table></figure></div>
-<p>![1 [3]](D:\Backup\桌面\1 [3].png)</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tbody><tr><td class="code"><pre><span class="line">java HelloImooc        //执行程序时，文件名没有后缀</span><br></pre></td></tr></tbody></table></figure></div>
+<p><img src="/images/cmd.png" alt="cmd" title="cmd"></p>
 <h4 id="环境变量的配置及简单Java程序的编写。"><a href="#环境变量的配置及简单Java程序的编写。" class="headerlink" title="环境变量的配置及简单Java程序的编写。"></a>环境变量的配置及简单Java程序的编写。</h4><p>在桌面计算机图标右键–属性–高级系统设置–高级–环境变量–将javac的目录复制到环境变量内。</p>
 <ul>
 <li>在保存Java文件时注意它的扩展名。</li>
@@ -75,22 +76,25 @@
 <h4 id="多选题"><a href="#多选题" class="headerlink" title="多选题"></a>多选题</h4><p>下面选项中说法正确的是：（选两项）<br>A.  Java文件的编译命令是java。<br>B.  配置环境变量Path时，要配置到JDK安装目录下的bin目录。<br>C.  在命令行窗口输入cd  java命令，可以显示java文件夹下的所有文件。<br>D.  在命令行中执行Java代码时，配置好环境变量后，要重启命令行窗口才能生效。</p>
 <p>正确答案： B,D </p>
 <p><strong>参考解析：</strong><br>本题考查的是对Java程序执行流程和常用操作命令的认知，BD选项是正确的。A选项错误，Java文件的编译命令是javac，解释执行命令是java。C选项错误，在命令行窗口输入cd  java命令，可以切换到java文件夹。dir才是显示该文件夹下所有文件。</p>
-<h4 id="Java程序的结构"><a href="#Java程序的结构" class="headerlink" title="Java程序的结构"></a>Java程序的结构</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloImooc</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(&amp;quot;Hello,imooc!&amp;quot;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<h4 id="Java程序的结构"><a href="#Java程序的结构" class="headerlink" title="Java程序的结构"></a>Java程序的结构</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloImooc</span></span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"Hello,imooc!"</span>); </span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
 <p>1和5行的“class HelloImooc{}”是类，英文为“class”，后面的内容为类的定义。大括号可以先写完一对，以防止忘记。高亮区域为类的命名，可根据情况改变。</p>
 <p>2和5行的“public ststic void main(String[] args){}”是主方法，主方法之程序执行的入口，是开始的地方。高亮区域为主方法的命名，可根据情况改变。3行是主方法的方法体的内容，即输出语句。</p>
-<h4 id="选择练习"><a href="#选择练习" class="headerlink" title="选择练习"></a>选择练习</h4><p>单选题以下定义了主方法的代码中，有几处错误（选一项）</p>
-<p><img src="D:\Backup\桌面\34.png" alt="34"></p>
+<p><strong>单选题</strong></p>
+<p>以下定义了主方法的代码中，有几处错误（选一项）</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>{ <span class="comment">// 1</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>{ <span class="comment">// 2</span></span><br><span class="line">        System.out.printIn(<span class="string">"helloworld"</span>); <span class="comment">// 3</span></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
 <p>A.  1处错误<br>B.  2处错误<br>C.  3处错误<br>D.  没有错误</p>
 <p>正确答案： B </p>
-<p><strong>参考解析：</strong><br>本题考查的是对Java程序结构的认知， 本段代码共有两处错误：<br>第2行处，主方法的名字应该是main，而题目中是mian ，主方法的名称必须是main<br>第3行处，输出语句中![1 [2]](D:\Backup\桌面\1 [2].png)<br>应该改成println所以B选项是正确的</p>
-<h3 id="三、使用eclipse开发Java程序"><a href="#三、使用eclipse开发Java程序" class="headerlink" title="三、使用eclipse开发Java程序"></a>三、使用eclipse开发Java程序</h3><h4 id="eclipse简介"><a href="#eclipse简介" class="headerlink" title="eclipse简介"></a>eclipse简介</h4><p>推荐小白先装JDK再装Eclipse。</p>
-<p>eclipse下载地址：<a href="http://www.eclipse.org/downloads/">http://www.eclipse.org/downloads/</a>      </p>
-<p><img src="D:\Backup\桌面\41.png" alt="41"></p>
+<p><strong>参考解析：</strong><br>本题考查的是对Java程序结构的认知， 本段代码共有两处错误：<br>第2行处，主方法的名字应该是main，而题目中是mian ，主方法的名称必须是main<br>第3行处，输出语句中<code>printIn</code><br>应该改成println所以B选项是正确的</p>
+<h3 id="三、使用eclipse开发Java程序"><a href="#三、使用eclipse开发Java程序" class="headerlink" title="三、使用eclipse开发Java程序"></a>三、使用eclipse开发Java程序</h3><h4 id="eclipse简介"><a href="#eclipse简介" class="headerlink" title="eclipse简介"></a>eclipse简介</h4><p>还有一个业界普遍认为是最好的开发工具（Intellij IDEA）后面会介绍到。</p>
+<p>推荐小白先装JDK再装Eclipse。</p>
+<p>eclipse下载地址：<a href="https://www.eclipse.org/downloads/">https://www.eclipse.org/downloads/</a></p>
+<p><img src="/images/downloadstep1.png" alt="官网下载" title="Eclipse官网下载步骤一"></p>
+<p><img src="/images/downloadstep2.png" alt="官网下载" title="Eclipse官网下载步骤二"></p>
 <h4 id="在eclipse下开发Java程序"><a href="#在eclipse下开发Java程序" class="headerlink" title="在eclipse下开发Java程序"></a>在eclipse下开发Java程序</h4><ul>
 <li>包（package）的名字一般是域名反写，如com.imooc（小数点前后是两个文件夹，com文件夹内包含imooc文件夹）。</li>
 <li>保存就是编译的过程。</li>
 </ul>
-]]></content>
+</body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -98,7 +102,7 @@
   <entry>
     <title>《一颗开花的树》席慕蓉</title>
     <url>/posts/303255476/</url>
-    <content><![CDATA[<h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>如何让你遇见我，<br>在我最美丽的时刻。</p>
+    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>如何让你遇见我，<br>在我最美丽的时刻。</p>
 <a id="more"></a>
 
 <p>为这，<br>我已在佛前求了五百年，<br>求佛让我们结一段尘缘，<br>佛於是把我化做一棵树，<br>长在你必经的路旁。</p>
@@ -116,55 +120,7 @@
 <p>那…</p>
 <p>这相逢，</p>
 <p>又何必是在那最美的时刻？</p>
-]]></content>
-      <categories>
-        <category>诗词美文</category>
-      </categories>
-      <tags>
-        <tag>诗词</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《个人博客介绍》</title>
-    <url>/posts/2643675631/</url>
-    <content><![CDATA[<h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>这个博客的搭建主要有两个初衷：</p>
-<h4 id="一、总结学到的技术，记录自己的思考。"><a href="#一、总结学到的技术，记录自己的思考。" class="headerlink" title="一、总结学到的技术，记录自己的思考。"></a>一、总结学到的技术，记录自己的思考。</h4><a id="more"></a>
-
-<p>1.1&emsp; 将学习到的技术，经过自己实践、验证、思考、总结后，写出可复现、较详尽、易理解的说明文档。记录一只小菜鸟的技术成长之路，是该博客的主要职能之一。</p>
-<p>1.2&emsp;该博客另一个主要的职能是记录自己对一些问题的思考和一些自己所犯的错误的一些总结与反思，属于思想上的修炼之路吧。期待一个更成熟、更强大的自己。</p>
-<p>1.3&emsp;无论是技术还是生活，毕竟是第一次做人，很多东西都不懂！在面对一些不曾涉猎的问题，会做出很多错误的选择，浪费很多时间，走很多弯路。所以想在自己努力成长的同时，如果能给需要的朋友，提供一点反面参考的经验，让朋友们少浪费些时间，少走点弯路，那我所犯的错误，所做的蠢事，或许也是有一点意义的吧。</p>
-<p>1.4&emsp;有一分热，便发一分光，不必等候火炬。星星之火，可以燎原。共同成长，与君共勉！</p>
-<h4 id="二、记录自己的生活。"><a href="#二、记录自己的生活。" class="headerlink" title="二、记录自己的生活。"></a>二、记录自己的生活。</h4><p>社交软件也可以记录生活，但是有两个方面社交软件达不到我的需求：</p>
-<p>2.1&emsp;无法做单纯的记录。</p>
-<p>有些时候，仅仅只是希望做一份记录，不想打扰到别人，但社交软件的强制社交性，会导致他只要打开社交软件，就一定会看到我仅仅想做记录的动态。</p>
-<p>工作也是生活的一部分，但是要在社交软件中发布某些和工作有关的工作记录，就会感觉很奇怪。大家一天工作忙完了，已经很累了，想开朋友圈看看有什么轻松有趣的动态，如果被迫考到我这还全是工作有关的一堆事，那不是挺糟心的嘛，干脆社交软件就做点轻松愉快的生活记录，岂不是更好。</p>
-<p>2.2&emsp;或多或少总有不满意的地方，并且无法进行调整。</p>
-<p>各个软件总体来说都有自己的局限性，文字、图片、视频、PDF、代码块、网站引用连接等等，要么就是这个功能缺失，要么就是那个字数、文件大小、或者是文件类型有限制，反正总是有不尽人意的地方，在个人博客中，想用什么全看自己，没有的功能也可以根据自己的需求增加，并且一处编写，随处引用，这样就方便了很多了。</p>
-<p>2.3&emsp;先上传些诗词美文，用作测试。以便确定相关功能正常运行。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>《我会采更多的菊》 纳丁·斯特尔</title>
-    <url>/posts/4025597166/</url>
-    <content><![CDATA[<h4 id="译文："><a href="#译文：" class="headerlink" title="译文："></a>译文：</h4><p>如果我能够从头活过，<br>我会试着犯更多的错。<br>我会放松一点，我会灵活一点。<br>我会比这一趟过得傻。</p>
-<a id="more"></a>
-
-<p>很少有什么事情能让我当真。<br>我会疯狂一些，我会少讲点卫生。<br>我会冒更多的险。我会更经常的旅行。<br>我会爬更多的山，游更多的河，看更多的日落。<br>我会多吃冰激凌，少吃豆子。<br>我会惹更多的麻烦，可是不在想象中担忧。</p>
-<p>你看，我小心翼翼地稳健地理智地活着。<br>一个又一个小时，一天又一天。<br>噢，我有过难忘的时刻。<br>如果我能够重来一次，我会要更多这样的时刻。</p>
-<p>事实上，我不需要别的什么，<br>仅仅是时刻，一个接着一个。<br>而不是每天都操心着以后的漫长日子。</p>
-<p>我曾经不论到哪里都不忘记带上：<br>温度计，热水壶，雨衣和降落伞。<br>如果我能够重来一次，<br>我会到处走走，什么都试试，并且轻装上阵。</p>
-<p>如果我能够重头活过，<br>我会延长打赤脚的时光。<br>从尽早的春天到尽晚的秋天。<br>我会更经常的逃学。<br>我不会考那么高的分数，除非是一不小心。<br>我会多骑些旋转木马，<br>我会采更多的雏菊。</p>
-<h4 id="阅读随机："><a href="#阅读随机：" class="headerlink" title="阅读随机："></a>阅读随机：</h4><p>诗词永远是诗词，诗词是艺术的一种形式，而艺术是经过人刻意加工，有意识得去放大、缩小某些局部特性的，这无关好坏对错，这就是艺术，来源于生活，但永远不是生活。</p>
-<p>至于高不高于生活？我的态度：艺术仅是生活的一部分，即不高，也不低。它值得人民向往、期盼、欣赏。但不值得崇拜、神化、迷醉其中。</p>
-<p>此诗歌中的意境无意是轻松的、愉悦的、令人神往的。这是无可厚非且无需过多探讨的。</p>
-<p>但更想讨论的是，从现实意义出发，我个人的主观观点：</p>
-<p>如果我能从头活过，我会努力犯更少的错。</p>
-<p>原因无它，现实世界是有因有果，具有客观的事物发展规律的，且我们每个人和这个世界有着千丝万缕的联系，我少犯点错误，就能让别人少因我遭受些牵连、麻烦、甚至是痛苦，至少让和我亲近的人少受些。</p>
-<p>我指的这些牵连、麻烦、甚至是痛苦，是指那些无妄之灾，人在家中坐，锅从天上来的那种。</p>
-<p>虽然，我从小到大也没有给家中惹什么大麻烦，比较愧疚的是自己以前没努力学习，上了个三本大学，让家里承受了更多的经济压力，这是比较内疚的，让父母为我犯的错去买单，也有负于整个家庭对我的付出与关爱！</p>
-<p>少犯些错，也是为自己负责。尽量少的犯错，才能不断的向良性的方向发展，才能越来越好。</p>
-<p>加油！</p>
-]]></content>
+</body></html>]]></content>
       <categories>
         <category>诗词美文</category>
       </categories>
@@ -175,7 +131,7 @@
   <entry>
     <title>Java报警报错处理方案记录</title>
     <url>/posts/218316291/</url>
-    <content><![CDATA[<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
 <li>一、Java基础  报警报错处理方案<ul>
 <li>Java基础语法</li>
 <li>Java面对对象</li>
@@ -269,21 +225,69 @@
 <p>解决方案：</p>
 <p>1.可以不用管【因为使用了maven模版构建项目，要从网上获取模版，然而没有找到这个模版或者网络慢，导致获取失败 】，选择File —&gt; 再选择Close Project，关闭项目后重启就可以了。</p>
 <p>2.参考 <a href="https://link.zhihu.com/?target=https://www.cnblogs.com/loufangcheng/p/12861762.html">https://www.cnblogs.com/loufangcheng/p/12861762.html</a> 这篇文章</p>
-]]></content>
+</body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
   </entry>
   <entry>
+    <title>《个人博客介绍》</title>
+    <url>/posts/2643675631/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>这个博客的搭建主要有两个初衷：</p>
+<h4 id="一、总结学到的技术，记录自己的思考。"><a href="#一、总结学到的技术，记录自己的思考。" class="headerlink" title="一、总结学到的技术，记录自己的思考。"></a>一、总结学到的技术，记录自己的思考。</h4><a id="more"></a>
+
+<p>1.1  将学习到的技术，经过自己实践、验证、思考、总结后，写出可复现、较详尽、易理解的说明文档。记录一只小菜鸟的技术成长之路，是该博客的主要职能之一。</p>
+<p>1.2 该博客另一个主要的职能是记录自己对一些问题的思考和一些自己所犯的错误的一些总结与反思，属于思想上的修炼之路吧。期待一个更成熟、更强大的自己。</p>
+<p>1.3 无论是技术还是生活，毕竟是第一次做人，很多东西都不懂！在面对一些不曾涉猎的问题，会做出很多错误的选择，浪费很多时间，走很多弯路。所以想在自己努力成长的同时，如果能给需要的朋友，提供一点反面参考的经验，让朋友们少浪费些时间，少走点弯路，那我所犯的错误，所做的蠢事，或许也是有一点意义的吧。</p>
+<p>1.4 有一分热，便发一分光，不必等候火炬。星星之火，可以燎原。共同成长，与君共勉！</p>
+<h4 id="二、记录自己的生活。"><a href="#二、记录自己的生活。" class="headerlink" title="二、记录自己的生活。"></a>二、记录自己的生活。</h4><p>社交软件也可以记录生活，但是有两个方面社交软件达不到我的需求：</p>
+<p>2.1 无法做单纯的记录。</p>
+<p>有些时候，仅仅只是希望做一份记录，不想打扰到别人，但社交软件的强制社交性，会导致他只要打开社交软件，就一定会看到我仅仅想做记录的动态。</p>
+<p>工作也是生活的一部分，但是要在社交软件中发布某些和工作有关的工作记录，就会感觉很奇怪。大家一天工作忙完了，已经很累了，想开朋友圈看看有什么轻松有趣的动态，如果被迫考到我这还全是工作有关的一堆事，那不是挺糟心的嘛，干脆社交软件就做点轻松愉快的生活记录，岂不是更好。</p>
+<p>2.2 或多或少总有不满意的地方，并且无法进行调整。</p>
+<p>各个软件总体来说都有自己的局限性，文字、图片、视频、PDF、代码块、网站引用连接等等，要么就是这个功能缺失，要么就是那个字数、文件大小、或者是文件类型有限制，反正总是有不尽人意的地方，在个人博客中，想用什么全看自己，没有的功能也可以根据自己的需求增加，并且一处编写，随处引用，这样就方便了很多了。</p>
+<p>2.3 先上传些诗词美文，用作测试。以便确定相关功能正常运行。</p>
+</body></html>]]></content>
+  </entry>
+  <entry>
+    <title>《我会采更多的菊》 纳丁·斯特尔</title>
+    <url>/posts/4025597166/</url>
+    <content><![CDATA[<html><head></head><body><h4 id="译文："><a href="#译文：" class="headerlink" title="译文："></a>译文：</h4><p>如果我能够从头活过，<br>我会试着犯更多的错。<br>我会放松一点，我会灵活一点。<br>我会比这一趟过得傻。</p>
+<a id="more"></a>
+
+<p>很少有什么事情能让我当真。<br>我会疯狂一些，我会少讲点卫生。<br>我会冒更多的险。我会更经常的旅行。<br>我会爬更多的山，游更多的河，看更多的日落。<br>我会多吃冰激凌，少吃豆子。<br>我会惹更多的麻烦，可是不在想象中担忧。</p>
+<p>你看，我小心翼翼地稳健地理智地活着。<br>一个又一个小时，一天又一天。<br>噢，我有过难忘的时刻。<br>如果我能够重来一次，我会要更多这样的时刻。</p>
+<p>事实上，我不需要别的什么，<br>仅仅是时刻，一个接着一个。<br>而不是每天都操心着以后的漫长日子。</p>
+<p>我曾经不论到哪里都不忘记带上：<br>温度计，热水壶，雨衣和降落伞。<br>如果我能够重来一次，<br>我会到处走走，什么都试试，并且轻装上阵。</p>
+<p>如果我能够重头活过，<br>我会延长打赤脚的时光。<br>从尽早的春天到尽晚的秋天。<br>我会更经常的逃学。<br>我不会考那么高的分数，除非是一不小心。<br>我会多骑些旋转木马，<br>我会采更多的雏菊。</p>
+<h4 id="阅读随机："><a href="#阅读随机：" class="headerlink" title="阅读随机："></a>阅读随机：</h4><p>诗词永远是诗词，诗词是艺术的一种形式，而艺术是经过人刻意加工，有意识得去放大、缩小某些局部特性的，这无关好坏对错，这就是艺术，来源于生活，但永远不是生活。</p>
+<p>至于高不高于生活？我的态度：艺术仅是生活的一部分，即不高，也不低。它值得人民向往、期盼、欣赏。但不值得崇拜、神化、迷醉其中。</p>
+<p>此诗歌中的意境无意是轻松的、愉悦的、令人神往的。这是无可厚非且无需过多探讨的。</p>
+<p>但更想讨论的是，从现实意义出发，我个人的主观观点：</p>
+<p>如果我能从头活过，我会努力犯更少的错。</p>
+<p>原因无它，现实世界是有因有果，具有客观的事物发展规律的，且我们每个人和这个世界有着千丝万缕的联系，我少犯点错误，就能让别人少因我遭受些牵连、麻烦、甚至是痛苦，至少让和我亲近的人少受些。</p>
+<p>我指的这些牵连、麻烦、甚至是痛苦，是指那些无妄之灾，人在家中坐，锅从天上来的那种。</p>
+<p>虽然，我从小到大也没有给家中惹什么大麻烦，比较愧疚的是自己以前没努力学习，上了个三本大学，让家里承受了更多的经济压力，这是比较内疚的，让父母为我犯的错去买单，也有负于整个家庭对我的付出与关爱！</p>
+<p>少犯些错，也是为自己负责。尽量少的犯错，才能不断的向良性的方向发展，才能越来越好。</p>
+<p>加油！</p>
+</body></html>]]></content>
+      <categories>
+        <category>诗词美文</category>
+      </categories>
+      <tags>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《断章》卞之琳</title>
     <url>/posts/435292665/</url>
-    <content><![CDATA[<h4 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h4><p>你站在桥上看风景，<br>看风景的人在楼上看你。 </p>
+    <content><![CDATA[<html><head></head><body><h4 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h4><p>你站在桥上看风景，<br>看风景的人在楼上看你。 </p>
 <p>明月装饰了你的窗，<br>你装饰了别人的梦。</p>
 <a id="more"></a>
 
 <hr>
 <h4 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h4><p>其实我发现我会比较喜欢这种简单的文字，每一句单独拉出来，似乎很平常，但是组合在一起，这当中勾勒出的意境，就很美。</p>
-]]></content>
+</body></html>]]></content>
       <categories>
         <category>诗词美文</category>
       </categories>
@@ -294,7 +298,7 @@
   <entry>
     <title>《沙扬娜拉——赠日本女郎》徐志摩</title>
     <url>/posts/2802668681/</url>
-    <content><![CDATA[<h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>最是那一低头的温柔，</p>
+    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>最是那一低头的温柔，</p>
 <p>象一朵水莲花不胜凉风的娇羞，</p>
 <p>道一声珍重，道一声珍重，</p>
 <p>那一声珍重里有蜜甜的忧愁——沙扬娜拉！</p>
@@ -309,7 +313,7 @@
 <p>作品之外，自有人评说。我只管欣赏他挥洒的才华就好了。</p>
 <p>读徐留下来的这些作品，真的很容易代入到他诗词中，文风轻柔，描绘却细腻准确，用词用字灵动情深，一读便能感受到字词情涌，才思飞扬。</p>
 <p>美！喜欢！</p>
-]]></content>
+</body></html>]]></content>
       <categories>
         <category>诗词美文</category>
       </categories>
