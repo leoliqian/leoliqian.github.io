@@ -177,27 +177,29 @@
       </tags>
   </entry>
   <entry>
+    <title>《断章》卞之琳</title>
+    <url>/posts/435292665/</url>
+    <content><![CDATA[<html><head></head><body><h4 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h4><p>你站在桥上看风景，<br>看风景的人在楼上看你。 </p>
+<p>明月装饰了你的窗，<br>你装饰了别人的梦。</p>
+<a id="more"></a>
+
+<hr>
+<h4 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h4><p>其实我发现我会比较喜欢这种简单的文字，每一句单独拉出来，似乎很平常，但是组合在一起，这当中勾勒出的意境，就很美。</p>
+</body></html>]]></content>
+      <categories>
+        <category>诗词美文</category>
+      </categories>
+      <tags>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java报警报错处理方案记录</title>
     <url>/posts/218316291/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>一、Java基础  报警报错处理方案<ul>
-<li>Java基础语法</li>
-<li>Java面对对象</li>
-<li>Java常用工具类</li>
-</ul>
-</li>
-<li>二、JavaWeb  报警报错处理方案<ul>
-<li>HTML、CSS</li>
-<li>JavaScript</li>
-<li>Java Web</li>
-</ul>
-</li>
-<li>三、Java数据库  报警报错处理方案<ul>
-<li>数据库基础</li>
-<li>MyBatis</li>
-<li>Redis数据库与Linux</li>
-</ul>
-</li>
+<li>一、Java基础  报警报错处理方案</li>
+<li>二、JavaWeb  报警报错处理方案</li>
+<li>三、Java数据库  报警报错处理方案</li>
 <li>四、Java框架  报错处理方案</li>
 </ul>
 <a id="more"></a>
@@ -279,23 +281,6 @@
       </categories>
   </entry>
   <entry>
-    <title>《断章》卞之琳</title>
-    <url>/posts/435292665/</url>
-    <content><![CDATA[<html><head></head><body><h4 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h4><p>你站在桥上看风景，<br>看风景的人在楼上看你。 </p>
-<p>明月装饰了你的窗，<br>你装饰了别人的梦。</p>
-<a id="more"></a>
-
-<hr>
-<h4 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h4><p>其实我发现我会比较喜欢这种简单的文字，每一句单独拉出来，似乎很平常，但是组合在一起，这当中勾勒出的意境，就很美。</p>
-</body></html>]]></content>
-      <categories>
-        <category>诗词美文</category>
-      </categories>
-      <tags>
-        <tag>诗词</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《沙扬娜拉——赠日本女郎》徐志摩</title>
     <url>/posts/2802668681/</url>
     <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>最是那一低头的温柔，</p>
@@ -320,5 +305,444 @@
       <tags>
         <tag>诗词</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>编程思想</title>
+    <url>/posts/2724880937/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><ul>
+<li><p>一、面向过程编程</p>
+</li>
+<li><p>二、函数式编程</p>
+</li>
+<li><p>三、面向对象编程</p>
+</li>
+<li><p>四、面向过程与面向对象的区别</p>
+</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="一、面向过程编程"><a href="#一、面向过程编程" class="headerlink" title="一、面向过程编程"></a>一、面向过程编程</h3><p>“面向过程”(Procedure Oriented)是一种以过程为中心的编程思想。这些都是以什么正在发生为目标进行编程，不同于面向对象的是谁在受影响。与面向对象明显的不同就是封装、继承、类。<br><strong>特性</strong>：模块化 流程化<br><strong>优点</strong>：性能比面向对象高, 因为类调用时需要实例化，开销比较大，比较消耗资源;<br>单片机、嵌入式开发、Linux/Unix等一般采用面向过程开发，性能是最重要的因素。<br><strong>缺点</strong>：没有面向对象易维护、易复用、易扩展</p>
+<p>例如下面这个学生入学的例子：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">第一个用户的信息</span><br><span class="line">student_a = {</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'小明'</span>,</span><br><span class="line">    <span class="string">'age'</span>: <span class="number">23</span>,</span><br><span class="line">    <span class="string">'gender'</span>: <span class="string">'男'</span>,</span><br><span class="line">    <span class="comment">// 座右铭</span></span><br><span class="line">    <span class="string">'matto'</span>: <span class="string">'人生苦短， 我用python!'</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">第二个用户的信息</span><br><span class="line">student_b = {</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'小红'</span>,</span><br><span class="line">    <span class="string">'age'</span>: <span class="number">21</span>,</span><br><span class="line">    <span class="string">'gender'</span>: <span class="string">'女'</span>,</span><br><span class="line">    # 座右铭</span><br><span class="line">    <span class="string">'matto'</span>: <span class="string">'合理安排时间，就等于节约时间。'</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">第三个用户的信息</span><br><span class="line">student_c = {</span><br><span class="line">    <span class="string">'name'</span>: <span class="string">'小李'</span>,</span><br><span class="line">    <span class="string">'age'</span>: <span class="number">26</span>,</span><br><span class="line">    <span class="string">'gender'</span>: <span class="string">'男'</span>,</span><br><span class="line">    # 座右铭</span><br><span class="line">    <span class="string">'matto'</span>: <span class="string">'挫折不是惩罚而是学习的机会。'</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">def <span class="title">roll</span><span class="params">(studentDict)</span>:</span></span><br><span class="line"><span class="function">    """</span></span><br><span class="line"><span class="function">    入学过程封装的函数</span></span><br><span class="line"><span class="function">    :return:</span></span><br><span class="line"><span class="function">    """</span></span><br><span class="line"><span class="function">    # 字典的get方法: 如果key值不存在， 直接返回为空；</span></span><br><span class="line"><span class="function">    <span class="title">print</span><span class="params">(<span class="string">"正在办理手续"</span>.center(<span class="number">20</span>, <span class="string">'*'</span>)</span>)</span></span><br><span class="line"><span class="function">    <span class="title">print</span><span class="params">(<span class="string">"正在注册用户[%s]信息"</span> %(studentDict.get(<span class="string">'name'</span>)</span>))</span></span><br><span class="line"><span class="function">    <span class="title">print</span><span class="params">(<span class="string">"用户[%s]正在入学"</span> %(studentDict.get(<span class="string">'name'</span>)</span>))</span></span><br><span class="line"><span class="function">    <span class="title">print</span><span class="params">(<span class="string">"用户[%s]正在上课"</span> %(studentDict.get(<span class="string">'name'</span>)</span>))</span></span><br><span class="line"><span class="function">    <span class="title">print</span><span class="params">(<span class="string">"用户[%s]正在自我介绍"</span> %(studentDict.get(<span class="string">'name'</span>)</span>))</span></span><br><span class="line"><span class="function">    <span class="keyword">for</span> key, value in studentDict.<span class="title">items</span><span class="params">()</span>:</span></span><br><span class="line"><span class="function">        <span class="title">print</span><span class="params">(key, <span class="string">':'</span>, value)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">roll</span><span class="params">(student_a)</span>       </span></span><br><span class="line"><span class="function"><span class="title">roll</span><span class="params">(student_b)</span> </span></span><br><span class="line"><span class="function"><span class="title">roll</span><span class="params">(student_c)</span> </span></span><br><span class="line"><span class="function"></span></span><br></pre></td></tr></tbody></table></figure></div>
+<p>上面的代码就是典型的面向过程编程。<br>面向过程：根据业务逻辑从上到下写代码 。面向过程编程最易被初学者接受，其往往用一长段代码来实现指定功能，开发过程的思路是将数据与函数按照执行的逻辑顺序组织在一起，数据与函数分开考虑。</p>
+<p>考虑现实生活中，我们的思维方式是放在学生这个个人上，是学生做了自我介<br>绍。而不是像我们刚刚写出的代码，先有了介绍的行为，再去看介绍了谁。<br>用我们的现实思维方式该怎么用程序表达呢？这就要用到面向对象的编程思想了。</p>
+<p>面向对象：将数据与函数绑定到一起，进行封装，这样能够更快速的开发程序，减少了重复代码的重写过程</p>
+<h3 id="二、函数式编程"><a href="#二、函数式编程" class="headerlink" title="二、函数式编程"></a>二、函数式编程</h3><p>函数式编程是种编程方式，它将电脑运算视为函数的计算。函数编程语言最重要的基础是λ演算（lambda calculus），而且λ演算的函数可以接受函数当作输入（参数）和输出（返回值）。</p>
+<p>主要思想: 把运算过程尽量写成一系列嵌套的函数调用。<br>例如：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">def <span class="title">add</span><span class="params">(a,b)</span>:</span></span><br><span class="line"><span class="function">    return a+b</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">def <span class="title">multi</span><span class="params">(a,b)</span>:</span></span><br><span class="line"><span class="function">    return a*b</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">print</span><span class="params">(multi(add(<span class="number">1</span>,<span class="number">2</span>)</span>,<span class="title">add</span><span class="params">(<span class="number">2</span>,<span class="number">3</span>)</span>))</span></span><br></pre></td></tr></tbody></table></figure></div>
+<p>Python 不是也不大可能会成为一种函数式编程语言，但是它支持许多有价值的函数式编程语言构建。也有些表现得像函数式编程机制（如：内建函数 filter()、map()、reduce()），但是从传统上也不能被认为是函数式编程语言的构建。</p>
+<h3 id="三、面向对象编程"><a href="#三、面向对象编程" class="headerlink" title="三、面向对象编程"></a>三、面向对象编程</h3><p>面向对象是按人们认识客观世界的系统思维方式，采用基于对象（实体）的概念建立模型，模拟客观世界分析、设计、实现软件的办法。通过面向对象的理念使计算机软件系统能与现实世界中的系统一一对应。</p>
+<p><strong>特性</strong>：抽象 封装 继承 多态<br><strong>优点</strong>：易维护、易复用、易扩展，由于面向对象有封装、继承、多态性的特性，可以设计出低耦合的系统，使系统更加灵活、更加易于维护<br><strong>缺点</strong>：性能比面向过程低四、数据类型转换</p>
+<h3 id="四、面向过程与面向对象的区别"><a href="#四、面向过程与面向对象的区别" class="headerlink" title="四、面向过程与面向对象的区别"></a>四、面向过程与面向对象的区别</h3><p>面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了；<br>面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。</p>
+<p>可以拿生活中的实例来理解面向过程与面向对象，例如五子棋。</p>
+<p>面向过程的设计思路就是首先分析问题的步骤：1、开始游戏，2、黑子先走，3、绘制画面，4、判断输赢，5、轮到白子，6、绘制画面，7、判断输赢，8、返回步骤2，9、输出最后结果。把上面每个步骤用不同的方法来实现。</p>
+<p>如果是面向对象的设计思想来解决问题。面向对象的设计则是从另外的思路来解决问题。整个五子棋可以分为1、黑白双方，这两方的行为是一模一样的，2、棋盘系统，负责绘制画面，3、规则系统，负责判定诸如犯规、输赢等。第一类对象（玩家对象）负责接受用户输入，并告知第二类对象（棋盘对象）棋子布局的变化，棋盘对象接收到了棋子的变化就要负责在屏幕上面显示出这种变化，同时利用第三类对象（规则系统）来对棋局进行判定。</p>
+<p>可以明显地看出，面向对象是以功能来划分问题，而不是步骤。同样是绘制棋局，这样的行为在面向过程的设计中分散在了多个步骤中，很可能出现不同的绘制版本，因为通常设计人员会考虑到实际情况进行各种各样的简化。而面向对象的设计中，绘图只可能在棋盘对象中出现，从而保证了绘图的统一。</p>
+</body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Java基础通识1.1.2</title>
+    <url>/posts/233426257/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="一、标识符与关键字"><a href="#一、标识符与关键字" class="headerlink" title="一、标识符与关键字"></a>一、标识符与关键字</h3><h4 id="1-1标识符"><a href="#1-1标识符" class="headerlink" title="1.1标识符"></a>1.1标识符</h4><p>类的名字就叫做标识符，单个字母叫做字符，连起来的叫做”字符串”。</p>
+<p>标识符的命名规则：</p>
+<ul>
+<li>标    不能以数字开头，也不能包含空格。</li>
+<li>标识符严格区分大小写。</li>
+<li>标识符不能是Java关键字和保留字。</li>
+<li>标识符的命名最好能反映出其作用。</li>
+</ul>
+<p>请区分下列标识符那些事合法的，哪些是非法的：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">Hello <span class="comment">// 合法。</span></span><br><span class="line">hello_imooc <span class="comment">// 合法。</span></span><br><span class="line">_hello <span class="comment">// 合法。</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> // 非法，不能是<span class="title">java</span>关键字和保留字。</span></span><br><span class="line"><span class="class"><span class="title">Void</span> // 合法，严格区分大小写。</span></span><br><span class="line"><span class="class">123<span class="title">abc</span> // 非法，不能以数字开头。</span></span><br><span class="line"><span class="class"><span class="title">abc</span>$123 // 合法。</span></span><br><span class="line"><span class="class"><span class="title">abc</span> 123 // 非法，不能包含空格。</span></span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="1-2关键字"><a href="#1-2关键字" class="headerlink" title="1.2关键字"></a>1.2关键字</h4><p><img src="/images/theKeyword.png" alt="关键字" title="关键字"></p>
+<h4 id="1-3多选题"><a href="#1-3多选题" class="headerlink" title="1.3多选题"></a>1.3多选题</h4><p>下面标识符哪些是合法的？（选择三项）</p>
+<p>A.  $value<br>B.  Void<br>C.  class<br>D.  1abc<br>E.  my value<br>F.  void_class</p>
+<p>正确答案： A,B,F </p>
+<p><strong>参考解析：</strong></p>
+<p>本题考查的是标识符的命名规则，标识符可以由字母、数字、下划线和美元符组成，不能以数字开头；区分大小写，不能是关键字。<br>A选项正确，B选项正确，void是关键字，但是标识符是区分大小写的，因此Void和void不是同一个标识符。 C选项错误，class是关键字，不能作为标识符。 D选项错误，标识符不能以数字开头。E选项错误，标识符不能包含空格。<br><strong>注意：</strong><br>F选项正确，void和class都是关键字，但是中间用下划线连起来了，组成一个新的标识符是没有问题的。</p>
+<h4 id="1-4-单选题"><a href="#1-4-单选题" class="headerlink" title="1.4 单选题"></a>1.4 单选题</h4><p>下列哪一个选项不是Java的关键字？（选择一项）<br>A.  class<br>B.  package<br>C.  Void<br>D.  static</p>
+<p>正确答案： C</p>
+<p><strong>参考解析：</strong><br>本题考查的是Java的关键字，Java语言是区分大小写的，因此Void不是关键字，void才是。</p>
+<h3 id="二、变量"><a href="#二、变量" class="headerlink" title="二、变量"></a>二、变量</h3><h4 id="2-1变量"><a href="#2-1变量" class="headerlink" title="2.1变量"></a>2.1变量</h4><ul>
+<li>变量是程序当中数据的临时存放场所。</li>
+<li>变量的三个元素：变量类型、变量名和变量值。</li>
+</ul>
+<p><img src="/images/variable.png" alt="&quot;什么是变量&quot;" title="什么是变量"></p>
+<p><strong>变量名的命名规则</strong></p>
+<ul>
+<li>满足标识符命名规则<ul>
+<li>标识符可以由字母、数字、下划线( _ )和美元符( $ )组成，不能以数字开头，也不能包含空格。</li>
+<li>标识符严格区分大小写。</li>
+<li>标识符不能是Java关键字和保留字。</li>
+<li>标识符的命名最好能反映出其作用。</li>
+</ul>
+</li>
+<li>符合驼峰法命名规范（第一个单词全部小写，后面单词首字母大写。例：stuName）</li>
+<li>尽量简单，做到见名知意。</li>
+<li>变量名的长度没有限制。</li>
+</ul>
+<p><strong>类的命名规则</strong></p>
+<ul>
+<li>满足Pascal命名法规范（组成类命名的所有单词首字母都要大写。）</li>
+</ul>
+<p><strong>总结归纳：</strong></p>
+<table>
+<thead>
+<tr>
+<th>命名规则</th>
+<th>变量名</th>
+<th>标识符</th>
+<th>类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字母、数字、下划线、美元符组成</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>不能由数字开头，也不能包含空格</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>严格区分大小写</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>不能是Java关键字和保留字</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>尽量简单、见名知意</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>没有长度限制</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td>驼峰法命名规范</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td>Pascal命名法命名规范</td>
+<td>×</td>
+<td>×</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<h4 id="2-2数据类型"><a href="#2-2数据类型" class="headerlink" title="2.2数据类型"></a>2.2数据类型</h4><p><img src="/images/dataType.png" alt="数据类型" title="数据类型"></p>
+<p><strong>布尔型（boolean）：</strong> boolean的两个值为true和false；true代表真，false代表假。<br><strong>整数类型：</strong> 数学当中的整数。<br><strong>浮点类型：</strong> 数学当中的小数。</p>
+<h4 id="2-3多选题"><a href="#2-3多选题" class="headerlink" title="2.3多选题"></a>2.3多选题</h4><p>下列可以表示数值型数据的数据类型是？（选择三项）</p>
+<p>A.  byte</p>
+<p>B.  float  </p>
+<p>C.  boolean  </p>
+<p>D.  long</p>
+<p>正确答案： A,B,D </p>
+<p><strong>参考解析：</strong><br>本题考查基本数据类型，byte,long表示整数类型的数值型数据，float表示浮点类型的数值型数据，boolean表示布尔型数据，不属于数值型数据。</p>
+<h4 id="2-4-单选题"><a href="#2-4-单选题" class="headerlink" title="2-4  单选题"></a>2-4  单选题</h4><p>关于数据类型的说法错误的是？（选择一项）<br>A.  数据类型分为基本数据类型和引用数据类型<br>B.  数组属于基本数据类型<br>C.  类属于引用数据类型<br>D.  int和double属于基本数据类型</p>
+<p>正确答案： B </p>
+<p><strong>参考解析：</strong><br>本题考查数据类型的内容，ACD选项是关于数据类型的正确说法，B选项的描述是错误的，数组属于引用数据类型。</p>
+<h4 id="2-5-基本数据类型详解"><a href="#2-5-基本数据类型详解" class="headerlink" title="2-5  基本数据类型详解"></a>2-5  基本数据类型详解</h4><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>说明</th>
+<th>字节</th>
+<th>二进制位</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>字节型</td>
+<td>1</td>
+<td>8</td>
+</tr>
+<tr>
+<td>short</td>
+<td>短整型</td>
+<td>2</td>
+<td>16</td>
+</tr>
+<tr>
+<td>int</td>
+<td>整型</td>
+<td>4</td>
+<td>32</td>
+</tr>
+<tr>
+<td>long</td>
+<td>长整型</td>
+<td>8</td>
+<td>64</td>
+</tr>
+<tr>
+<td>float</td>
+<td>单精度浮点型</td>
+<td>4</td>
+<td>32</td>
+</tr>
+<tr>
+<td>double</td>
+<td>双精度浮点型</td>
+<td>8</td>
+<td>64</td>
+</tr>
+<tr>
+<td>char</td>
+<td>字符型</td>
+<td>2</td>
+<td>16</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>布尔型</td>
+<td>1</td>
+<td>8</td>
+</tr>
+</tbody></table>
+<ul>
+<li>1字节=8个二进制位</li>
+</ul>
+<h3 id="三、数据类型的字面值及变量定义"><a href="#三、数据类型的字面值及变量定义" class="headerlink" title="三、数据类型的字面值及变量定义"></a>三、数据类型的字面值及变量定义</h3><h4 id="3-1整型字面值及变量声明"><a href="#3-1整型字面值及变量声明" class="headerlink" title="3.1整型字面值及变量声明"></a>3.1整型字面值及变量声明</h4><p><strong>整型字面值</strong><br>Java中有三种表示整数的方法：</p>
+<ul>
+<li>十进制：日常使用的就是十进制表示方法。</li>
+<li>八进制：以0开头，包括0-7的数字。</li>
+<li>十六进制：以0x或0X开头，包括0-9的数字，及字母a-f，A-F。（a表示数字10，以此类推。）如：0x12，0xabcf，0XABCFF，123，023，0x1357，0X3c，0x1abcL（长整型数据，L大小写皆可。）</li>
+</ul>
+<p><strong>变量声明</strong></p>
+<ul>
+<li>声明变量格式：”数据类型  变量名;”。</li>
+</ul>
+<p>示例：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n; <span class="comment">// 声明整型变量n。</span></span><br><span class="line"><span class="keyword">long</span> count; <span class="comment">// 声明长整型变量count。</span></span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>赋值</strong></p>
+<ul>
+<li>使用“=”运算符进行赋值</li>
+<li>“=”叫作赋值运算符，将运算符右边的值赋给左边的变量。</li>
+</ul>
+<p>示例：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n;  <span class="comment">// 定义int型变量n </span></span><br><span class="line">n=<span class="number">3</span>;; <span class="comment">// 将3赋值给n</span></span><br><span class="line"><span class="keyword">int</span> n=<span class="number">3</span>; <span class="comment">// 在定义变量的同时给变量赋值，即变量的初始化。</span></span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>变量定义</strong></p>
+<ul>
+<li>int octal=037；//定义int类型变量存放八进制数据。</li>
+<li><ul>
+<li>long longNumber=0xa2cdf3ffL；//定义变量存放十六进制长整型数据。</li>
+</ul>
+</li>
+<li>short shortNumber=123；//定义变量存放短整型数据。</li>
+<li>byte b=10；  //定义变量存放byte类型数据。</li>
+</ul>
+<h4 id="3-2-多选题"><a href="#3-2-多选题" class="headerlink" title="3-2 多选题"></a>3-2 多选题</h4><p>下列关于赋值运算符的说法正确的是？（选择两项）<br>A.  使用“=”给变量进行赋值<br>B.  使用“==”给变量进行赋值<br>C.  “=”叫作赋值运算符，将运算符右边的值赋给左边的变量<br>D.  “=”叫作赋值运算符，将运算符左边的值赋给右边的变</p>
+<p>量正确答案： A,C </p>
+<p><strong>参考解析：</strong></p>
+<p>本题考查的是赋值运算符的概念，在Java中“=”是赋值运算符， 是将运算符右边的值赋值给左边的变量。 “==”是关系运算符。因此AC选项正确。</p>
+<h4 id="3-3-单选题"><a href="#3-3-单选题" class="headerlink" title="3-3 单选题"></a>3-3 单选题</h4><p>以下哪个不是合法的int类型字面值的表示方式？（选择一项）</p>
+<p>A.  0x34  </p>
+<p>B.  026  </p>
+<p>C.  1000  </p>
+<p>D.  0x23dfL</p>
+<p>正确答案： D </p>
+<p><strong>参考解析：</strong><br>本题考查整型字母值的表示方式，整型的字面值可以是二进制、十进制、八进制和十六进制。A选项是十六进制表示，B选项是八进制表示，C选项是十进制表示，D选项0x23dfL末尾有L，表示长整型的字面值，不是int类型字面值。</p>
+<h4 id="3-4-选择练习下面语句的输出结果是？（选择一项）"><a href="#3-4-选择练习下面语句的输出结果是？（选择一项）" class="headerlink" title="3-4 选择练习下面语句的输出结果是？（选择一项）"></a>3-4 选择练习下面语句的输出结果是？（选择一项）</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> x=<span class="number">56</span>;</span><br><span class="line">System.out.println(<span class="string">"x="</span>+x);</span><br></pre></td></tr></tbody></table></figure></div>
+<p>A.  x=x</p>
+<p>B.  x=56</p>
+<p>C.  56=56</p>
+<p>D.  56=x</p>
+<p>正确答案： B </p>
+<p><strong>参考解析：</strong><br>本题考查字符串和基本数据类型的连接运算。双引号引起来的内容是字符串，字符串的内容是直接输出的，用加号连接整型变量，整型变量x是直接输出x的值的 。因此输出结果是x=56，B选项正确。</p>
+<h4 id="3-5-浮点型字面值"><a href="#3-5-浮点型字面值" class="headerlink" title="3-5 浮点型字面值"></a>3-5 浮点型字面值</h4><p><strong>浮点型字面值</strong></p>
+<ul>
+<li>浮点型字面值默认情况下表示double类型，也可以在值后加d或D。如：123.43d或123.43D。</li>
+<li>表示float类型，则需要在字面值后加f或F。</li>
+<li>如：23.4f或23.4F。</li>
+</ul>
+<h4 id="3-6-选择题"><a href="#3-6-选择题" class="headerlink" title="3-6 选择题"></a>3-6 选择题</h4><p>以下对double类型字面值的表示错误的是？（选择一项）<br>A.  1.23<br>B.  1.23d<br>C.  1.23D<br>D.  1.23f</p>
+<p>正确答案： D<br><strong>参考解析：</strong><br>本题考查double类型字面值的表示。在Java中，形如1.23的字面值默认是double类型的，还可以在数据后面加上d或者D，所以A、B、C三个选项是正确的。1.23f是float类型字面值的表示方式，因此D选项错误。</p>
+<h4 id="3-7-选择练习"><a href="#3-7-选择练习" class="headerlink" title="3-7 选择练习"></a>3-7 选择练习</h4><p>以下语句哪个是错误的？（选择一项）<br>A.  double d=12.3d;<br>B.  double d=12.3D;<br>C.  float f=1.23f;<br>D.  float f=1.23;</p>
+<p>正确答案： D</p>
+<p><strong>参考解析：</strong><br>本题考查的是浮点型的字面值表示，以及如何给浮点型变量赋值。A选项将double类型的字面值12.3d赋值给double类型的变量d，没有问题。B选项和A选项类似，只是字面值是12.3D，最后的字母是大写的D。double类型字面值在表示的时候，末尾可以是d或D。C选项将float类型的字面值1.23f赋值给float类型的变量，也没有问题。D选项float f=1.23;1.23后面没有跟字母，默认表示的是double类型的字面值，将double类型的数据赋值给float类型会出现编译错误。本题是选择错误的语句，所以选D。</p>
+<h4 id="3-8-浮点型案例"><a href="#3-8-浮点型案例" class="headerlink" title="3-8 浮点型案例"></a>3-8 浮点型案例</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FloatDemo</span></span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] args)</span></span>{</span><br><span class="line">        <span class="comment">// 定义一个单精度浮点型变量，存放1234.567</span></span><br><span class="line">        <span class="keyword">float</span> f=<span class="number">1234.567f</span>;</span><br><span class="line">        System.out.println(<span class="string">"f="</span>+f);</span><br><span class="line">        <span class="comment">// 定义一个双精度浮点型变量，存放1234.567</span></span><br><span class="line">        <span class="keyword">double</span> d=<span class="number">1234.567</span>;</span><br><span class="line">        System.out.println(<span class="string">"d="</span>+d);</span><br><span class="line">        <span class="comment">// 将整型赋值给浮点型</span></span><br><span class="line">        <span class="keyword">double</span> d1=<span class="number">1234</span>;</span><br><span class="line">        System.out.println(<span class="string">"d1="</span>+d1);</span><br><span class="line">        <span class="comment">// 变量间的赋值</span></span><br><span class="line">        <span class="keyword">double</span> d2=d;</span><br><span class="line">        System.out.println(<span class="string">"d2="</span>+d2);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>运行结果：</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">f=<span class="number">1234.567</span></span><br><span class="line">d=<span class="number">1234.567</span></span><br><span class="line">d1=<span class="number">1234.0</span></span><br><span class="line">d2=<span class="number">1234.567</span></span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>3-9 编程练习</strong><br>分别定义float、double、int类型的数据，并打印输出。<br>效果图:</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">f1=<span class="number">98.4</span>;</span><br><span class="line">f2=<span class="number">98.4</span>;</span><br><span class="line">n=<span class="number">55</span>;</span><br><span class="line">d1=<span class="number">555.3</span>;</span><br><span class="line">复制后d1的值为：<span class="number">55.0</span>;</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<p>任务<br>1、定义一个float类型的变量f1，值为98.4。<br>2、定义一个float类型的变量f2，将f1的值赋值给f2。<br>3、定义一个整型变量n，值为55。<br>4、定义一个double类型的变量d1，值为555.3。<br>5、将n的值赋值给d1。</p>
+<p><strong>原题</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FloatDemo</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 定义一个float类型的变量f1，值为98.4。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个float类型的变量f2，将f1的值赋值给f2。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个整型变量n，值为55。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个double类型的变量d1，值为555.3。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//将n的值赋值给d1。</span></span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>作答</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FloatDemo</span> </span>{</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">// 定义一个float类型的变量f1，值为98.4。</span></span><br><span class="line">		Float f1=<span class="number">98.4f</span>;</span><br><span class="line">		System.out.println(<span class="string">"f1="</span>+f1);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//定义一个float类型的变量f2，将f1的值赋值给f2。</span></span><br><span class="line">		Float f2=f1;</span><br><span class="line">		System.out.println(<span class="string">"f2="</span>+f2);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//定义一个整型变量n，值为55。</span></span><br><span class="line">		<span class="keyword">int</span> n=<span class="number">55</span>;</span><br><span class="line">		System.out.println(<span class="string">"n="</span>+n);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//定义一个double类型的变量d1，值为555.3。</span></span><br><span class="line">		<span class="keyword">double</span> d1=<span class="number">555.3d</span>;</span><br><span class="line">		System.out.println(<span class="string">"d1="</span>+d1);</span><br><span class="line"></span><br><span class="line">		<span class="comment">//将n的值赋值给d1</span></span><br><span class="line">		<span class="keyword">double</span> d2=n;</span><br><span class="line">		System.out.println(<span class="string">"赋值后d1的值为："</span>+d2);</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="3-10-局部变量的存储方式"><a href="#3-10-局部变量的存储方式" class="headerlink" title="3-10 局部变量的存储方式"></a>3-10 局部变量的存储方式</h4><p><strong>基本数据类型变量的存储</strong></p>
+<ul>
+<li>数据类型分为基本数据类型和引用数据类型。</li>
+<li>引用数据类型包括：数组、类、接口等。</li>
+<li>类定义的变量又叫“对象”。</li>
+</ul>
+<p><strong>按照作用范围分为：</strong></p>
+<ul>
+<li>类级、对象实例级、方法级、块级。</li>
+<li>方法级的变量又叫做“局部变量”。</li>
+</ul>
+<p><img src="/images/storageOfVariables.png" alt="&quot;基本数据类型变量的存储&quot;" title="基本数据类型变量的存储"></p>
+<p>当前我们在主方法中定义的局部变量是存储在栈当中的。</p>
+<p><img src="en-resource://database/2655:1" alt="764ea360179daabbb833bc302d506913.png"></p>
+<ul>
+<li>int n=100;   定义变量的同时对变量进行初始化。</li>
+<li>在执行此条语句的同时会在栈中开辟出int大小的空间，int占用4字节，即32个2进制位的，空间开辟好以后我们把100这个整型字面值存储到开辟的空间中了。在这里我们可以把这个n看作是100所在空间的别名，n就是代表100，后面有运算可以直接用 n参与运算，它就是100。</li>
+</ul>
+<h4 id="3-11-字符型字面值"><a href="#3-11-字符型字面值" class="headerlink" title="3-11 字符型字面值"></a>3-11 字符型字面值</h4><ul>
+<li>字符型字面值用单引号内的单个字符表示。如：’a’, ‘b’, ‘c’, ‘$’。</li>
+<li>必须是英文状态下的单引号，否则会报错。</li>
+<li>单引号内必须只有一个字符。</li>
+</ul>
+<p>如何定义字符型变量：</p>
+<ul>
+<li>char a= ‘a’；</li>
+<li>char ch=65；</li>
+</ul>
+<p><strong>ASCII码</strong></p>
+<ul>
+<li>ASCII（American Standard code for Information Interchange，美国标准信息交换代码）。</li>
+<li>基于拉丁字母的一套电脑编码系统。</li>
+<li>主要用于显示现代英语和其西欧语言。</li>
+</ul>
+<p><strong>ASCII码表示</strong></p>
+<ul>
+<li><p>使用7位或8位二进制数组合来表示128或256中 可能的字符。</p>
+<ul>
+<li>7位二进制数组合——标准ASCII码。</li>
+<li>8位二进制数组合（后128位）——扩展ASCII码。</li>
+</ul>
+<p><img src="en-resource://database/2657:1" alt="174d7f44f26541e6de6d1fff11a1586b.png"></p>
+</li>
+</ul>
+<p>如果字面值超出char类型所表示的数据范围（0-65535），需要进行强制类型转换。</p>
+<h4 id="3-12-选择题"><a href="#3-12-选择题" class="headerlink" title="3-12 选择题"></a>3-12 选择题</h4><p>下面代码运行后的结果为：（选择一项）</p>
+<p><img src="en-resource://database/2659:1" alt="0d23f0b726413952959056c0af6caec5.png"></p>
+<p>A.  A        B.  65C.  A    65D.  A     A</p>
+<p>正确答案： D</p>
+<p><strong>参考解析：</strong><br>本题考查字符类型和整型之间的转换，D选项是正确的。字符‘A’输出时仍然是A，而整型65是大写字母’A’的ASCII码值，因为c1是char类型的变量，因此会转行成字符型输出.故输出两行，每行输出一个A。</p>
+<h4 id="3-13-选择练习"><a href="#3-13-选择练习" class="headerlink" title="3-13 选择练习"></a>3-13 选择练习</h4><p>以下字符型字面值中，不合法的是？（选择一项）<br>A.  ‘@’        B.  ‘&amp;’        C.  “M”        D.  ‘课’</p>
+<p>正确答案： C</p>
+<p><strong>参考解析：</strong><br>本题考查字符型字面值的表示，字符型字面值是用单引号引起来的，并且单引号里面只能有一个字符，可以是汉字。因此ABD选项的内容是正确的。用双引号引起来的是字符串字面值，因此C选项的内容是不合法的，本题选不合法的字符型字面值表示，所以选C。</p>
+<h4 id="3-14-选择练习"><a href="#3-14-选择练习" class="headerlink" title="3-14 选择练习"></a>3-14 选择练习</h4><p>以下哪个选项是字符型字面值的正确表示方式？（选择一项）<br>A.F        B.’F’        C.’EF’        D.”AB”</p>
+<p>正确答案： B</p>
+<p><strong>参考解析：</strong></p>
+<p>本题考查字符型字面值的表示方式，其正确表示是：用单引号引起来，并且只能有一个字符，因此B选项正确。A选项没有单引号，C选项单引号引起来的有两个字符，D选项用双引号引起来两个字符，是字符串的表示方式。</p>
+<h4 id="3-15-编程练习"><a href="#3-15-编程练习" class="headerlink" title="3-15 编程练习"></a>3-15 编程练习</h4><p>定义字符型变量，赋值后输出。<br>效果图如下：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">c=S</span><br><span class="line">c1=N</span><br></pre></td></tr></tbody></table></figure></div>
+<p>任务</p>
+<ol>
+<li><pre><code>定义字符型变量c，赋值为'S'并输出
+</code></pre>
+</li>
+<li><pre><code>定义字符变量c1，并赋值为78，输出c1
+</code></pre>
+</li>
+</ol>
+<p><strong>原题：</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CharTest</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 定义字符变量c，并赋值为'S'     </span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//输出c的值            //定义字符变量c1，并赋值为78 </span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//输出c1的值 </span></span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line"> }</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>作答：</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CharTest</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 定义字符变量c，并赋值为'S'      </span></span><br><span class="line">        <span class="keyword">char</span> c=<span class="string">'S'</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//输出c的值        char c1=78;   </span></span><br><span class="line">        System.out.println(<span class="string">"c="</span>+c);   </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义字符变量c1，并赋值为78。</span></span><br><span class="line">        <span class="keyword">char</span> c1=<span class="number">78</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//输出c1的值。</span></span><br><span class="line">        System.out.println(<span class="string">"c1="</span>+c1);</span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line"> }</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="3-16-Unicode编码"><a href="#3-16-Unicode编码" class="headerlink" title="3-16 Unicode编码"></a>3-16 Unicode编码</h4><p>Unicode编码又称为统一码，万国码。<br>unicode编码目标是能够支持世界上所有的字符集。</p>
+<ul>
+<li>char c=’\u005d’;</li>
+<li>unicode表示法，在值前加前缀\u</li>
+</ul>
+<h4 id="3-17-布尔类型和字符串的字面值"><a href="#3-17-布尔类型和字符串的字面值" class="headerlink" title="3-17 布尔类型和字符串的字面值"></a>3-17 布尔类型和字符串的字面值</h4><p><strong>布尔类型</strong></p>
+<ul>
+<li>布尔值只能定义为 true和false。</li>
+<li>例：boolean b= true；</li>
+</ul>
+<p><strong>字符串字面值</strong><br>字符串不属于基本数据类型，它是类！</p>
+<ul>
+<li>双引号引起来的0个或者多个字符。<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//定义一个空字符串。</span></span><br><span class="line">String s1=<span class="string">""</span>;</span><br></pre></td></tr></tbody></table></figure></div></li>
+</ul>
+<p><strong>3-18 选择题</strong><br>多选题<br>以下哪两个是合法的字符串字面值？（选择两项）<br>A””        B’ab’        C’a’        D“\u0067”</p>
+<p>正确答案： A,D</p>
+<p><strong>参考解析：</strong><br>本题考查字符串字面值的表示，字符串字面值应该用双引号引起来。BC选项用的是单引号，所以不正确。A选项是表示空字符串。D选项是字符串里只有一个Unicode表示的字符，也就是相当于字符串中只有一个字符的情况。</p>
+<h4 id="3-19-编程练习"><a href="#3-19-编程练习" class="headerlink" title="3-19 编程练习"></a>3-19 编程练习</h4><p>定义布尔类型和字符串类型的变量，为它们赋值，并打印输出。</p>
+<p><img src="en-resource://database/2661:1" alt="51f088e633534fd9c259cc912a1d3b6b.png"></p>
+<p><strong>任务</strong><br>1、定义一个布尔类型的变量flag，赋值为true，并输出。<br>2、定义一个字符串类型的变量str，值为"hello world"，并输出。<br>3、定义一个字符串类型的变量str1，值为空串。<br>4、将str的值赋值给str1，并输出。</p>
+<p><strong>原题</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 定义一个布尔类型的变量flag，赋值为true，并输出。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个字符串类型的变量str，值为"hello world"，并输出。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个字符串类型的变量str1，值为空串。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//将str的值赋值给str1，并输出。</span></span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>我的答案</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 定义一个布尔类型的变量flag，赋值为true，并输出。</span></span><br><span class="line">        <span class="keyword">boolean</span> flag=<span class="keyword">true</span>;</span><br><span class="line">        System.out.println(<span class="string">"flag="</span>+flag);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个字符串类型的变量str，值为"hello world"，并输出。</span></span><br><span class="line">        String str=<span class="string">"hello world"</span>;</span><br><span class="line">        System.out.println(<span class="string">"str="</span>+str);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个字符串类型的变量str1，值为空串。</span></span><br><span class="line">        String str1=<span class="string">""</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//将str的值赋值给str1，并输出。</span></span><br><span class="line">        str1=str;</span><br><span class="line">        System.out.println(<span class="string">"str1="</span>+str1);</span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>经验：</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String=<span class="string">""</span> <span class="comment">//双引号</span></span><br><span class="line"><span class="keyword">char</span>=<span class="string">''</span> <span class="comment">//单引号</span></span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="3-20-变量综合案例"><a href="#3-20-变量综合案例" class="headerlink" title="3-20 变量综合案例"></a>3-20 变量综合案例</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">//定义两个整型变量x,y。</span></span><br><span class="line"><span class="comment">//方式一：</span></span><br><span class="line"><span class="keyword">int</span> x=<span class="number">3</span>,y=<span class="number">5</span>;</span><br><span class="line"><span class="comment">//方式二：</span></span><br><span class="line"><span class="keyword">int</span> x,y;</span><br><span class="line">x=<span class="number">3</span>;y=<span class="number">4</span>;<span class="comment">//强调：此处x=3后面不能用逗号隔开，只能用分号。</span></span><br><span class="line"></span><br><span class="line">system.out.print    <span class="comment">//不换行</span></span><br><span class="line">System.out.println    <span class="comment">//换行</span></span><br><span class="line">\n    <span class="comment">//换行，转译字符。</span></span><br></pre></td></tr></tbody></table></figure></div>
+<p><img src="en-resource://database/2663:1" alt="f5db9aff28cef8266f7c44e4db8662e2.png"></p>
+<p><strong>用科学计数法表示浮点型数据</strong></p>
+<ul>
+<li>double d=1.23E5;   （表示1.23*10五次方） 输出为d=123000.0</li>
+<li>float f= 1.23e5f;  输出为f=123000.0</li>
+<li>double d1=.2;  输出为d1=0.2</li>
+</ul>
+<h4 id="3-21-编程练习"><a href="#3-21-编程练习" class="headerlink" title="3-21 编程练习"></a>3-21 编程练习</h4><p>定义各种数据类型的变量，为它们赋值，并打印输出。</p>
+<p><img src="en-resource://database/2665:1" alt="99a4850ae24e004a77579386d321d6ab.png"></p>
+<p><strong>任务</strong><br>1、定义一个整型变量n，值为98。<br>2、定义一个char类型的变量ch，将变量n赋值给ch，然后输出ch的值。<br>3、定义一个长整型变量var，值为190000000，并输出。<br>4、定义一个double类型的变量d，将变量var的值赋值给d。</p>
+<p><strong>原题</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TypeExchange</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 定义一个整型变量n，值为98。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个char类型的变量ch，将变量n赋值给ch，然后输出ch的值。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个长整型变量var，值为190000000，并输出。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个double类型的变量d，将变量var的值赋值给d。</span></span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>作答</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TypeExchange</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 定义一个整型变量n，值为98。</span></span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">98</span>; </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个char类型的变量ch，将变量n赋值给ch，然后输出ch的值。</span></span><br><span class="line">        <span class="keyword">char</span> ch=(<span class="keyword">char</span>)n;</span><br><span class="line">        System.out.println(<span class="string">"ch="</span>+ch);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个长整型变量var，值为190000000，并输出。</span></span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">var</span>=(<span class="keyword">long</span>)<span class="number">1.9e8</span>;</span><br><span class="line">        System.out.println(<span class="string">"var="</span>+<span class="keyword">var</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个double类型的变量d，将变量var的值赋值给d。</span></span><br><span class="line">        <span class="keyword">double</span> d;d=<span class="keyword">var</span>;</span><br><span class="line">        System.out.println(<span class="string">"d="</span>+d);</span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="四、数据类型转换"><a href="#四、数据类型转换" class="headerlink" title="四、数据类型转换"></a>四、数据类型转换</h3><h4 id="4-1-数据类型转换的基本概念"><a href="#4-1-数据类型转换的基本概念" class="headerlink" title="4-1 数据类型转换的基本概念"></a>4-1 数据类型转换的基本概念</h4><p><strong>类型转换</strong></p>
+<ul>
+<li>类型转换分为自动类型转换和强制类型转换。</li>
+<li>自动类型转换又叫做隐式类型转换。</li>
+</ul>
+<p><img src="en-resource://database/2667:1" alt="fd4f6de34db0b4d7d7d5831434230cb8.png"></p>
+<p><strong>强制类型转换</strong></p>
+<ul>
+<li>如果A类型的数据表示范围比B类型大，则将A类型的值赋值给B类型，需要强制类型转换。</li>
+<li>例：double d=123.4；float=(float)d；强制数据类型转换的格式：（数据类型）数值。</li>
+</ul>
+<h4 id="4-2-选择题"><a href="#4-2-选择题" class="headerlink" title="4-2 选择题"></a>4-2 选择题</h4><p>以下哪两条语句是正确的？（选择两项）<br>A. char ch=65539;<br>B. int n=5.6f;<br>C. double d=1.2f;<br>D. double d=1.23;float f=(float)d；</p>
+<p>正确答案： C,D</p>
+<p><strong>参考解析：</strong><br>    本题考查数据类型的转换。A选项，65539超出了字符型所表示的数据范围，因此该条语句是错误的。B选项，将float类型的数据赋值给int类型也会报错。C选项，可以将float类型数据赋值给double类型变量，会进行自动类型转换。D选项将double类型数据赋值给float类型变量，进行了强制类型转换是可以的。</p>
+<h4 id="4-3-数据类型转换案例"><a href="#4-3-数据类型转换案例" class="headerlink" title="4-3 数据类型转换案例"></a>4-3 数据类型转换案例</h4><p><img src="en-resource://database/2669:1" alt="5c8ea338fe1d5f5c4b38e7eba6fea36d.png"></p>
+<h4 id="4-4-编程练习"><a href="#4-4-编程练习" class="headerlink" title="4-4 编程练习"></a>4-4 编程练习</h4><p>定义各种数据类型的变量，按要求为它们赋值，并打印输出。<br>效果图:</p>
+<p><img src="en-resource://database/2671:1" alt="9365ed0f3a8f5a486e8fbe5dec820915.png"></p>
+<p>备注：由于编辑器环境的不同，第一行字符c的输出结果也会有所不同。</p>
+<p>任务<br>1、定义一个整型字面值67832，赋值给char类型变量c，并将c的值输出。<br>2、定义一个整型变量n，初始化为65。<br>3、定义一个字符型变量c1，赋值为n，并输出c1的值。<br>4、定义一个长整型变量l，值为987654321。<br>5、定义一个整型变量i，赋值为l，并输出i的值。<br>6、定义一个float类型变量f，将变量l的值赋值给f，并输出f的值。<br>7、将float的值f，重新赋值给变量l，并输出l的值。</p>
+<p><strong>原题</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TypeExchange</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 将一个整型字面值67832赋值给char类型变量c。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//并将c的值输出。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个整型变量n，值为65。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个字符型变量c1，赋值为n，并输出c1的值。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个长整型变量l，值为987654321。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个整型变量i，赋值为l，并输出i的值。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个float类型变量f，将变量l的值赋值给f，并输出f的值。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//将float的值f，重新赋值给变量l，并输出l的值。</span></span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>我的答案</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TypeExchange</span> </span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 将一个整型字面值67832赋值给char类型变量c。</span></span><br><span class="line">        <span class="comment">//并将c的值输出。</span></span><br><span class="line">        <span class="keyword">int</span> a=<span class="number">67832</span>;</span><br><span class="line">        <span class="keyword">char</span> c=<span class="string">'a'</span>;</span><br><span class="line">        System.out.println(<span class="string">"c="</span>+c);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个整型变量n，值为65。</span></span><br><span class="line">        <span class="keyword">int</span> b=<span class="number">65</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个字符型变量c1，赋值为n，并输出c1的值。</span></span><br><span class="line">        <span class="keyword">char</span> c1=<span class="string">'n'</span>;</span><br><span class="line">        System.out.println(<span class="string">"c1="</span>+c1);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个长整型变量l，值为987654321。</span></span><br><span class="line">        <span class="keyword">long</span> l = <span class="number">987654321</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个整型变量i，赋值为l，并输出i的值。</span></span><br><span class="line">        <span class="keyword">int</span> i =(<span class="keyword">int</span>)l;</span><br><span class="line">        System.out.println(<span class="string">"i="</span>+i);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//定义一个float类型变量f，将变量l的值赋值给f，并输出f的值。</span></span><br><span class="line">        <span class="keyword">float</span> f=l;</span><br><span class="line">        System.out.println(<span class="string">"f="</span>+f);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//将float的值f，重新赋值给变量l，并输出l的值。</span></span><br><span class="line">        l=(<span class="keyword">long</span>)f;</span><br><span class="line">        System.out.println(<span class="string">"l="</span>+l);</span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="五、常量"><a href="#五、常量" class="headerlink" title="五、常量"></a>五、常量</h3><h4 id="5-1-常量"><a href="#5-1-常量" class="headerlink" title="5-1 常量"></a>5-1 常量</h4><ul>
+<li>用final来定义，并且不能被修改。</li>
+<li>常量值通常用大写字母表示。例：final double PI=3.14；final double MIN_VALUE=0;</li>
+</ul>
+<h4 id="6-2-选择题"><a href="#6-2-选择题" class="headerlink" title="6-2 选择题"></a>6-2 选择题</h4><p>下列的变量定义中，错误的是？（选择一项）<br>A. int a;b;<br>B. float a,b1=1.23f;<br>C. char ch1=’a’,ch2=’\n’;<br>D. int n=100,m=2,k;</p>
+<p>正确答案：A</p>
+<p><strong>参考解析：</strong><br>本题考查变量的定义，同时定义多个变量时，变量名间用逗号分隔，因此A选项的说法是错误的。其他几个选项都是正确的变量定义形式。</p>
+<h4 id="6-3-选择练习"><a href="#6-3-选择练习" class="headerlink" title="6-3 选择练习"></a>6-3 选择练习</h4><p>下列的变量定义中，正确的是？（选择一项）<br>A. boolean b=”false”<br>B. float f=5.6;<br>C. byte x=343;<br>D. double d=5.3f;<br>正确答案： D</p>
+<p><strong>参考解析：</strong></p>
+<p>本题考查变量的定义。A选项错误，布尔类型的字面值，不能加双引号。B选项，float f=5.6;该条语句错误，5.6是double类型字面值，赋值给float类型会报错。C选项，343超出了byte类型的数据表示范围，因此byte x=343会发生编译错误。把float类型的字面值赋值给double类型的变量是可以的，因此D选项double d=5.3f是正确的。</p>
+<p><strong>拓展：</strong><br>在JAVA中一共有八种基本数据类型，他d都们分别是 byte、short、int、long、float、double、char、boolean<br>整型：<br>其中zhibyte、short、int、long都是表示整数的dao，只不过他们的取值范围不一样。<br>byte的取值范围为-128<del>127，占用1个字节（-2的7次方到2的7次方-1）；<br>short的取值范围为-32768</del>32767，占用2个字节（-2的15次方到2的15次方-1） ；<br>int的取值范围为（-2147483648<del>2147483647），占用4个字节（-2的31次方到2的31次方-1） ；<br>long的取值范围为（-9223372036854774808</del>9223372036854774807），占用8个字节（-2的63次方到2的63次方-1）；</p>
+<p>可以看到byte和short的取值范围比较小，而long的取值范围太大，占用的空间多，基本上int可以满足我们的日常的计算了，而且int也是使用的最多的整型类型了。 在通常情况下，如果JAVA中出现了一个整数数字比如35，那么这个数字就是int型的，如果我们希望它是byte型的，可以在数据后加上大写的 B：35B，表示它是byte型的，同样的35S表示short型，35L表示long型的，表示int我们可以什么都不用加，但是如果要表示long型的，就一定要在数据后面加“L”。</p>
+<p>浮点型 ：<br>float和double是表示浮点型的数据类型，他们之间的区别在于他们的精确度不同 ；<br>float 3.402823e+38 ~ 1.401298e-45（e+38表示是乘以10的38次方，同样，e-45表示乘以10的负45次方）占用4个字节 ；<br>double 1.797693e+308~ 4.9000000e-324 占用8个字节 ；double型比float型存储范围更大，精度更高，所以通常的浮点型的数据在不声明的情况下都是double型的，如果要表示一个数据是float型的，可以在数据后面加上“F”。</p>
+<p>浮点型的数据是不能完全精确的，所以有的时候在计算的时候可能会在小数点最后几位出现浮动，这是正常的。</p>
+<p>boolean型（布尔型）：<br>这个类型只有两个值，true和false（真和非真）；boolean t = true； boolean f = false；<br>char型（文本型） ：<br>用于存放字符的数据类型，占用2个字节，采用unicode编码，它的前128字节编码与ASCII兼容 字符的存储范围在\u0000~\uFFFF，在定义字符型的数据时候要注意加’ ‘，比如 ‘1’表示字符’1’而不是数值1。</p>
+</body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
   </entry>
 </search>
