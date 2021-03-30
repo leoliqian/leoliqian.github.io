@@ -2,20 +2,6 @@
 <search>
   <entry>
     <title>JavaSpring4.1.1 Spring入门</title>
-    <url>/posts/2125400111/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li></li>
-<li></li>
-</ul>
-<a id="more"></a>
-
-</body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>JavaSpring4.1.1 Spring入门</title>
     <url>/posts/2125400112/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
 <li>Spring的概述</li>
@@ -111,6 +97,20 @@
 </tbody></table>
 <p>2、定义测试类，先创建工厂类，然后通过工厂获得Food类的对象；再完成信息的输出。</p>
 <p>   提示：需要重写toString()方法，完成对属性信息的输出，输出形式见效果图</p>
+</body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>JavaSpring4.1.1 Spring入门</title>
+    <url>/posts/2125400111/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li></li>
+<li></li>
+</ul>
+<a id="more"></a>
+
 </body></html>]]></content>
       <categories>
         <category>Java</category>
@@ -400,212 +400,6 @@
       </categories>
   </entry>
   <entry>
-    <title>JavaSpring4.1.5 JDBC Template</title>
-    <url>/posts/4075042915/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li></li>
-<li></li>
-</ul>
-<a id="more"></a>
-
-<h3 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h3><h4 id="课程介绍-1"><a href="#课程介绍-1" class="headerlink" title="课程介绍"></a>课程介绍</h4><h3 id="JDBC-Template概念及案例准备"><a href="#JDBC-Template概念及案例准备" class="headerlink" title="JDBC Template概念及案例准备"></a>JDBC Template概念及案例准备</h3><h4 id="JDBCTemplate概念"><a href="#JDBCTemplate概念" class="headerlink" title="JDBCTemplate概念"></a>JDBCTemplate概念</h4><ul>
-<li><p>为了简化持久化操作，Spring在JDBC API之上提供了JDBC Template组件</p>
-</li>
-<li><p>JDBC Template提供统一的模板方法，在保留代码灵活性的基础上，尽量减少持久化代码。</p>
-</li>
-</ul>
-<h4 id="单选题"><a href="#单选题" class="headerlink" title="单选题"></a>单选题</h4><p>以下关于JDBC Template的说法正确的是（）（选择一项）</p>
-<p><strong>A、</strong>为了简化持久化的操作，MyBatis提供了JDBC Template组件</p>
-<p><strong>B、</strong>为了简化持久化的操作，Spring提供了JDBC Template组件</p>
-<p><strong>C、</strong>JDBC Template相对于JDBC API，代码更加复杂，因此不推荐使用JDBC Template</p>
-<p><strong>D、</strong>JDBC API是在JDBC Template基础上完成的</p>
-<p><strong>正确答案：</strong> <strong>B</strong></p>
-<h4 id="示例数据库"><a href="#示例数据库" class="headerlink" title="示例数据库"></a>示例数据库</h4><h4 id="搭建项目"><a href="#搭建项目" class="headerlink" title="搭建项目"></a>搭建项目</h4><ul>
-<li>Maven<ul>
-<li>Mysql驱动</li>
-<li>Spring组件（core、beans、context、aop）</li>
-<li>JDBC Template（jdbc、tx）</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>Spring配置<ul>
-<li>数据源</li>
-<li>JDBC Template</li>
-</ul>
-</li>
-</ul>
-<h3 id="JDBC-Template基本使用及持久化案例"><a href="#JDBC-Template基本使用及持久化案例" class="headerlink" title="JDBC Template基本使用及持久化案例"></a>JDBC Template基本使用及持久化案例</h3><h4 id="使用流程"><a href="#使用流程" class="headerlink" title="使用流程"></a>使用流程</h4><ul>
-<li>execute方法 <ul>
-<li>可以执行任何sql，但是在实际应用中，通常我们用于执行DDL语句，“我建个表，修改下表结构等等。。。”</li>
-<li>所以在实际应用中用的并不多。</li>
-</ul>
-</li>
-<li>update与batchUpdate方法<ul>
-<li>用于执行新增、修改、删除等语句</li>
-</ul>
-</li>
-<li>query与queryXXX方法<ul>
-<li>用于执行查询相关语句。</li>
-</ul>
-</li>
-<li>call方法<ul>
-<li>用于执行存储过程、函数相关语句。</li>
-</ul>
-</li>
-</ul>
-<h4 id="单选题-1"><a href="#单选题-1" class="headerlink" title="单选题"></a>单选题</h4><p>在JDBCTemlate中，创建table的sql语句应该写到哪个方法中（选择一项）</p>
-<p><strong>A</strong>execute()</p>
-<p><strong>B</strong>update()</p>
-<p><strong>C</strong>query()</p>
-<p><strong>D</strong>batchUpdate()</p>
-<p><strong>正确答案：</strong> <strong>A</strong></p>
-<h4 id="update和batchUpdate"><a href="#update和batchUpdate" class="headerlink" title="update和batchUpdate"></a>update和batchUpdate</h4><ul>
-<li>update方法<ul>
-<li>对数据进行增删改操作</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">update</span><span class="params">(String sql,Object[] args)</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">update</span><span class="params">(String sql,Object... args)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<ul>
-<li>batchUpdate方法<ul>
-<li>批量增删改操作</li>
-</ul>
-</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] batchUpdate(String[] sql)</span><br><span class="line"><span class="keyword">int</span>[] batchUpdate(String sql,List&lt;Object[] args) <span class="comment">// 执行同构sql，向一个表插入多条记录</span></span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> JdbcTemplate jdbcTemplate;</span><br><span class="line">    {</span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"spring.xml"</span>);</span><br><span class="line">         jdbcTemplate = (JdbcTemplate)context.getBean(<span class="string">"jdbcTemplate"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testExecute</span><span class="params">()</span></span>{</span><br><span class="line">        jdbcTemplate.execute(<span class="string">"create table user1(id int,name varchar(20))"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// int update(String sql,Object[] args) 实例演示</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testUpdate</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"insert into student(name,sex) values(?,?)"</span>;</span><br><span class="line">        jdbcTemplate.update(sql,<span class="keyword">new</span> Object[]{<span class="string">"张飞"</span>,<span class="string">"男"</span>});</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// int update(String sql,Object... args) 实例演示</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testUpdate2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"update student set sex=? where id=?"</span>;</span><br><span class="line">        jdbcTemplate.update(sql,<span class="string">"女"</span>,<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// int update(String sql,Object... args) 实例演示</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testBatchUpdate</span><span class="params">()</span></span>{</span><br><span class="line">        String[] sqls={</span><br><span class="line">            <span class="string">"insert into student(name,sex) values('关羽','男')"</span>,</span><br><span class="line">            <span class="string">"insert into student(name,sex) values('刘备','男')"</span>,</span><br><span class="line">                <span class="string">"update student set sex='女' where id=1"</span></span><br><span class="line">        };</span><br><span class="line">        jdbcTemplate.batchUpdate(sqls);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// int[] batchUpdate(String sql,List&lt;Object[] args) 实例演示</span></span><br><span class="line">    <span class="meta">@org</span>.junit.Test</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testBatchUpdate2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"insert into selection(student,course) values(?,?)"</span>;</span><br><span class="line">        List&lt;Object[]&gt; list = <span class="keyword">new</span> ArrayList&lt;Object[]&gt;();</span><br><span class="line">        list.add(<span class="keyword">new</span> Object[]{<span class="number">5</span>,<span class="number">1001</span>});</span><br><span class="line">        list.add(<span class="keyword">new</span> Object[]{<span class="number">5</span>,<span class="number">1003</span>});</span><br><span class="line">        jdbcTemplate.batchUpdate(sql,list);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<h4 id="单选题-2"><a href="#单选题-2" class="headerlink" title="单选题"></a>单选题</h4><p>使用JDBCTemplate对表内进行数据的插入，以下写法正确的是（）（选择一项）</p>
-<p><strong>A</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String sql = <span class="string">"insert into course(name,teacher) values(?,?)"</span>;</span><br><span class="line">jdbcTemplate.update(sql,<span class="keyword">new</span> Object[]{<span class="string">"大学物理"</span>，<span class="string">"胡老师"</span>});</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>B</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String sql = <span class="string">"insert into course(name,teacher) values(?,?)"</span>;</span><br><span class="line">jdbcTemplate.execute(sql,<span class="keyword">new</span> Object[]{<span class="string">"大学物理"</span>，<span class="string">"胡老师"</span>});</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>C</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String sql = <span class="string">"insert into course(name,teacher) values(?,?)"</span>;</span><br><span class="line">jdbcTemplate.execute(sql);</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>D</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String sql = <span class="string">"insert into course(name,teacher) values(?,?)"</span>;</span><br><span class="line">jdbcTemplate.batchUpdate(sql);</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<p><strong>正确答案：</strong> <strong>A</strong></p>
-<h4 id="查询1"><a href="#查询1" class="headerlink" title="查询1"></a>查询1</h4><ul>
-<li><p>查询简单数据项</p>
-<ul>
-<li>获取一个</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, Class&lt;T&gt; type)</span></span></span><br><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, Object[] args, Class&lt;T&gt; type)</span></span></span><br><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, Class&lt;T&gt; type, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<ul>
-<li>获取多个</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">List&lt;T&gt; <span class="title">queryForObject</span><span class="params">(String sql, Class&lt;T&gt; type)</span></span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">queryForObject</span><span class="params">(String sql, Object[] args, Class&lt;T&gt; type)</span></span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">queryForObject</span><span class="params">(String sql, Class&lt;T&gt; type, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
-
-
-</li>
-</ul>
-<ul>
-<li><p>查询复杂对象（封装为Map）</p>
-<ul>
-<li>获取一个</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">Map <span class="title">queryForObject</span><span class="params">(String sql)</span></span></span><br><span class="line"><span class="function">Map <span class="title">queryForObject</span><span class="params">(String sql, Object[] args)</span></span></span><br><span class="line"><span class="function">Map <span class="title">queryForObject</span><span class="params">(String sql, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<ul>
-<li>获取多个</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">List&lt;Map&lt;String,Object&gt;&gt; queryForObject(String sql)</span><br><span class="line">List&lt;Map&lt;String,Object&gt;&gt; queryForObject(String sql, Object[] args)</span><br><span class="line">List&lt;Map&lt;String,Object&gt;&gt; queryForObject(String sql, Object... arg)</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.imooc.sc.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.RowMapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> JdbcTemplate jdbcTemplate;</span><br><span class="line">    {</span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"spring.xml"</span>);</span><br><span class="line">         jdbcTemplate = (JdbcTemplate)context.getBean(<span class="string">"jdbcTemplate"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testExecute</span><span class="params">()</span></span>{</span><br><span class="line">        jdbcTemplate.execute(<span class="string">"create table user1(id int,name varchar(20))"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// T queryForObject(String sql, Class&lt;T&gt; type) 查询一个对象实例演示</span></span><br><span class="line">    <span class="meta">@org</span>.junit.Test</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQuerySimple1</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select count(*) from student"</span>;</span><br><span class="line">        <span class="keyword">int</span> count=jdbcTemplate.queryForObject(sql,Integer.class);</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// List&lt;T&gt; queryForObject(String sql, Class&lt;T&gt; type) 查询复杂对象实例演示</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQuerySimple2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select name from student where sex=?"</span>;</span><br><span class="line">        List&lt;String&gt; names = jdbcTemplate.queryForList(sql,String.class,<span class="string">"男"</span>);</span><br><span class="line">        System.out.println(names);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Map queryForObject(String sql) 查询一个对象实例演示</span></span><br><span class="line">    <span class="meta">@org</span>.junit.Test</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryMap1</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student where id = ?"</span>;</span><br><span class="line">        Map&lt;String,Object&gt; stu = jdbcTemplate.queryForMap(sql,<span class="number">3</span>);</span><br><span class="line">        System.out.println(stu);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// List&lt;Map&lt;String,Object&gt;&gt; queryForObject(String sql) 查询复杂对象实例演示</span></span><br><span class="line">    <span class="meta">@org</span>.junit.Test</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryMap2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student"</span>;</span><br><span class="line">        List&lt;Map&lt;String,Object&gt;&gt; stus = jdbcTemplate.queryForList(sql);</span><br><span class="line">        System.out.println(stus);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<h4 id="查询2"><a href="#查询2" class="headerlink" title="查询2"></a>查询2</h4><ul>
-<li><p>查询复杂对象（封装为实体对象）</p>
-<ul>
-<li>RowMapper接口</li>
-<li>获取一个</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, RowMapper&lt;T&gt; mapper)</span></span></span><br><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, Object[] args, RowMapper&lt;T&gt; mapper)</span></span></span><br><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, RowMapper&lt;T&gt; mapper, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<ul>
-<li>获取多个</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">List&lt;T&gt; <span class="title">query</span><span class="params">(String sql, RowMapper&lt;T&gt; mapper)</span></span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">query</span><span class="params">(String sql, Object[] args, Class&lt;T&gt; mapper)</span></span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">query</span><span class="params">(String sql, RowMapper&lt;T&gt; mapper, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
-
-
-</li>
-</ul>
-<ul>
-<li><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.imooc.sc.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.RowMapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> JdbcTemplate jdbcTemplate;</span><br><span class="line">    {</span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"spring.xml"</span>);</span><br><span class="line">         jdbcTemplate = (JdbcTemplate)context.getBean(<span class="string">"jdbcTemplate"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testExecute</span><span class="params">()</span></span>{</span><br><span class="line">        jdbcTemplate.execute(<span class="string">"create table user1(id int,name varchar(20))"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryEntity1</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student where id = ?"</span>;</span><br><span class="line">        Student stu = jdbcTemplate.queryForObject(sql, <span class="keyword">new</span> RowMapper&lt;Student&gt;() {</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> Student <span class="title">mapRow</span><span class="params">(ResultSet resultSet, <span class="keyword">int</span> i)</span> <span class="keyword">throws</span> SQLException </span>{</span><br><span class="line">                Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">                stu.setId(resultSet.getInt(<span class="string">"id"</span>));</span><br><span class="line">                stu.setName(resultSet.getString(<span class="string">"name"</span>));</span><br><span class="line">                stu.setSex(resultSet.getString(<span class="string">"sex"</span>));</span><br><span class="line">                stu.setBorn(resultSet.getDate(<span class="string">"born"</span>));</span><br><span class="line">                <span class="keyword">return</span> stu;</span><br><span class="line">            }</span><br><span class="line">        }, <span class="number">4</span>);</span><br><span class="line">        System.out.println(stu);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryEntity2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student"</span>;</span><br><span class="line">        List&lt;Student&gt; stus = jdbcTemplate.query(sql, <span class="keyword">new</span> RowMapper&lt;Student&gt;() {</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> Student <span class="title">mapRow</span><span class="params">(ResultSet resultSet, <span class="keyword">int</span> i)</span> <span class="keyword">throws</span> SQLException </span>{</span><br><span class="line">                Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">                stu.setId(resultSet.getInt(<span class="string">"id"</span>));</span><br><span class="line">                stu.setName(resultSet.getString(<span class="string">"name"</span>));</span><br><span class="line">                stu.setSex(resultSet.getString(<span class="string">"sex"</span>));</span><br><span class="line">                stu.setBorn(resultSet.getDate(<span class="string">"born"</span>));</span><br><span class="line">                <span class="keyword">return</span> stu;</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line">        System.out.println(stus);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 优化匿名内部类</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentRowMapper</span> <span class="keyword">implements</span> <span class="title">RowMapper</span>&lt;<span class="title">Student</span>&gt;</span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> Student <span class="title">mapRow</span><span class="params">(ResultSet resultSet, <span class="keyword">int</span> i)</span> <span class="keyword">throws</span> SQLException </span>{</span><br><span class="line">            Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">            stu.setId(resultSet.getInt(<span class="string">"id"</span>));</span><br><span class="line">            stu.setName(resultSet.getString(<span class="string">"name"</span>));</span><br><span class="line">            stu.setSex(resultSet.getString(<span class="string">"sex"</span>));</span><br><span class="line">            stu.setBorn(resultSet.getDate(<span class="string">"born"</span>));</span><br><span class="line">            <span class="keyword">return</span> stu;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryEntity3</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student where id = ?"</span>;</span><br><span class="line">        Student stu = jdbcTemplate.queryForObject(sql, <span class="keyword">new</span> StudentRowMapper() {}, <span class="number">4</span>); <span class="comment">// 直接new StudentRowMapper()</span></span><br><span class="line">        System.out.println(stu);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryEntity4</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student"</span>;</span><br><span class="line">        List&lt;Student&gt; stus = jdbcTemplate.query(sql, <span class="keyword">new</span> StudentRowMapper() {}); <span class="comment">// 直接new StudentRowMapper()</span></span><br><span class="line">        System.out.println(stus);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-</li>
-</ul>
-<h4 id="单选题-3"><a href="#单选题-3" class="headerlink" title="单选题"></a>单选题</h4><p>在JDBC Template中，查询复杂对象时，获取单条查询结果，可以使用下面哪个方法，是错误的（选择一项）</p>
-<p><strong>A、</strong>T queryForObject(String sql,RowMapper<t> mapper)</t></p>
-<p><strong>B、</strong>T queryForObject(String sql,Object[] args,RowMapper<t> mapper)</t></p>
-<p><strong>C、</strong>T queryForObject(String sql,Object… args,RowMapper<t> mapper)</t></p>
-<p><strong>D、</strong>T queryForObject(String sql,RowMapper<t> mapper ,Object… args)</t></p>
-<p><strong>正确答案：</strong> <strong>C</strong></p>
-<h4 id="持久层实现——StudentDAO和CourseDAO"><a href="#持久层实现——StudentDAO和CourseDAO" class="headerlink" title="持久层实现——StudentDAO和CourseDAO"></a>持久层实现——StudentDAO和CourseDAO</h4><ul>
-<li>实体类</li>
-<li>DAO<ul>
-<li>注入JDBCTemplate</li>
-<li>声明JDBCTemplate</li>
-</ul>
-</li>
-</ul>
-<h4 id="持久层实现——SelectionDAO"><a href="#持久层实现——SelectionDAO" class="headerlink" title="持久层实现——SelectionDAO"></a>持久层实现——SelectionDAO</h4><h3 id="JDBCTemplate的优缺点分析"><a href="#JDBCTemplate的优缺点分析" class="headerlink" title="JDBCTemplate的优缺点分析"></a>JDBCTemplate的优缺点分析</h3><h4 id="优缺点分析"><a href="#优缺点分析" class="headerlink" title="优缺点分析"></a>优缺点分析</h4><ul>
-<li><p>优点：</p>
-<ul>
-<li>简单</li>
-<li>灵活</li>
-</ul>
-</li>
-<li><p>缺点：</p>
-<ul>
-<li>SQL与Java代码掺杂</li>
-<li>功能不丰富</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>持久化操作特点<ul>
-<li>必须</li>
-<li>机械性</li>
-<li>ORM<ul>
-<li>对象 - 关系 - 映射</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>JDBCTemplate是Spring框架对JDBC操作的封装，简单、灵活但不够强大。</li>
-<li>实际应用中还需要和其它ORM框架混合使用。</li>
-</ul>
-<h4 id="多选题"><a href="#多选题" class="headerlink" title="多选题"></a>多选题</h4><p>以下关于JDBCTemplate的说法正确的是（）（选择两项）</p>
-<p><strong>A、</strong>JDBCTemplate相对于JDBC更加的简便，代码量更少</p>
-<p><strong>B、</strong>能够完整的将sql和Java代码分离开</p>
-<p><strong>C、</strong>Sql和Java代码掺杂，要求较高</p>
-<p><strong>D、</strong>JDBCTemplate相对于JDBC更加的复杂，增大了代码量</p>
-<p><strong>正确答案：</strong> <strong>A,C</strong></p>
-</body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>JavaSpring4.1.6 Spring事务管理</title>
     <url>/posts/3496803191/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -825,6 +619,212 @@
 </ul>
 </li>
 </ul>
+</body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>JavaSpring4.1.5 JDBC Template</title>
+    <url>/posts/4075042915/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li></li>
+<li></li>
+</ul>
+<a id="more"></a>
+
+<h3 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h3><h4 id="课程介绍-1"><a href="#课程介绍-1" class="headerlink" title="课程介绍"></a>课程介绍</h4><h3 id="JDBC-Template概念及案例准备"><a href="#JDBC-Template概念及案例准备" class="headerlink" title="JDBC Template概念及案例准备"></a>JDBC Template概念及案例准备</h3><h4 id="JDBCTemplate概念"><a href="#JDBCTemplate概念" class="headerlink" title="JDBCTemplate概念"></a>JDBCTemplate概念</h4><ul>
+<li><p>为了简化持久化操作，Spring在JDBC API之上提供了JDBC Template组件</p>
+</li>
+<li><p>JDBC Template提供统一的模板方法，在保留代码灵活性的基础上，尽量减少持久化代码。</p>
+</li>
+</ul>
+<h4 id="单选题"><a href="#单选题" class="headerlink" title="单选题"></a>单选题</h4><p>以下关于JDBC Template的说法正确的是（）（选择一项）</p>
+<p><strong>A、</strong>为了简化持久化的操作，MyBatis提供了JDBC Template组件</p>
+<p><strong>B、</strong>为了简化持久化的操作，Spring提供了JDBC Template组件</p>
+<p><strong>C、</strong>JDBC Template相对于JDBC API，代码更加复杂，因此不推荐使用JDBC Template</p>
+<p><strong>D、</strong>JDBC API是在JDBC Template基础上完成的</p>
+<p><strong>正确答案：</strong> <strong>B</strong></p>
+<h4 id="示例数据库"><a href="#示例数据库" class="headerlink" title="示例数据库"></a>示例数据库</h4><h4 id="搭建项目"><a href="#搭建项目" class="headerlink" title="搭建项目"></a>搭建项目</h4><ul>
+<li>Maven<ul>
+<li>Mysql驱动</li>
+<li>Spring组件（core、beans、context、aop）</li>
+<li>JDBC Template（jdbc、tx）</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Spring配置<ul>
+<li>数据源</li>
+<li>JDBC Template</li>
+</ul>
+</li>
+</ul>
+<h3 id="JDBC-Template基本使用及持久化案例"><a href="#JDBC-Template基本使用及持久化案例" class="headerlink" title="JDBC Template基本使用及持久化案例"></a>JDBC Template基本使用及持久化案例</h3><h4 id="使用流程"><a href="#使用流程" class="headerlink" title="使用流程"></a>使用流程</h4><ul>
+<li>execute方法 <ul>
+<li>可以执行任何sql，但是在实际应用中，通常我们用于执行DDL语句，“我建个表，修改下表结构等等。。。”</li>
+<li>所以在实际应用中用的并不多。</li>
+</ul>
+</li>
+<li>update与batchUpdate方法<ul>
+<li>用于执行新增、修改、删除等语句</li>
+</ul>
+</li>
+<li>query与queryXXX方法<ul>
+<li>用于执行查询相关语句。</li>
+</ul>
+</li>
+<li>call方法<ul>
+<li>用于执行存储过程、函数相关语句。</li>
+</ul>
+</li>
+</ul>
+<h4 id="单选题-1"><a href="#单选题-1" class="headerlink" title="单选题"></a>单选题</h4><p>在JDBCTemlate中，创建table的sql语句应该写到哪个方法中（选择一项）</p>
+<p><strong>A</strong>execute()</p>
+<p><strong>B</strong>update()</p>
+<p><strong>C</strong>query()</p>
+<p><strong>D</strong>batchUpdate()</p>
+<p><strong>正确答案：</strong> <strong>A</strong></p>
+<h4 id="update和batchUpdate"><a href="#update和batchUpdate" class="headerlink" title="update和batchUpdate"></a>update和batchUpdate</h4><ul>
+<li>update方法<ul>
+<li>对数据进行增删改操作</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">update</span><span class="params">(String sql,Object[] args)</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">update</span><span class="params">(String sql,Object... args)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<ul>
+<li>batchUpdate方法<ul>
+<li>批量增删改操作</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] batchUpdate(String[] sql)</span><br><span class="line"><span class="keyword">int</span>[] batchUpdate(String sql,List&lt;Object[] args) <span class="comment">// 执行同构sql，向一个表插入多条记录</span></span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> JdbcTemplate jdbcTemplate;</span><br><span class="line">    {</span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"spring.xml"</span>);</span><br><span class="line">         jdbcTemplate = (JdbcTemplate)context.getBean(<span class="string">"jdbcTemplate"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testExecute</span><span class="params">()</span></span>{</span><br><span class="line">        jdbcTemplate.execute(<span class="string">"create table user1(id int,name varchar(20))"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// int update(String sql,Object[] args) 实例演示</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testUpdate</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"insert into student(name,sex) values(?,?)"</span>;</span><br><span class="line">        jdbcTemplate.update(sql,<span class="keyword">new</span> Object[]{<span class="string">"张飞"</span>,<span class="string">"男"</span>});</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// int update(String sql,Object... args) 实例演示</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testUpdate2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"update student set sex=? where id=?"</span>;</span><br><span class="line">        jdbcTemplate.update(sql,<span class="string">"女"</span>,<span class="number">1</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// int update(String sql,Object... args) 实例演示</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testBatchUpdate</span><span class="params">()</span></span>{</span><br><span class="line">        String[] sqls={</span><br><span class="line">            <span class="string">"insert into student(name,sex) values('关羽','男')"</span>,</span><br><span class="line">            <span class="string">"insert into student(name,sex) values('刘备','男')"</span>,</span><br><span class="line">                <span class="string">"update student set sex='女' where id=1"</span></span><br><span class="line">        };</span><br><span class="line">        jdbcTemplate.batchUpdate(sqls);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// int[] batchUpdate(String sql,List&lt;Object[] args) 实例演示</span></span><br><span class="line">    <span class="meta">@org</span>.junit.Test</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testBatchUpdate2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"insert into selection(student,course) values(?,?)"</span>;</span><br><span class="line">        List&lt;Object[]&gt; list = <span class="keyword">new</span> ArrayList&lt;Object[]&gt;();</span><br><span class="line">        list.add(<span class="keyword">new</span> Object[]{<span class="number">5</span>,<span class="number">1001</span>});</span><br><span class="line">        list.add(<span class="keyword">new</span> Object[]{<span class="number">5</span>,<span class="number">1003</span>});</span><br><span class="line">        jdbcTemplate.batchUpdate(sql,list);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<h4 id="单选题-2"><a href="#单选题-2" class="headerlink" title="单选题"></a>单选题</h4><p>使用JDBCTemplate对表内进行数据的插入，以下写法正确的是（）（选择一项）</p>
+<p><strong>A</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String sql = <span class="string">"insert into course(name,teacher) values(?,?)"</span>;</span><br><span class="line">jdbcTemplate.update(sql,<span class="keyword">new</span> Object[]{<span class="string">"大学物理"</span>，<span class="string">"胡老师"</span>});</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>B</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String sql = <span class="string">"insert into course(name,teacher) values(?,?)"</span>;</span><br><span class="line">jdbcTemplate.execute(sql,<span class="keyword">new</span> Object[]{<span class="string">"大学物理"</span>，<span class="string">"胡老师"</span>});</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>C</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String sql = <span class="string">"insert into course(name,teacher) values(?,?)"</span>;</span><br><span class="line">jdbcTemplate.execute(sql);</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>D</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">String sql = <span class="string">"insert into course(name,teacher) values(?,?)"</span>;</span><br><span class="line">jdbcTemplate.batchUpdate(sql);</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<p><strong>正确答案：</strong> <strong>A</strong></p>
+<h4 id="查询1"><a href="#查询1" class="headerlink" title="查询1"></a>查询1</h4><ul>
+<li><p>查询简单数据项</p>
+<ul>
+<li>获取一个</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, Class&lt;T&gt; type)</span></span></span><br><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, Object[] args, Class&lt;T&gt; type)</span></span></span><br><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, Class&lt;T&gt; type, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<ul>
+<li>获取多个</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">List&lt;T&gt; <span class="title">queryForObject</span><span class="params">(String sql, Class&lt;T&gt; type)</span></span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">queryForObject</span><span class="params">(String sql, Object[] args, Class&lt;T&gt; type)</span></span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">queryForObject</span><span class="params">(String sql, Class&lt;T&gt; type, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
+
+
+</li>
+</ul>
+<ul>
+<li><p>查询复杂对象（封装为Map）</p>
+<ul>
+<li>获取一个</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">Map <span class="title">queryForObject</span><span class="params">(String sql)</span></span></span><br><span class="line"><span class="function">Map <span class="title">queryForObject</span><span class="params">(String sql, Object[] args)</span></span></span><br><span class="line"><span class="function">Map <span class="title">queryForObject</span><span class="params">(String sql, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<ul>
+<li>获取多个</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">List&lt;Map&lt;String,Object&gt;&gt; queryForObject(String sql)</span><br><span class="line">List&lt;Map&lt;String,Object&gt;&gt; queryForObject(String sql, Object[] args)</span><br><span class="line">List&lt;Map&lt;String,Object&gt;&gt; queryForObject(String sql, Object... arg)</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.imooc.sc.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.RowMapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> JdbcTemplate jdbcTemplate;</span><br><span class="line">    {</span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"spring.xml"</span>);</span><br><span class="line">         jdbcTemplate = (JdbcTemplate)context.getBean(<span class="string">"jdbcTemplate"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testExecute</span><span class="params">()</span></span>{</span><br><span class="line">        jdbcTemplate.execute(<span class="string">"create table user1(id int,name varchar(20))"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// T queryForObject(String sql, Class&lt;T&gt; type) 查询一个对象实例演示</span></span><br><span class="line">    <span class="meta">@org</span>.junit.Test</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQuerySimple1</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select count(*) from student"</span>;</span><br><span class="line">        <span class="keyword">int</span> count=jdbcTemplate.queryForObject(sql,Integer.class);</span><br><span class="line">        System.out.println(count);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// List&lt;T&gt; queryForObject(String sql, Class&lt;T&gt; type) 查询复杂对象实例演示</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQuerySimple2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select name from student where sex=?"</span>;</span><br><span class="line">        List&lt;String&gt; names = jdbcTemplate.queryForList(sql,String.class,<span class="string">"男"</span>);</span><br><span class="line">        System.out.println(names);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Map queryForObject(String sql) 查询一个对象实例演示</span></span><br><span class="line">    <span class="meta">@org</span>.junit.Test</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryMap1</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student where id = ?"</span>;</span><br><span class="line">        Map&lt;String,Object&gt; stu = jdbcTemplate.queryForMap(sql,<span class="number">3</span>);</span><br><span class="line">        System.out.println(stu);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// List&lt;Map&lt;String,Object&gt;&gt; queryForObject(String sql) 查询复杂对象实例演示</span></span><br><span class="line">    <span class="meta">@org</span>.junit.Test</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryMap2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student"</span>;</span><br><span class="line">        List&lt;Map&lt;String,Object&gt;&gt; stus = jdbcTemplate.queryForList(sql);</span><br><span class="line">        System.out.println(stus);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<h4 id="查询2"><a href="#查询2" class="headerlink" title="查询2"></a>查询2</h4><ul>
+<li><p>查询复杂对象（封装为实体对象）</p>
+<ul>
+<li>RowMapper接口</li>
+<li>获取一个</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, RowMapper&lt;T&gt; mapper)</span></span></span><br><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, Object[] args, RowMapper&lt;T&gt; mapper)</span></span></span><br><span class="line"><span class="function">T <span class="title">queryForObject</span><span class="params">(String sql, RowMapper&lt;T&gt; mapper, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<ul>
+<li>获取多个</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function">List&lt;T&gt; <span class="title">query</span><span class="params">(String sql, RowMapper&lt;T&gt; mapper)</span></span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">query</span><span class="params">(String sql, Object[] args, Class&lt;T&gt; mapper)</span></span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">query</span><span class="params">(String sql, RowMapper&lt;T&gt; mapper, Object... arg)</span></span></span><br></pre></td></tr></tbody></table></figure></div>
+
+
+</li>
+</ul>
+<ul>
+<li><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.imooc.sc.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.JdbcTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.jdbc.core.RowMapper;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.sql.ResultSet;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>{</span><br><span class="line">    <span class="keyword">private</span> JdbcTemplate jdbcTemplate;</span><br><span class="line">    {</span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"spring.xml"</span>);</span><br><span class="line">         jdbcTemplate = (JdbcTemplate)context.getBean(<span class="string">"jdbcTemplate"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testExecute</span><span class="params">()</span></span>{</span><br><span class="line">        jdbcTemplate.execute(<span class="string">"create table user1(id int,name varchar(20))"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryEntity1</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student where id = ?"</span>;</span><br><span class="line">        Student stu = jdbcTemplate.queryForObject(sql, <span class="keyword">new</span> RowMapper&lt;Student&gt;() {</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> Student <span class="title">mapRow</span><span class="params">(ResultSet resultSet, <span class="keyword">int</span> i)</span> <span class="keyword">throws</span> SQLException </span>{</span><br><span class="line">                Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">                stu.setId(resultSet.getInt(<span class="string">"id"</span>));</span><br><span class="line">                stu.setName(resultSet.getString(<span class="string">"name"</span>));</span><br><span class="line">                stu.setSex(resultSet.getString(<span class="string">"sex"</span>));</span><br><span class="line">                stu.setBorn(resultSet.getDate(<span class="string">"born"</span>));</span><br><span class="line">                <span class="keyword">return</span> stu;</span><br><span class="line">            }</span><br><span class="line">        }, <span class="number">4</span>);</span><br><span class="line">        System.out.println(stu);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryEntity2</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student"</span>;</span><br><span class="line">        List&lt;Student&gt; stus = jdbcTemplate.query(sql, <span class="keyword">new</span> RowMapper&lt;Student&gt;() {</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> Student <span class="title">mapRow</span><span class="params">(ResultSet resultSet, <span class="keyword">int</span> i)</span> <span class="keyword">throws</span> SQLException </span>{</span><br><span class="line">                Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">                stu.setId(resultSet.getInt(<span class="string">"id"</span>));</span><br><span class="line">                stu.setName(resultSet.getString(<span class="string">"name"</span>));</span><br><span class="line">                stu.setSex(resultSet.getString(<span class="string">"sex"</span>));</span><br><span class="line">                stu.setBorn(resultSet.getDate(<span class="string">"born"</span>));</span><br><span class="line">                <span class="keyword">return</span> stu;</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line">        System.out.println(stus);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 优化匿名内部类</span></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentRowMapper</span> <span class="keyword">implements</span> <span class="title">RowMapper</span>&lt;<span class="title">Student</span>&gt;</span>{</span><br><span class="line">        <span class="function"><span class="keyword">public</span> Student <span class="title">mapRow</span><span class="params">(ResultSet resultSet, <span class="keyword">int</span> i)</span> <span class="keyword">throws</span> SQLException </span>{</span><br><span class="line">            Student stu = <span class="keyword">new</span> Student();</span><br><span class="line">            stu.setId(resultSet.getInt(<span class="string">"id"</span>));</span><br><span class="line">            stu.setName(resultSet.getString(<span class="string">"name"</span>));</span><br><span class="line">            stu.setSex(resultSet.getString(<span class="string">"sex"</span>));</span><br><span class="line">            stu.setBorn(resultSet.getDate(<span class="string">"born"</span>));</span><br><span class="line">            <span class="keyword">return</span> stu;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryEntity3</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student where id = ?"</span>;</span><br><span class="line">        Student stu = jdbcTemplate.queryForObject(sql, <span class="keyword">new</span> StudentRowMapper() {}, <span class="number">4</span>); <span class="comment">// 直接new StudentRowMapper()</span></span><br><span class="line">        System.out.println(stu);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryEntity4</span><span class="params">()</span></span>{</span><br><span class="line">        String sql = <span class="string">"select * from student"</span>;</span><br><span class="line">        List&lt;Student&gt; stus = jdbcTemplate.query(sql, <span class="keyword">new</span> StudentRowMapper() {}); <span class="comment">// 直接new StudentRowMapper()</span></span><br><span class="line">        System.out.println(stus);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+</li>
+</ul>
+<h4 id="单选题-3"><a href="#单选题-3" class="headerlink" title="单选题"></a>单选题</h4><p>在JDBC Template中，查询复杂对象时，获取单条查询结果，可以使用下面哪个方法，是错误的（选择一项）</p>
+<p><strong>A、</strong>T queryForObject(String sql,RowMapper<t> mapper)</t></p>
+<p><strong>B、</strong>T queryForObject(String sql,Object[] args,RowMapper<t> mapper)</t></p>
+<p><strong>C、</strong>T queryForObject(String sql,Object… args,RowMapper<t> mapper)</t></p>
+<p><strong>D、</strong>T queryForObject(String sql,RowMapper<t> mapper ,Object… args)</t></p>
+<p><strong>正确答案：</strong> <strong>C</strong></p>
+<h4 id="持久层实现——StudentDAO和CourseDAO"><a href="#持久层实现——StudentDAO和CourseDAO" class="headerlink" title="持久层实现——StudentDAO和CourseDAO"></a>持久层实现——StudentDAO和CourseDAO</h4><ul>
+<li>实体类</li>
+<li>DAO<ul>
+<li>注入JDBCTemplate</li>
+<li>声明JDBCTemplate</li>
+</ul>
+</li>
+</ul>
+<h4 id="持久层实现——SelectionDAO"><a href="#持久层实现——SelectionDAO" class="headerlink" title="持久层实现——SelectionDAO"></a>持久层实现——SelectionDAO</h4><h3 id="JDBCTemplate的优缺点分析"><a href="#JDBCTemplate的优缺点分析" class="headerlink" title="JDBCTemplate的优缺点分析"></a>JDBCTemplate的优缺点分析</h3><h4 id="优缺点分析"><a href="#优缺点分析" class="headerlink" title="优缺点分析"></a>优缺点分析</h4><ul>
+<li><p>优点：</p>
+<ul>
+<li>简单</li>
+<li>灵活</li>
+</ul>
+</li>
+<li><p>缺点：</p>
+<ul>
+<li>SQL与Java代码掺杂</li>
+<li>功能不丰富</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>持久化操作特点<ul>
+<li>必须</li>
+<li>机械性</li>
+<li>ORM<ul>
+<li>对象 - 关系 - 映射</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>JDBCTemplate是Spring框架对JDBC操作的封装，简单、灵活但不够强大。</li>
+<li>实际应用中还需要和其它ORM框架混合使用。</li>
+</ul>
+<h4 id="多选题"><a href="#多选题" class="headerlink" title="多选题"></a>多选题</h4><p>以下关于JDBCTemplate的说法正确的是（）（选择两项）</p>
+<p><strong>A、</strong>JDBCTemplate相对于JDBC更加的简便，代码量更少</p>
+<p><strong>B、</strong>能够完整的将sql和Java代码分离开</p>
+<p><strong>C、</strong>Sql和Java代码掺杂，要求较高</p>
+<p><strong>D、</strong>JDBCTemplate相对于JDBC更加的复杂，增大了代码量</p>
+<p><strong>正确答案：</strong> <strong>A,C</strong></p>
 </body></html>]]></content>
       <categories>
         <category>Java</category>
@@ -1106,38 +1106,6 @@
       </categories>
   </entry>
   <entry>
-    <title>JavaSpring4.2.3 SpringMVC拦截器</title>
-    <url>/posts/222992809/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>Spring的概述</li>
-<li>Spring的入门</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="第1章-Interceptor拦截器入门及使用技巧"><a href="#第1章-Interceptor拦截器入门及使用技巧" class="headerlink" title="第1章 Interceptor拦截器入门及使用技巧"></a>第1章 Interceptor拦截器入门及使用技巧</h3><h4 id="Interceptor拦截器入门"><a href="#Interceptor拦截器入门" class="headerlink" title="Interceptor拦截器入门"></a>Interceptor拦截器入门</h4><ul>
-<li>拦截器（Interceptor）用于对URL请求进行前置、后置过滤。</li>
-<li>Interceptor与Filter用途相似，但实现方式不同。</li>
-<li>Interceptor底层就是基于Spring AOP面向切面编程实现。</li>
-</ul>
-<p>拦截器开发流程</p>
-<ul>
-<li>Maven依赖servlet-api</li>
-<li>实现Handlernterceptor接口</li>
-<li>applicationContext配置过滤地址。</li>
-</ul>
-<p><strong>HandlerInterceptor接口</strong></p>
-<ul>
-<li>preHandle - 前置执行处理。</li>
-<li>postHandle - 目标资源已被Spring MVC框架处理。</li>
-<li>afterCompletion - 响应文本已经产生。</li>
-</ul>
-<h4 id="Interceptor使用技巧"><a href="#Interceptor使用技巧" class="headerlink" title="Interceptor使用技巧"></a>Interceptor使用技巧</h4><p>多个拦截器按照配置顺序执行，</p>
-<h3 id="第2章-开发用户流量拦截器"><a href="#第2章-开发用户流量拦截器" class="headerlink" title="第2章 开发用户流量拦截器"></a>第2章 开发用户流量拦截器</h3><h4 id="开发用户流量拦截器-1"><a href="#开发用户流量拦截器-1" class="headerlink" title="开发用户流量拦截器-1"></a>开发用户流量拦截器-1</h4><h4 id="开发用户流量拦截器-2"><a href="#开发用户流量拦截器-2" class="headerlink" title="开发用户流量拦截器-2"></a>开发用户流量拦截器-2</h4><h3 id="第3章-Spring-MVC处理流程"><a href="#第3章-Spring-MVC处理流程" class="headerlink" title="第3章 Spring MVC处理流程"></a>第3章 Spring MVC处理流程</h3><h4 id="Spring-MVC处理流程"><a href="#Spring-MVC处理流程" class="headerlink" title="Spring MVC处理流程"></a>Spring MVC处理流程</h4></body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>JavaSpring4.3.1 Spring Boot入门</title>
     <url>/posts/4151842779/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -1313,6 +1281,38 @@
       </categories>
   </entry>
   <entry>
+    <title>JavaSpring4.2.3 SpringMVC拦截器</title>
+    <url>/posts/222992809/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>Spring的概述</li>
+<li>Spring的入门</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="第1章-Interceptor拦截器入门及使用技巧"><a href="#第1章-Interceptor拦截器入门及使用技巧" class="headerlink" title="第1章 Interceptor拦截器入门及使用技巧"></a>第1章 Interceptor拦截器入门及使用技巧</h3><h4 id="Interceptor拦截器入门"><a href="#Interceptor拦截器入门" class="headerlink" title="Interceptor拦截器入门"></a>Interceptor拦截器入门</h4><ul>
+<li>拦截器（Interceptor）用于对URL请求进行前置、后置过滤。</li>
+<li>Interceptor与Filter用途相似，但实现方式不同。</li>
+<li>Interceptor底层就是基于Spring AOP面向切面编程实现。</li>
+</ul>
+<p>拦截器开发流程</p>
+<ul>
+<li>Maven依赖servlet-api</li>
+<li>实现Handlernterceptor接口</li>
+<li>applicationContext配置过滤地址。</li>
+</ul>
+<p><strong>HandlerInterceptor接口</strong></p>
+<ul>
+<li>preHandle - 前置执行处理。</li>
+<li>postHandle - 目标资源已被Spring MVC框架处理。</li>
+<li>afterCompletion - 响应文本已经产生。</li>
+</ul>
+<h4 id="Interceptor使用技巧"><a href="#Interceptor使用技巧" class="headerlink" title="Interceptor使用技巧"></a>Interceptor使用技巧</h4><p>多个拦截器按照配置顺序执行，</p>
+<h3 id="第2章-开发用户流量拦截器"><a href="#第2章-开发用户流量拦截器" class="headerlink" title="第2章 开发用户流量拦截器"></a>第2章 开发用户流量拦截器</h3><h4 id="开发用户流量拦截器-1"><a href="#开发用户流量拦截器-1" class="headerlink" title="开发用户流量拦截器-1"></a>开发用户流量拦截器-1</h4><h4 id="开发用户流量拦截器-2"><a href="#开发用户流量拦截器-2" class="headerlink" title="开发用户流量拦截器-2"></a>开发用户流量拦截器-2</h4><h3 id="第3章-Spring-MVC处理流程"><a href="#第3章-Spring-MVC处理流程" class="headerlink" title="第3章 Spring MVC处理流程"></a>第3章 Spring MVC处理流程</h3><h4 id="Spring-MVC处理流程"><a href="#Spring-MVC处理流程" class="headerlink" title="Spring MVC处理流程"></a>Spring MVC处理流程</h4></body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>JavaSpring4.3。3 项目：校园商铺-店铺管理</title>
     <url>/posts/3233767690/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -1427,143 +1427,6 @@
 <h4 id="在eclipse下开发Java程序"><a href="#在eclipse下开发Java程序" class="headerlink" title="在eclipse下开发Java程序"></a>在eclipse下开发Java程序</h4><ul>
 <li>包（package）的名字一般是域名反写，如com.imooc（小数点前后是两个文件夹，com文件夹内包含imooc文件夹）。</li>
 <li>保存就是编译的过程。</li>
-</ul>
-</body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Java基础通识1.1.4 控制流程--选择结构和控制结构</title>
-    <url>/posts/967957899/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>一、选择结构<ul>
-<li>if结构，if-else结构</li>
-<li>多重if</li>
-<li>嵌套if</li>
-<li>switch结构</li>
-</ul>
-</li>
-<li>二、循环结构<ul>
-<li>while，do-while，for</li>
-<li>循环嵌套</li>
-</ul>
-</li>
-<li>三、while循环</li>
-<li>四、do-while循环</li>
-<li>五、for循环循环嵌套</li>
-<li>六、break语句</li>
-<li>七、continue语句</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="流程控制概述流程"><a href="#流程控制概述流程" class="headerlink" title="流程控制概述流程"></a>流程控制概述流程</h3><p>控制语句：顺序、选择、循环</p>
-<p>顺序：由上而下，依次执行叫做顺序结构。<br><img src="en-resource://database/5353:1" alt="14cfa6132a07af71e7be63b676d18b27.png"></p>
-<p>选择结构：如同if-else结构（根据不同的条件去选择执行if后面的语句还是else后的语句）就是选择结构。</p>
-<h3 id="多重if结构与嵌套if结构"><a href="#多重if结构与嵌套if结构" class="headerlink" title="多重if结构与嵌套if结构"></a>多重if结构与嵌套if结构</h3><h4 id="多重if结构"><a href="#多重if结构" class="headerlink" title="多重if结构"></a>多重if结构</h4><p><strong>选择结构</strong><br>if单条语句形式。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件)    </span><br><span class="line">	语句；</span><br></pre></td></tr></tbody></table></figure></div>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件){</span><br><span class="line">	语句；</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>更推荐加上大括号这种形式，避免遗忘出错。</p>
-<p>if-else多条语句形式。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件)</span><br><span class="line">    语句<span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    语句<span class="number">2</span>；</span><br></pre></td></tr></tbody></table></figure></div>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件){</span><br><span class="line">    语句<span class="number">1</span>;</span><br><span class="line">}<span class="keyword">else</span>{</span><br><span class="line">    语句<span class="number">2</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>案例</strong><br>需求描述：<br>编写一个程序，更具考试成绩，输出相应的评定信息。</p>
-<ul>
-<li>成绩大于等于90分，输出“优”。</li>
-<li>成绩大于等于80分且小于90分，输出“良”。</li>
-<li>成绩大于等于60分小于80分，输出“中”。</li>
-<li>成绩小于60分，输出“不及格”。</li>
-</ul>
-<p>多行注释</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ASCIIDOC"><figure class="iseeu highlight /asciidoc"><table><tbody><tr><td class="code"><pre><span class="line">/\*注释1</span><br><span class="line">注释2</span><br><span class="line">注释3*/</span><br></pre></td></tr></tbody></table></figure></div>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScoreAssess</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    成绩大于等于90分，输出“优”</span></span><br><span class="line"><span class="comment">    成绩大于等于80分且小于90分，输出“良”</span></span><br><span class="line"><span class="comment">    成绩大于等于60分小于80分，输出“中”</span></span><br><span class="line"><span class="comment">    成绩小于60分，输出“不及格”</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    System.out.println(<span class="string">"请输入成绩："</span>); </span><br><span class="line">    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> score=sc.nextInt();</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">90</span>)</span><br><span class="line">        System.out.println(<span class="string">"优"</span>);</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">80</span> &amp; score&lt;<span class="number">90</span>)</span><br><span class="line">        System.out.println(<span class="string">"良"</span>);</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">60</span> &amp; score&lt;<span class="number">80</span>)</span><br><span class="line">        System.out.println(<span class="string">"中"</span>);</span><br><span class="line">    <span class="keyword">if</span>(score&lt;<span class="number">60</span>)</span><br><span class="line">        System.out.println(<span class="string">"不及格"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>多重if结构</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>)</span><br><span class="line">    语句；</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">2</span>) </span><br><span class="line">    语句<span class="number">2</span>；</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">3</span>) </span><br><span class="line">    语句<span class="number">3</span>；</span><br><span class="line">...</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    语句n；</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>改写上方案</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScoreAssess</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    成绩大于等于90分，输出“优”</span></span><br><span class="line"><span class="comment">    成绩大于等于80分且小于90分，输出“良”</span></span><br><span class="line"><span class="comment">    成绩大于等于60分小于80分，输出“中”</span></span><br><span class="line"><span class="comment">    成绩小于60分，输出“不及格”</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    System.out.println(<span class="string">"请输入成绩："</span>); </span><br><span class="line">    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> score=sc.nextInt();</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">90</span>)</span><br><span class="line">        System.out.println(<span class="string">"优"</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">80</span>)<span class="comment">//相当于score&gt;80&amp;score&lt;90。</span></span><br><span class="line">        System.out.println(<span class="string">"良"</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">60</span>)</span><br><span class="line">        System.out.println(<span class="string">"中"</span>);</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">        System.out.println(<span class="string">"不及格"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="嵌套if结构"><a href="#嵌套if结构" class="headerlink" title="嵌套if结构"></a>嵌套if结构</h4><p><img src="en-resource://database/5367:1" alt="ee729e0db1da7f65a75806f38ca8bedc.png"></p>
-<p>注意：在编写过程中可能有多个if或者多个else，每个else应该与哪个if相对于应，则极为重要，初学建议多使用大括号避免出错。</p>
-<p><strong>案例</strong><br>从键盘输入两个整数，经过判断输出他们的关系（大于，小于，等于）</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IntCompare</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String\[] args)</span> </span>{</span><br><span class="line">    <span class="comment">// 定义两个整型变量并初始化</span></span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">5</span>,y=<span class="number">10</span>;</span><br><span class="line">    <span class="comment">//判断x和y是否相等</span></span><br><span class="line">    <span class="keyword">if</span>(x!=y) {</span><br><span class="line">        <span class="keyword">if</span>(x&gt;y){</span><br><span class="line">            System.out.println(x+<span class="string">"大于"</span>+y);</span><br><span class="line">    }<span class="keyword">else</span> {</span><br><span class="line">        System.out.println(x+<span class="string">"小于"</span>+y);</span><br><span class="line">        }</span><br><span class="line">    }<span class="keyword">else</span> {</span><br><span class="line">        System.out.println(x+<span class="string">"和"</span>+y+<span class="string">"相等"</span>);</span><br><span class="line">        }</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(x!=y)</span><br><span class="line">            <span class="keyword">if</span>(x&gt;y)</span><br><span class="line">                System.out.println(x+<span class="string">"大于"</span>+y);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            System.out.println(x+<span class="string">"和"</span>+y+<span class="string">"相等"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>注意：如果没有大括号的情况，if与最近的else相匹配。</p>
-<h3 id="switch结构"><a href="#switch结构" class="headerlink" title="switch结构"></a>switch结构</h3><h4 id="switch结构-1"><a href="#switch结构-1" class="headerlink" title="switch结构"></a>switch结构</h4><p><strong>比较</strong>：</p>
-<p>if结构和switch结构的区别</p>
-<p><strong>if结构：</strong></p>
-<ul>
-<li>判断条件是布尔类型。</li>
-<li>判断条件是一个范围。</li>
-</ul>
-<p><strong>switch结构：</strong></p>
-<ul>
-<li>判断条件是常量值。</li>
-</ul>
-<p><strong>switch结构语法</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式){</span><br><span class="line">    <span class="keyword">case</span>常量表达式<span class="number">1</span>:</span><br><span class="line">        语句<span class="number">1</span>;<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span>常量表达式<span class="number">2</span>:</span><br><span class="line">        语句<span class="number">2</span>;<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        语句<span class="number">3</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>注释：表达式计算之后是个常量值。switch结构的大括号无论何时都不能省略。case语句中：case+空格+常量表达式（计算的结果必须是常量值）+：（冒号不能丢）冒号后面即使不加大括号也可以跟多条语句。break；语句可以在适当的条件下去掉。</p>
-<p>default：语句在前面条件都不满足的情况下才会执行default语句的内容。有点像多重if-else语句中最后的else语句。</p>
-<p>执行流程：先计算switch后表达式的值。然后用计算出来的值一次与case语句后面表达式的值进行匹配。如果小括号内的值与某一个case后表达式的值是相等的 ，就会继续执行case后面的语句。如果执行过程中遇到break语句，将会跳出switch结果，switch结构将终止执行。语句1后面如果没有break语句，将会继续往下执行，直到遇到break语句，才能跳出switch结构。如果一直没有遇到break语句，最终将执行default语句后面的内容。如果小括号内的值与case语句后任何表达式值都不相等，则执行default后的语句。default 语句是可以省略的。如果没有default语句，表达式的值也找不到匹配的值，将会结束switch结构的执行。</p>
-<p>switch结构又被称为多路选择结构。JDK6.0以前表达式的值只能是int类型或者是与int类型等价的数据类型比如说byte，short和字符类型。JDK7.0以后表达式的值可以是基本数据类型的byte，short，int，char，以及string类型。</p>
-<h4 id="星期的表示案例及总结"><a href="#星期的表示案例及总结" class="headerlink" title="星期的表示案例及总结"></a>星期的表示案例及总结</h4><p>从键盘输入1-7之间的任意数字，分别输出对应的星期信息。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeekDemo1</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>{</span><br><span class="line">    <span class="comment">//从键盘接受数据</span></span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    System.out.println(<span class="string">"请输入1-7之间的数字"</span>);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">        <span class="keyword">switch</span> (n) {</span><br><span class="line">             <span class="keyword">case</span> <span class="number">1</span>: </span><br><span class="line">                System.out.println(<span class="string">"星期一"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期二"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期三"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期四"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期五"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期六"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期日"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.out.println(<span class="string">"该数字超出了1-7的范围！"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>改写为输入英文：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeekDemo2</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String\[] args)</span> </span>{</span><br><span class="line">        <span class="comment">//从键盘接受数据</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">            System.out.println(<span class="string">"请输入表示星期的英文单词："</span>);</span><br><span class="line">        String week = sc.next();</span><br><span class="line">        <span class="comment">//比较输入数字和输入英文的代码不同。</span></span><br><span class="line">        week=week.toUpperCase();</span><br><span class="line">        <span class="comment">//把字符串中的字符全部改为大写字母。</span></span><br><span class="line">        <span class="keyword">switch</span> (week) {</span><br><span class="line">            <span class="keyword">case</span> MONDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期一"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> TUESDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期二"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> WEDNESDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期三"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> THURSDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期四"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> FRIDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期五"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> SATURDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期六"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> SUNDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期日"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.out.println(<span class="string">"关于星期的单词输入错误！"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>学习重点：</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">week=week.toUpperCase();<span class="comment">//把字符串中的字符全部改为大写字母。</span></span><br></pre></td></tr></tbody></table></figure></div>
-<p>该条码解决了大小写区分的问题。<br>比较输入数字和输入英文的代码不同：<br>输入数字条码int n = sc.nextInt();<br>输入英文条码String week = sc.next();</p>
-<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><h4 id="while循环的执行流程"><a href="#while循环的执行流程" class="headerlink" title="while循环的执行流程"></a>while循环的执行流程</h4><p>语法格式：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(循环条件){</span><br><span class="line">	语句；</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>注释：<br>循环条件的表达语句结果只能说ture和false。当循环条件的结果是true的时候就执行循环条件后面的语句，否则不执行while循环。如果循环体只有一条语句，大括号可以省略。小括号后面不要加分号，避免出现死循环。</p>
-<p>执行流程：<br>将小于5的整数打印输出。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(n&gt;<span class="number">5</span>){</span><br><span class="line">    <span class="comment">//输出n的值</span></span><br><span class="line">    n++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p><img src="en-resource://database/5380:1" alt="17a24f5bba89686e2d52221f31f9cfbe.png"></p>
-<p>分析：</p>
-<ul>
-<li>n的值必须先进行初始化。</li>
-<li>循环变量n的值必须被改变。</li>
-</ul>
-<h4 id="案例：求1到5的累加和。"><a href="#案例：求1到5的累加和。" class="headerlink" title="案例：求1到5的累加和。"></a>案例：求1到5的累加和。</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlusDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 求1-5的累加和</span></span><br><span class="line">        <span class="comment">//1+2+3+4+5</span></span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;<span class="comment">//sum是存放和的变量</span></span><br><span class="line">        <span class="keyword">while</span>(n&lt;=<span class="number">5</span>){</span><br><span class="line">            sum=sum+n;<span class="comment">//sum+=n;</span></span><br><span class="line">            n++;<span class="comment">//n=n+1;</span></span><br><span class="line">        }</span><br><span class="line">    System.out.println(<span class="string">"1到5的累加和为："</span>+sum);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="案例：循环输出英文字母循环输出26个英文字母，分两行输出。"><a href="#案例：循环输出英文字母循环输出26个英文字母，分两行输出。" class="headerlink" title="案例：循环输出英文字母循环输出26个英文字母，分两行输出。"></a>案例：循环输出英文字母循环输出26个英文字母，分两行输出。</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CharDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 循环输出26个英文小写字母，分两行输出</span></span><br><span class="line">        <span class="keyword">char</span> ch=<span class="string">'a'</span>;</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">1</span>;<span class="comment">//控制换行</span></span><br><span class="line">        <span class="keyword">while</span>(ch&lt;=<span class="string">'z'</span>) {</span><br><span class="line">            System.out.print(ch+<span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span>(count%<span class="number">13</span>==<span class="number">0</span>)</span><br><span class="line">        System.out.println();</span><br><span class="line">        count++;</span><br><span class="line">        ch++;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h3 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do-while循环"></a>do-while循环</h3><h4 id="do-while循环-1"><a href="#do-while循环-1" class="headerlink" title="do-while循环"></a>do-while循环</h4><p>介绍及应用语法格式</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">{</span><br><span class="line">    语句;</span><br><span class="line">}<span class="keyword">while</span>(循环条件);</span><br></pre></td></tr></tbody></table></figure></div>
-<p>注意：</p>
-<ul>
-<li>do-while循环至少执行一次。</li>
-<li>循环条件后的分号不能丢。</li>
-</ul>
-<p>执行流程<br><img src="en-resource://database/5393:1" alt="99426fca401865424547443c4a9a54bf.png"></p>
-<p>注释：局部变量使用前必须被初始化。</p>
-<p><strong>案例：</strong><br>求1-5的累加和。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DoWhileDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 求1-5的累加和</span></span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">do</span>{</span><br><span class="line">            sum=sum+n;</span><br><span class="line">            n++;</span><br><span class="line">        }<span class="keyword">while</span>(n&lt;=<span class="number">5</span>);</span><br><span class="line">    System.out.println(<span class="string">"sum="</span>+sum);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="案例：猜字游戏猜字游戏。"><a href="#案例：猜字游戏猜字游戏。" class="headerlink" title="案例：猜字游戏猜字游戏。"></a>案例：猜字游戏猜字游戏。</h4><p><strong>要求</strong><br>猜一个介于1到10之间的数字。然后将猜测的值与实际值进行比较，并给出提示，以便能更接近实际值，直到猜中为止。</p>
-<p><strong>程序分析：</strong><br>给定要猜测的数字。使用循环结构。循环进行的条件：猜测的数据和实际值不相等循环体的内容：输入实际值，进行判断输出猜到的值。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GuessDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 设置要猜测的数值</span></span><br><span class="line">        <span class="keyword">int</span> number=(<span class="keyword">int</span>)(Math.random()*<span class="number">10</span>+<span class="number">1</span>);</span><br><span class="line">        <span class="comment">//使用随机数生成1到10之间的整数。</span></span><br><span class="line">        <span class="keyword">int</span> guess;</span><br><span class="line">        System.out.println(<span class="string">"猜测一个介于1到10之间的数"</span>);</span><br><span class="line">        <span class="keyword">do</span> {</span><br><span class="line">            System.out.println(<span class="string">"请输入您猜测的数："</span>);</span><br><span class="line">            Scanner sc=<span class="keyword">new</span> Scanner(System.in); </span><br><span class="line">            guess=sc.nextInt();</span><br><span class="line">            <span class="keyword">if</span>(guess&gt;number) {</span><br><span class="line">                System.out.println(<span class="string">"太大！"</span>);</span><br><span class="line">            }<span class="keyword">else</span> <span class="keyword">if</span>(guess&lt;number) {</span><br><span class="line">                System.out.println(<span class="string">"太小！"</span>);</span><br><span class="line">            }</span><br><span class="line">        }<span class="keyword">while</span>(number!=guess);</span><br><span class="line">        System.out.println(<span class="string">"您猜中了！答案为"</span>+number);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>接收从键盘收入的数值时，出现“Resource leak: ‘sc’ is never closed”（资源泄漏:“sc”永远不会关闭）提示。<br><img src="en-resource://database/5814:1" alt="c46d42c6d9399dc11f5608c017d2123d.png"></p>
-<p><img src="en-resource://database/5812:1" alt="e6420eea8c27ef74a694f645a46f4110.png"><br>解决方法如下。<br><img src="en-resource://database/5810:1" alt="5ef7043c5627b690a89025081b8ba73f.png"></p>
-<p><strong>疑问：</strong><br>具体该提示为何形成，有什么影响还不清楚。</p>
-<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><h4 id="for循环应用及局部变量作用范围"><a href="#for循环应用及局部变量作用范围" class="headerlink" title="for循环应用及局部变量作用范围"></a>for循环应用及局部变量作用范围</h4><p>语法格式</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式<span class="number">1</span>;表达式<span class="number">2</span>;表达式<span class="number">3</span>){</span><br><span class="line">    语句;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>只有一条语句，大括号可以省略。<br>运算步骤：表达式1–表达式2–语句–表达式3–表达式2–语句–表达式3（已经进入循环：表2-语句–表3–表2）</p>
-<p>使用for循环，求1到5的累加和。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ForDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> n=<span class="number">1</span>;n&lt;=<span class="number">5</span>;n++){</span><br><span class="line">            sum=sum+n;</span><br><span class="line">        }</span><br><span class="line">    System.out.println(<span class="string">"sum="</span>+sum);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>注意：定义的局部变量只在定义它的大括号内有效！</p>
-<h4 id="for循环的注意事项"><a href="#for循环的注意事项" class="headerlink" title="for循环的注意事项"></a>for循环的注意事项</h4><p>三个表达式都是可以省略的。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式<span class="number">1</span>;表达式<span class="number">2</span>;表达式<span class="number">3</span>){</span><br><span class="line">    语句;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><h4 id="嵌套while循环应用"><a href="#嵌套while循环应用" class="headerlink" title="嵌套while循环应用"></a>嵌套while循环应用</h4><p><img src="en-resource://database/5404:1" alt="321c97b2c99263336e0be1d38e1f491d.png"></p>
-<p>外面的循环叫外重循环，里面的循环叫内重循环。<br>允许多种形式的循环交叉嵌套。</p>
-<p>例题：<br>使用嵌套while循环输出4行4列的星号。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StarDemo1</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> m=<span class="number">1</span>;<span class="comment">//外重循环的变量。</span></span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">1</span>;<span class="comment">//内重循环的循环变量。</span></span><br><span class="line">        System.out.println(<span class="string">"输出4行4列的星号"</span>);</span><br><span class="line">        <span class="comment">//外重循环控制输出几行。</span></span><br><span class="line">        <span class="keyword">while</span>(m&lt;=<span class="number">4</span>) {</span><br><span class="line">            <span class="comment">//内重循环控制每行输出几个星号。</span></span><br><span class="line">            n=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(n&lt;=<span class="number">4</span>) {</span><br><span class="line">                System.out.print(<span class="string">"*"</span>);</span><br><span class="line">                n++;</span><br><span class="line">            }</span><br><span class="line">        System.out.println();<span class="comment">//换行语句 。</span></span><br><span class="line">        m++;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="案例：阶乘的累加和"><a href="#案例：阶乘的累加和" class="headerlink" title="案例：阶乘的累加和"></a>案例：阶乘的累加和</h4><p>案例：<br>求1!+2!+3!+4!+5!+6!+7!+8!+9!+10!</p>
-<p>分析：外重循环做和运算，内重循环做阶乘运算。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JiechengPlus</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> s=<span class="number">1</span>,sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++) {</span><br><span class="line">            s=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=i;j++) {</span><br><span class="line">                s=s*j;<span class="comment">//s存放阶乘计算的结果</span></span><br><span class="line">            }</span><br><span class="line">        sum=sum+s;</span><br><span class="line">        }</span><br><span class="line">    System.out.println(<span class="string">"1!+2!+3!+4!="</span>+sum);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h3 id="break语句和continue语句"><a href="#break语句和continue语句" class="headerlink" title="break语句和continue语句"></a>break语句和continue语句</h3><h4 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h4><ul>
-<li>break语句可以结束当前循环。</li>
-<li>执行完break语句后，当前循环体中位于break语句后面的语句就不会被执行。</li>
-<li>注意：在多重循环中，break语句只向外跳一层。</li>
-<li>break语句既可以用在switch结构也可以用在循环结构当中。</li>
-</ul>
-<h4 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h4><ul>
-<li>continue语句只能使用在循环结构当中。</li>
-<li>continue语句可以结束当前循环的执行，但是要继续执行当前循环体的下一次循环。<br><img src="en-resource://database/5411:1" alt="62f2b170f45c6ad6d8ce68c4f4b19f1f.png"><br><img src="en-resource://database/5416:1" alt="a5fda8481e373028aeaa0ca381e75287.png"></li>
 </ul>
 </body></html>]]></content>
       <categories>
@@ -1711,6 +1574,143 @@
 <li>n=x*y+(x%2)-(x/y)</li>
 <li>n=?</li>
 <li>n=24</li>
+</ul>
+</body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Java基础通识1.1.4 控制流程--选择结构和控制结构</title>
+    <url>/posts/967957899/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>一、选择结构<ul>
+<li>if结构，if-else结构</li>
+<li>多重if</li>
+<li>嵌套if</li>
+<li>switch结构</li>
+</ul>
+</li>
+<li>二、循环结构<ul>
+<li>while，do-while，for</li>
+<li>循环嵌套</li>
+</ul>
+</li>
+<li>三、while循环</li>
+<li>四、do-while循环</li>
+<li>五、for循环循环嵌套</li>
+<li>六、break语句</li>
+<li>七、continue语句</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="流程控制概述流程"><a href="#流程控制概述流程" class="headerlink" title="流程控制概述流程"></a>流程控制概述流程</h3><p>控制语句：顺序、选择、循环</p>
+<p>顺序：由上而下，依次执行叫做顺序结构。<br><img src="en-resource://database/5353:1" alt="14cfa6132a07af71e7be63b676d18b27.png"></p>
+<p>选择结构：如同if-else结构（根据不同的条件去选择执行if后面的语句还是else后的语句）就是选择结构。</p>
+<h3 id="多重if结构与嵌套if结构"><a href="#多重if结构与嵌套if结构" class="headerlink" title="多重if结构与嵌套if结构"></a>多重if结构与嵌套if结构</h3><h4 id="多重if结构"><a href="#多重if结构" class="headerlink" title="多重if结构"></a>多重if结构</h4><p><strong>选择结构</strong><br>if单条语句形式。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件)    </span><br><span class="line">	语句；</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件){</span><br><span class="line">	语句；</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>更推荐加上大括号这种形式，避免遗忘出错。</p>
+<p>if-else多条语句形式。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件)</span><br><span class="line">    语句<span class="number">1</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    语句<span class="number">2</span>；</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(条件){</span><br><span class="line">    语句<span class="number">1</span>;</span><br><span class="line">}<span class="keyword">else</span>{</span><br><span class="line">    语句<span class="number">2</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>案例</strong><br>需求描述：<br>编写一个程序，更具考试成绩，输出相应的评定信息。</p>
+<ul>
+<li>成绩大于等于90分，输出“优”。</li>
+<li>成绩大于等于80分且小于90分，输出“良”。</li>
+<li>成绩大于等于60分小于80分，输出“中”。</li>
+<li>成绩小于60分，输出“不及格”。</li>
+</ul>
+<p>多行注释</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="ASCIIDOC"><figure class="iseeu highlight /asciidoc"><table><tbody><tr><td class="code"><pre><span class="line">/\*注释1</span><br><span class="line">注释2</span><br><span class="line">注释3*/</span><br></pre></td></tr></tbody></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScoreAssess</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    成绩大于等于90分，输出“优”</span></span><br><span class="line"><span class="comment">    成绩大于等于80分且小于90分，输出“良”</span></span><br><span class="line"><span class="comment">    成绩大于等于60分小于80分，输出“中”</span></span><br><span class="line"><span class="comment">    成绩小于60分，输出“不及格”</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    System.out.println(<span class="string">"请输入成绩："</span>); </span><br><span class="line">    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> score=sc.nextInt();</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">90</span>)</span><br><span class="line">        System.out.println(<span class="string">"优"</span>);</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">80</span> &amp; score&lt;<span class="number">90</span>)</span><br><span class="line">        System.out.println(<span class="string">"良"</span>);</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">60</span> &amp; score&lt;<span class="number">80</span>)</span><br><span class="line">        System.out.println(<span class="string">"中"</span>);</span><br><span class="line">    <span class="keyword">if</span>(score&lt;<span class="number">60</span>)</span><br><span class="line">        System.out.println(<span class="string">"不及格"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>多重if结构</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>)</span><br><span class="line">    语句；</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">2</span>) </span><br><span class="line">    语句<span class="number">2</span>；</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">3</span>) </span><br><span class="line">    语句<span class="number">3</span>；</span><br><span class="line">...</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    语句n；</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>改写上方案</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ScoreAssess</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    成绩大于等于90分，输出“优”</span></span><br><span class="line"><span class="comment">    成绩大于等于80分且小于90分，输出“良”</span></span><br><span class="line"><span class="comment">    成绩大于等于60分小于80分，输出“中”</span></span><br><span class="line"><span class="comment">    成绩小于60分，输出“不及格”</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    System.out.println(<span class="string">"请输入成绩："</span>); </span><br><span class="line">    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> score=sc.nextInt();</span><br><span class="line">    <span class="keyword">if</span>(score&gt;=<span class="number">90</span>)</span><br><span class="line">        System.out.println(<span class="string">"优"</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">80</span>)<span class="comment">//相当于score&gt;80&amp;score&lt;90。</span></span><br><span class="line">        System.out.println(<span class="string">"良"</span>);</span><br><span class="line">   <span class="keyword">else</span> <span class="keyword">if</span>(score&gt;=<span class="number">60</span>)</span><br><span class="line">        System.out.println(<span class="string">"中"</span>);</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">        System.out.println(<span class="string">"不及格"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="嵌套if结构"><a href="#嵌套if结构" class="headerlink" title="嵌套if结构"></a>嵌套if结构</h4><p><img src="en-resource://database/5367:1" alt="ee729e0db1da7f65a75806f38ca8bedc.png"></p>
+<p>注意：在编写过程中可能有多个if或者多个else，每个else应该与哪个if相对于应，则极为重要，初学建议多使用大括号避免出错。</p>
+<p><strong>案例</strong><br>从键盘输入两个整数，经过判断输出他们的关系（大于，小于，等于）</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IntCompare</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String\[] args)</span> </span>{</span><br><span class="line">    <span class="comment">// 定义两个整型变量并初始化</span></span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">5</span>,y=<span class="number">10</span>;</span><br><span class="line">    <span class="comment">//判断x和y是否相等</span></span><br><span class="line">    <span class="keyword">if</span>(x!=y) {</span><br><span class="line">        <span class="keyword">if</span>(x&gt;y){</span><br><span class="line">            System.out.println(x+<span class="string">"大于"</span>+y);</span><br><span class="line">    }<span class="keyword">else</span> {</span><br><span class="line">        System.out.println(x+<span class="string">"小于"</span>+y);</span><br><span class="line">        }</span><br><span class="line">    }<span class="keyword">else</span> {</span><br><span class="line">        System.out.println(x+<span class="string">"和"</span>+y+<span class="string">"相等"</span>);</span><br><span class="line">        }</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(x!=y)</span><br><span class="line">            <span class="keyword">if</span>(x&gt;y)</span><br><span class="line">                System.out.println(x+<span class="string">"大于"</span>+y);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            System.out.println(x+<span class="string">"和"</span>+y+<span class="string">"相等"</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>注意：如果没有大括号的情况，if与最近的else相匹配。</p>
+<h3 id="switch结构"><a href="#switch结构" class="headerlink" title="switch结构"></a>switch结构</h3><h4 id="switch结构-1"><a href="#switch结构-1" class="headerlink" title="switch结构"></a>switch结构</h4><p><strong>比较</strong>：</p>
+<p>if结构和switch结构的区别</p>
+<p><strong>if结构：</strong></p>
+<ul>
+<li>判断条件是布尔类型。</li>
+<li>判断条件是一个范围。</li>
+</ul>
+<p><strong>switch结构：</strong></p>
+<ul>
+<li>判断条件是常量值。</li>
+</ul>
+<p><strong>switch结构语法</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式){</span><br><span class="line">    <span class="keyword">case</span>常量表达式<span class="number">1</span>:</span><br><span class="line">        语句<span class="number">1</span>;<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span>常量表达式<span class="number">2</span>:</span><br><span class="line">        语句<span class="number">2</span>;<span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        语句<span class="number">3</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>注释：表达式计算之后是个常量值。switch结构的大括号无论何时都不能省略。case语句中：case+空格+常量表达式（计算的结果必须是常量值）+：（冒号不能丢）冒号后面即使不加大括号也可以跟多条语句。break；语句可以在适当的条件下去掉。</p>
+<p>default：语句在前面条件都不满足的情况下才会执行default语句的内容。有点像多重if-else语句中最后的else语句。</p>
+<p>执行流程：先计算switch后表达式的值。然后用计算出来的值一次与case语句后面表达式的值进行匹配。如果小括号内的值与某一个case后表达式的值是相等的 ，就会继续执行case后面的语句。如果执行过程中遇到break语句，将会跳出switch结果，switch结构将终止执行。语句1后面如果没有break语句，将会继续往下执行，直到遇到break语句，才能跳出switch结构。如果一直没有遇到break语句，最终将执行default语句后面的内容。如果小括号内的值与case语句后任何表达式值都不相等，则执行default后的语句。default 语句是可以省略的。如果没有default语句，表达式的值也找不到匹配的值，将会结束switch结构的执行。</p>
+<p>switch结构又被称为多路选择结构。JDK6.0以前表达式的值只能是int类型或者是与int类型等价的数据类型比如说byte，short和字符类型。JDK7.0以后表达式的值可以是基本数据类型的byte，short，int，char，以及string类型。</p>
+<h4 id="星期的表示案例及总结"><a href="#星期的表示案例及总结" class="headerlink" title="星期的表示案例及总结"></a>星期的表示案例及总结</h4><p>从键盘输入1-7之间的任意数字，分别输出对应的星期信息。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeekDemo1</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>{</span><br><span class="line">    <span class="comment">//从键盘接受数据</span></span><br><span class="line">    Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    System.out.println(<span class="string">"请输入1-7之间的数字"</span>);</span><br><span class="line">    <span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">        <span class="keyword">switch</span> (n) {</span><br><span class="line">             <span class="keyword">case</span> <span class="number">1</span>: </span><br><span class="line">                System.out.println(<span class="string">"星期一"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期二"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期三"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">4</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期四"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期五"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">6</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期六"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">7</span>:</span><br><span class="line">                System.out.println(<span class="string">"星期日"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.out.println(<span class="string">"该数字超出了1-7的范围！"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>改写为输入英文：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WeekDemo2</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String\[] args)</span> </span>{</span><br><span class="line">        <span class="comment">//从键盘接受数据</span></span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">            System.out.println(<span class="string">"请输入表示星期的英文单词："</span>);</span><br><span class="line">        String week = sc.next();</span><br><span class="line">        <span class="comment">//比较输入数字和输入英文的代码不同。</span></span><br><span class="line">        week=week.toUpperCase();</span><br><span class="line">        <span class="comment">//把字符串中的字符全部改为大写字母。</span></span><br><span class="line">        <span class="keyword">switch</span> (week) {</span><br><span class="line">            <span class="keyword">case</span> MONDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期一"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> TUESDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期二"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> WEDNESDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期三"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> THURSDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期四"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> FRIDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期五"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> SATURDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期六"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> SUNDAY:</span><br><span class="line">                System.out.println(<span class="string">"星期日"</span>);<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">default</span>:</span><br><span class="line">                System.out.println(<span class="string">"关于星期的单词输入错误！"</span>);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>学习重点：</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line">week=week.toUpperCase();<span class="comment">//把字符串中的字符全部改为大写字母。</span></span><br></pre></td></tr></tbody></table></figure></div>
+<p>该条码解决了大小写区分的问题。<br>比较输入数字和输入英文的代码不同：<br>输入数字条码int n = sc.nextInt();<br>输入英文条码String week = sc.next();</p>
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><h4 id="while循环的执行流程"><a href="#while循环的执行流程" class="headerlink" title="while循环的执行流程"></a>while循环的执行流程</h4><p>语法格式：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(循环条件){</span><br><span class="line">	语句；</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>注释：<br>循环条件的表达语句结果只能说ture和false。当循环条件的结果是true的时候就执行循环条件后面的语句，否则不执行while循环。如果循环体只有一条语句，大括号可以省略。小括号后面不要加分号，避免出现死循环。</p>
+<p>执行流程：<br>将小于5的整数打印输出。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> n=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(n&gt;<span class="number">5</span>){</span><br><span class="line">    <span class="comment">//输出n的值</span></span><br><span class="line">    n++;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><img src="en-resource://database/5380:1" alt="17a24f5bba89686e2d52221f31f9cfbe.png"></p>
+<p>分析：</p>
+<ul>
+<li>n的值必须先进行初始化。</li>
+<li>循环变量n的值必须被改变。</li>
+</ul>
+<h4 id="案例：求1到5的累加和。"><a href="#案例：求1到5的累加和。" class="headerlink" title="案例：求1到5的累加和。"></a>案例：求1到5的累加和。</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PlusDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 求1-5的累加和</span></span><br><span class="line">        <span class="comment">//1+2+3+4+5</span></span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;<span class="comment">//sum是存放和的变量</span></span><br><span class="line">        <span class="keyword">while</span>(n&lt;=<span class="number">5</span>){</span><br><span class="line">            sum=sum+n;<span class="comment">//sum+=n;</span></span><br><span class="line">            n++;<span class="comment">//n=n+1;</span></span><br><span class="line">        }</span><br><span class="line">    System.out.println(<span class="string">"1到5的累加和为："</span>+sum);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="案例：循环输出英文字母循环输出26个英文字母，分两行输出。"><a href="#案例：循环输出英文字母循环输出26个英文字母，分两行输出。" class="headerlink" title="案例：循环输出英文字母循环输出26个英文字母，分两行输出。"></a>案例：循环输出英文字母循环输出26个英文字母，分两行输出。</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CharDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String [] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 循环输出26个英文小写字母，分两行输出</span></span><br><span class="line">        <span class="keyword">char</span> ch=<span class="string">'a'</span>;</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">1</span>;<span class="comment">//控制换行</span></span><br><span class="line">        <span class="keyword">while</span>(ch&lt;=<span class="string">'z'</span>) {</span><br><span class="line">            System.out.print(ch+<span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span>(count%<span class="number">13</span>==<span class="number">0</span>)</span><br><span class="line">        System.out.println();</span><br><span class="line">        count++;</span><br><span class="line">        ch++;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="do-while循环"><a href="#do-while循环" class="headerlink" title="do-while循环"></a>do-while循环</h3><h4 id="do-while循环-1"><a href="#do-while循环-1" class="headerlink" title="do-while循环"></a>do-while循环</h4><p>介绍及应用语法格式</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">{</span><br><span class="line">    语句;</span><br><span class="line">}<span class="keyword">while</span>(循环条件);</span><br></pre></td></tr></tbody></table></figure></div>
+<p>注意：</p>
+<ul>
+<li>do-while循环至少执行一次。</li>
+<li>循环条件后的分号不能丢。</li>
+</ul>
+<p>执行流程<br><img src="en-resource://database/5393:1" alt="99426fca401865424547443c4a9a54bf.png"></p>
+<p>注释：局部变量使用前必须被初始化。</p>
+<p><strong>案例：</strong><br>求1-5的累加和。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DoWhileDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 求1-5的累加和</span></span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">do</span>{</span><br><span class="line">            sum=sum+n;</span><br><span class="line">            n++;</span><br><span class="line">        }<span class="keyword">while</span>(n&lt;=<span class="number">5</span>);</span><br><span class="line">    System.out.println(<span class="string">"sum="</span>+sum);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="案例：猜字游戏猜字游戏。"><a href="#案例：猜字游戏猜字游戏。" class="headerlink" title="案例：猜字游戏猜字游戏。"></a>案例：猜字游戏猜字游戏。</h4><p><strong>要求</strong><br>猜一个介于1到10之间的数字。然后将猜测的值与实际值进行比较，并给出提示，以便能更接近实际值，直到猜中为止。</p>
+<p><strong>程序分析：</strong><br>给定要猜测的数字。使用循环结构。循环进行的条件：猜测的数据和实际值不相等循环体的内容：输入实际值，进行判断输出猜到的值。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GuessDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">// 设置要猜测的数值</span></span><br><span class="line">        <span class="keyword">int</span> number=(<span class="keyword">int</span>)(Math.random()*<span class="number">10</span>+<span class="number">1</span>);</span><br><span class="line">        <span class="comment">//使用随机数生成1到10之间的整数。</span></span><br><span class="line">        <span class="keyword">int</span> guess;</span><br><span class="line">        System.out.println(<span class="string">"猜测一个介于1到10之间的数"</span>);</span><br><span class="line">        <span class="keyword">do</span> {</span><br><span class="line">            System.out.println(<span class="string">"请输入您猜测的数："</span>);</span><br><span class="line">            Scanner sc=<span class="keyword">new</span> Scanner(System.in); </span><br><span class="line">            guess=sc.nextInt();</span><br><span class="line">            <span class="keyword">if</span>(guess&gt;number) {</span><br><span class="line">                System.out.println(<span class="string">"太大！"</span>);</span><br><span class="line">            }<span class="keyword">else</span> <span class="keyword">if</span>(guess&lt;number) {</span><br><span class="line">                System.out.println(<span class="string">"太小！"</span>);</span><br><span class="line">            }</span><br><span class="line">        }<span class="keyword">while</span>(number!=guess);</span><br><span class="line">        System.out.println(<span class="string">"您猜中了！答案为"</span>+number);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>接收从键盘收入的数值时，出现“Resource leak: ‘sc’ is never closed”（资源泄漏:“sc”永远不会关闭）提示。<br><img src="en-resource://database/5814:1" alt="c46d42c6d9399dc11f5608c017d2123d.png"></p>
+<p><img src="en-resource://database/5812:1" alt="e6420eea8c27ef74a694f645a46f4110.png"><br>解决方法如下。<br><img src="en-resource://database/5810:1" alt="5ef7043c5627b690a89025081b8ba73f.png"></p>
+<p><strong>疑问：</strong><br>具体该提示为何形成，有什么影响还不清楚。</p>
+<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><h4 id="for循环应用及局部变量作用范围"><a href="#for循环应用及局部变量作用范围" class="headerlink" title="for循环应用及局部变量作用范围"></a>for循环应用及局部变量作用范围</h4><p>语法格式</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式<span class="number">1</span>;表达式<span class="number">2</span>;表达式<span class="number">3</span>){</span><br><span class="line">    语句;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>只有一条语句，大括号可以省略。<br>运算步骤：表达式1–表达式2–语句–表达式3–表达式2–语句–表达式3（已经进入循环：表2-语句–表3–表2）</p>
+<p>使用for循环，求1到5的累加和。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ForDemo</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> n=<span class="number">1</span>;n&lt;=<span class="number">5</span>;n++){</span><br><span class="line">            sum=sum+n;</span><br><span class="line">        }</span><br><span class="line">    System.out.println(<span class="string">"sum="</span>+sum);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>注意：定义的局部变量只在定义它的大括号内有效！</p>
+<h4 id="for循环的注意事项"><a href="#for循环的注意事项" class="headerlink" title="for循环的注意事项"></a>for循环的注意事项</h4><p>三个表达式都是可以省略的。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式<span class="number">1</span>;表达式<span class="number">2</span>;表达式<span class="number">3</span>){</span><br><span class="line">    语句;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><h4 id="嵌套while循环应用"><a href="#嵌套while循环应用" class="headerlink" title="嵌套while循环应用"></a>嵌套while循环应用</h4><p><img src="en-resource://database/5404:1" alt="321c97b2c99263336e0be1d38e1f491d.png"></p>
+<p>外面的循环叫外重循环，里面的循环叫内重循环。<br>允许多种形式的循环交叉嵌套。</p>
+<p>例题：<br>使用嵌套while循环输出4行4列的星号。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StarDemo1</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> m=<span class="number">1</span>;<span class="comment">//外重循环的变量。</span></span><br><span class="line">        <span class="keyword">int</span> n=<span class="number">1</span>;<span class="comment">//内重循环的循环变量。</span></span><br><span class="line">        System.out.println(<span class="string">"输出4行4列的星号"</span>);</span><br><span class="line">        <span class="comment">//外重循环控制输出几行。</span></span><br><span class="line">        <span class="keyword">while</span>(m&lt;=<span class="number">4</span>) {</span><br><span class="line">            <span class="comment">//内重循环控制每行输出几个星号。</span></span><br><span class="line">            n=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(n&lt;=<span class="number">4</span>) {</span><br><span class="line">                System.out.print(<span class="string">"*"</span>);</span><br><span class="line">                n++;</span><br><span class="line">            }</span><br><span class="line">        System.out.println();<span class="comment">//换行语句 。</span></span><br><span class="line">        m++;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="案例：阶乘的累加和"><a href="#案例：阶乘的累加和" class="headerlink" title="案例：阶乘的累加和"></a>案例：阶乘的累加和</h4><p>案例：<br>求1!+2!+3!+4!+5!+6!+7!+8!+9!+10!</p>
+<p>分析：外重循环做和运算，内重循环做阶乘运算。</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.flow1;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JiechengPlus</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="keyword">int</span> s=<span class="number">1</span>,sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++) {</span><br><span class="line">            s=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=i;j++) {</span><br><span class="line">                s=s*j;<span class="comment">//s存放阶乘计算的结果</span></span><br><span class="line">            }</span><br><span class="line">        sum=sum+s;</span><br><span class="line">        }</span><br><span class="line">    System.out.println(<span class="string">"1!+2!+3!+4!="</span>+sum);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h3 id="break语句和continue语句"><a href="#break语句和continue语句" class="headerlink" title="break语句和continue语句"></a>break语句和continue语句</h3><h4 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h4><ul>
+<li>break语句可以结束当前循环。</li>
+<li>执行完break语句后，当前循环体中位于break语句后面的语句就不会被执行。</li>
+<li>注意：在多重循环中，break语句只向外跳一层。</li>
+<li>break语句既可以用在switch结构也可以用在循环结构当中。</li>
+</ul>
+<h4 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h4><ul>
+<li>continue语句只能使用在循环结构当中。</li>
+<li>continue语句可以结束当前循环的执行，但是要继续执行当前循环体的下一次循环。<br><img src="en-resource://database/5411:1" alt="62f2b170f45c6ad6d8ce68c4f4b19f1f.png"><br><img src="en-resource://database/5416:1" alt="a5fda8481e373028aeaa0ca381e75287.png"></li>
 </ul>
 </body></html>]]></content>
       <categories>
@@ -2002,25 +2002,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《个人博客介绍》</title>
-    <url>/posts/2643675631/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>这个博客的搭建主要有两个初衷：</p>
-<h4 id="一、总结学到的技术，记录自己的思考。"><a href="#一、总结学到的技术，记录自己的思考。" class="headerlink" title="一、总结学到的技术，记录自己的思考。"></a>一、总结学到的技术，记录自己的思考。</h4><a id="more"></a>
-
-<p>1.1  将学习到的技术，经过自己实践、验证、思考、总结后，写出可复现、较详尽、易理解的说明文档。记录一只小菜鸟的技术成长之路，是该博客的主要职能之一。</p>
-<p>1.2 该博客另一个主要的职能是记录自己对一些问题的思考和一些自己所犯的错误的一些总结与反思，属于思想上的修炼之路吧。期待一个更成熟、更强大的自己。</p>
-<p>1.3 无论是技术还是生活，毕竟是第一次做人，很多东西都不懂！在面对一些不曾涉猎的问题，会做出很多错误的选择，浪费很多时间，走很多弯路。所以想在自己努力成长的同时，如果能给需要的朋友，提供一点反面参考的经验，让朋友们少浪费些时间，少走点弯路，那我所犯的错误，所做的蠢事，或许也是有一点意义的吧。</p>
-<p>1.4 有一分热，便发一分光，不必等候火炬。星星之火，可以燎原。共同成长，与君共勉！</p>
-<h4 id="二、记录自己的生活。"><a href="#二、记录自己的生活。" class="headerlink" title="二、记录自己的生活。"></a>二、记录自己的生活。</h4><p>社交软件也可以记录生活，但是有两个方面社交软件达不到我的需求：</p>
-<p>2.1 无法做单纯的记录。</p>
-<p>有些时候，仅仅只是希望做一份记录，不想打扰到别人，但社交软件的强制社交性，会导致他只要打开社交软件，就一定会看到我仅仅想做记录的动态。</p>
-<p>工作也是生活的一部分，但是要在社交软件中发布某些和工作有关的工作记录，就会感觉很奇怪。大家一天工作忙完了，已经很累了，想开朋友圈看看有什么轻松有趣的动态，如果被迫考到我这还全是工作有关的一堆事，那不是挺糟心的嘛，干脆社交软件就做点轻松愉快的生活记录，岂不是更好。</p>
-<p>2.2 或多或少总有不满意的地方，并且无法进行调整。</p>
-<p>各个软件总体来说都有自己的局限性，文字、图片、视频、PDF、代码块、网站引用连接等等，要么就是这个功能缺失，要么就是那个字数、文件大小、或者是文件类型有限制，反正总是有不尽人意的地方，在个人博客中，想用什么全看自己，没有的功能也可以根据自己的需求增加，并且一处编写，随处引用，这样就方便了很多了。</p>
-<p>2.3 先上传些诗词美文，用作测试。以便确定相关功能正常运行。</p>
-</body></html>]]></content>
-  </entry>
-  <entry>
     <title>《我会采更多的菊》 纳丁·斯特尔</title>
     <url>/posts/4025597166/</url>
     <content><![CDATA[<html><head></head><body><h4 id="译文："><a href="#译文：" class="headerlink" title="译文："></a>译文：</h4><p>如果我能够从头活过，<br>我会试着犯更多的错。<br>我会放松一点，我会灵活一点。<br>我会比这一趟过得傻。</p>
@@ -2048,6 +2029,25 @@
       <tags>
         <tag>诗词</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>《个人博客介绍》</title>
+    <url>/posts/2643675631/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>这个博客的搭建主要有两个初衷：</p>
+<h4 id="一、总结学到的技术，记录自己的思考。"><a href="#一、总结学到的技术，记录自己的思考。" class="headerlink" title="一、总结学到的技术，记录自己的思考。"></a>一、总结学到的技术，记录自己的思考。</h4><a id="more"></a>
+
+<p>1.1  将学习到的技术，经过自己实践、验证、思考、总结后，写出可复现、较详尽、易理解的说明文档。记录一只小菜鸟的技术成长之路，是该博客的主要职能之一。</p>
+<p>1.2 该博客另一个主要的职能是记录自己对一些问题的思考和一些自己所犯的错误的一些总结与反思，属于思想上的修炼之路吧。期待一个更成熟、更强大的自己。</p>
+<p>1.3 无论是技术还是生活，毕竟是第一次做人，很多东西都不懂！在面对一些不曾涉猎的问题，会做出很多错误的选择，浪费很多时间，走很多弯路。所以想在自己努力成长的同时，如果能给需要的朋友，提供一点反面参考的经验，让朋友们少浪费些时间，少走点弯路，那我所犯的错误，所做的蠢事，或许也是有一点意义的吧。</p>
+<p>1.4 有一分热，便发一分光，不必等候火炬。星星之火，可以燎原。共同成长，与君共勉！</p>
+<h4 id="二、记录自己的生活。"><a href="#二、记录自己的生活。" class="headerlink" title="二、记录自己的生活。"></a>二、记录自己的生活。</h4><p>社交软件也可以记录生活，但是有两个方面社交软件达不到我的需求：</p>
+<p>2.1 无法做单纯的记录。</p>
+<p>有些时候，仅仅只是希望做一份记录，不想打扰到别人，但社交软件的强制社交性，会导致他只要打开社交软件，就一定会看到我仅仅想做记录的动态。</p>
+<p>工作也是生活的一部分，但是要在社交软件中发布某些和工作有关的工作记录，就会感觉很奇怪。大家一天工作忙完了，已经很累了，想开朋友圈看看有什么轻松有趣的动态，如果被迫考到我这还全是工作有关的一堆事，那不是挺糟心的嘛，干脆社交软件就做点轻松愉快的生活记录，岂不是更好。</p>
+<p>2.2 或多或少总有不满意的地方，并且无法进行调整。</p>
+<p>各个软件总体来说都有自己的局限性，文字、图片、视频、PDF、代码块、网站引用连接等等，要么就是这个功能缺失，要么就是那个字数、文件大小、或者是文件类型有限制，反正总是有不尽人意的地方，在个人博客中，想用什么全看自己，没有的功能也可以根据自己的需求增加，并且一处编写，随处引用，这样就方便了很多了。</p>
+<p>2.3 先上传些诗词美文，用作测试。以便确定相关功能正常运行。</p>
+</body></html>]]></content>
   </entry>
   <entry>
     <title>Java报警报错处理方案记录</title>
