@@ -1220,7 +1220,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fff98e;
+  background: #ffffec;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2806,6 +2806,11 @@ body {
   outline: 0;
   padding: 0 15px;
   vertical-align: text-top;
+}
+.pagination {
+  box-shadow: 0 0 14px #cacbcb;
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
 }
 @font-face {
   font-family: Title;
