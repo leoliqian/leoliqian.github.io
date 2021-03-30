@@ -311,95 +311,6 @@
       </categories>
   </entry>
   <entry>
-    <title>JavaSpring4.1.4 基于AspectJ的AOP开发</title>
-    <url>/posts/3229689219/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>Spring的概述</li>
-<li>Spring的入门</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><h4 id="AspectJ的简介"><a href="#AspectJ的简介" class="headerlink" title="AspectJ的简介"></a>AspectJ的简介</h4><ul>
-<li>AspectJ是一个基于Java语言的AOP框架。</li>
-<li>Spring2.0以后新增了对AspectJ切点表达式支持</li>
-<li>@AspectJ是AspectJ1.5新增功能，通过JDK5注解技术，允许直接在Bean类中定义切面。</li>
-<li>新版本Spring框架，建议使用AspectJ方式来开发AOP。</li>
-<li>使用AspectJ需要导入Spring AOP和AspectJ相关jar包。<ul>
-<li>spring-aop-4.2.4.RELEASE.jar</li>
-<li>com.springsource.org.aopalliance-1.0.0.jar</li>
-<li>spring-aspects-4.2.4.RELEASE.jar</li>
-<li>com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar</li>
-</ul>
-</li>
-</ul>
-<h3 id="AspectJ的注解开发AOP（上）"><a href="#AspectJ的注解开发AOP（上）" class="headerlink" title="AspectJ的注解开发AOP（上）"></a>AspectJ的注解开发AOP（上）</h3><h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><h4 id="通知的类型介绍"><a href="#通知的类型介绍" class="headerlink" title="通知的类型介绍"></a>通知的类型介绍</h4><ul>
-<li>@Before 前置通知，相当于BeforeAdvice。</li>
-<li>@AfterReturning 后置通知，相当于AfterReturningAdvice。</li>
-<li>@Around 环绕通知，相当于MethodInterceptor。</li>
-<li>@AfterThrowing 异常抛出通知，相当于ThrowAdvice。</li>
-<li>@After 最终final通知，不管是否异常，该通知都会执行。</li>
-<li>@DeclareParents 引介通知，相当于IntroductionInterceptor（不要求掌握）</li>
-</ul>
-<h4 id="切入点表达式的定义"><a href="#切入点表达式的定义" class="headerlink" title="切入点表达式的定义"></a>切入点表达式的定义</h4><ul>
-<li><p>通过execution函数，可以定义切点的方法切入</p>
-</li>
-<li><p>语法：</p>
-<ul>
-<li>execution ( &lt;访问修饰符&gt; ? &lt; 返回类型 &gt; &lt; 方法名 &gt; ( &lt; 参数 &gt; ) &lt; 异常 &gt; )</li>
-</ul>
-</li>
-<li><p>例如：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="XML"><figure class="iseeu highlight /xml"><table><tbody><tr><td class="code"><pre><span class="line">匹配所有类public方法 execution(public * * (..))</span><br><span class="line">匹配指定包下所有类方法 execution(* com.imooc.dao.*(..)) 不包含子包</span><br><span class="line">execution (* com.imooc.dao..*(..))   表示包、子包下所有类可以用..*来表示</span><br><span class="line">匹配指定类所有方法 execution(* com.imooc.service.UserService.*(..))</span><br><span class="line">匹配实现特定接口所有类方法 execution(* com.imooc.dao.GenericDAO+.*(..))</span><br><span class="line">匹配所有save开头的方法 execution(* save*(..))</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-</li>
-</ul>
-<h3 id="第3章-AspectJ的注解开发AOP（下）"><a href="#第3章-AspectJ的注解开发AOP（下）" class="headerlink" title="第3章 AspectJ的注解开发AOP（下）"></a>第3章 AspectJ的注解开发AOP（下）</h3><h4 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h4><h4 id="Before前置通知"><a href="#Before前置通知" class="headerlink" title="@Before前置通知"></a>@Before前置通知</h4><ul>
-<li>可以在方法中传入JoinPoint对象，用来获得切点信息</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspectAnno</span> </span>{</span><br><span class="line">   <span class="meta">@Before(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.save(..))")</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">(JoinPoint joinPoint)</span></span>{</span><br><span class="line">       System.out.println(<span class="string">"前置通知==========="</span>+joinPoint);</span><br><span class="line">   }</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<h4 id="AfterReturing后置通知"><a href="#AfterReturing后置通知" class="headerlink" title="@AfterReturing后置通知"></a>@AfterReturing后置通知</h4><ul>
-<li>通过returning属性，可以定义方法返回值，作为参数。</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@AfterReturning(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.update(..))",returning = "result")</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturing</span><span class="params">(Object result)</span></span>{</span><br><span class="line">    System.out.println(<span class="string">"后置通知==========="</span>+result);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<h4 id="Around环绕通知"><a href="#Around环绕通知" class="headerlink" title="@Around环绕通知"></a>@Around环绕通知</h4><ul>
-<li>around方法的返回值就是目标代理方法执行返回值。</li>
-<li>参数为ProceedingJoinPoint可以调用拦截目标方法执行。</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Around(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.delete(..))")</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">around</span><span class="params">(ProceedingJoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">    System.out.println(<span class="string">"环绕前通知"</span>);</span><br><span class="line">    Object obj = joinPoint.proceed();<span class="comment">//执行目标方法</span></span><br><span class="line">    System.out.println(<span class="string">"环绕后通知"</span>);</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<ul>
-<li>重点：如果不调用ProceedingJoinPoint的proceed方法，那么目标方法就被拦截了。</li>
-</ul>
-<h4 id="AfterThrowing异常抛出通知"><a href="#AfterThrowing异常抛出通知" class="headerlink" title="@AfterThrowing异常抛出通知"></a>@AfterThrowing异常抛出通知</h4><ul>
-<li>通过设置throwing属性，可以设置发生异常对象参数</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@AfterThrowing(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.findOne(..))",throwing = "e")</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowing</span><span class="params">(Throwable e)</span></span>{</span><br><span class="line">    System.out.println(<span class="string">"异常抛出通知"</span>+e.getMessage());</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<h4 id="After最终通知"><a href="#After最终通知" class="headerlink" title="@After最终通知"></a>@After最终通知</h4><ul>
-<li>无论是否出现异常，最终通知总是会被执行的</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@After(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.findAll(..))")</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span></span>{</span><br><span class="line">    System.out.println(<span class="string">"最终通知"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<h4 id="切点命名"><a href="#切点命名" class="headerlink" title="切点命名"></a>切点命名</h4><ul>
-<li>在每个通知内定义切点，会造成工作量大，不易维护，对于重复的切点，可以使用@Pointcut进行定义。</li>
-<li>切点方法：private void 无参数方法，方法名为切点名</li>
-<li>当通知多个切点时，可以使用 || 进行连接。</li>
-</ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.aspectJ.demo1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.JoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.ProceedingJoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 切面类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspectAnno</span> </span>{</span><br><span class="line">    <span class="meta">@Before(value = "myPointcut1()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">(JoinPoint joinPoint)</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"前置通知==========="</span>+joinPoint);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AfterReturning(value = "myPointcut2()",returning = "result")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturing</span><span class="params">(Object result)</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"后置通知==========="</span>+result);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Around(value = "myPointcut3()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">around</span><span class="params">(ProceedingJoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">        System.out.println(<span class="string">"环绕前通知"</span>);</span><br><span class="line">        Object obj = joinPoint.proceed();<span class="comment">//执行目标方法</span></span><br><span class="line">        System.out.println(<span class="string">"环绕后通知"</span>);</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AfterThrowing(value = "myPointcut4()",throwing = "e")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowing</span><span class="params">(Throwable e)</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"异常抛出通知"</span>+e.getMessage());</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@After(value = "myPointcut5()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"最终通知"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.save(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut1</span><span class="params">()</span></span>{}</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.update(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut2</span><span class="params">()</span></span>{}</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.findOne(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut3</span><span class="params">()</span></span>{}</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.delete(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut4</span><span class="params">()</span></span>{}</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.findAll(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut5</span><span class="params">()</span></span>{}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<h3 id="AspectJ的XML方式开发AOP"><a href="#AspectJ的XML方式开发AOP" class="headerlink" title="AspectJ的XML方式开发AOP"></a>AspectJ的XML方式开发AOP</h3><h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><h4 id="入门案例-1"><a href="#入门案例-1" class="headerlink" title="入门案例"></a>入门案例</h4><h4 id="各种通知类型的配置"><a href="#各种通知类型的配置" class="headerlink" title="各种通知类型的配置"></a>各种通知类型的配置</h4></body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>JavaSpring4.1.5 JDBC Template</title>
     <url>/posts/4075042915/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -601,6 +512,95 @@
 <p><strong>D、</strong>JDBCTemplate相对于JDBC更加的复杂，增大了代码量</p>
 <p><strong>正确答案：</strong> <strong>A,C</strong></p>
 </body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>JavaSpring4.1.4 基于AspectJ的AOP开发</title>
+    <url>/posts/3229689219/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>Spring的概述</li>
+<li>Spring的入门</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><h4 id="AspectJ的简介"><a href="#AspectJ的简介" class="headerlink" title="AspectJ的简介"></a>AspectJ的简介</h4><ul>
+<li>AspectJ是一个基于Java语言的AOP框架。</li>
+<li>Spring2.0以后新增了对AspectJ切点表达式支持</li>
+<li>@AspectJ是AspectJ1.5新增功能，通过JDK5注解技术，允许直接在Bean类中定义切面。</li>
+<li>新版本Spring框架，建议使用AspectJ方式来开发AOP。</li>
+<li>使用AspectJ需要导入Spring AOP和AspectJ相关jar包。<ul>
+<li>spring-aop-4.2.4.RELEASE.jar</li>
+<li>com.springsource.org.aopalliance-1.0.0.jar</li>
+<li>spring-aspects-4.2.4.RELEASE.jar</li>
+<li>com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar</li>
+</ul>
+</li>
+</ul>
+<h3 id="AspectJ的注解开发AOP（上）"><a href="#AspectJ的注解开发AOP（上）" class="headerlink" title="AspectJ的注解开发AOP（上）"></a>AspectJ的注解开发AOP（上）</h3><h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><h4 id="通知的类型介绍"><a href="#通知的类型介绍" class="headerlink" title="通知的类型介绍"></a>通知的类型介绍</h4><ul>
+<li>@Before 前置通知，相当于BeforeAdvice。</li>
+<li>@AfterReturning 后置通知，相当于AfterReturningAdvice。</li>
+<li>@Around 环绕通知，相当于MethodInterceptor。</li>
+<li>@AfterThrowing 异常抛出通知，相当于ThrowAdvice。</li>
+<li>@After 最终final通知，不管是否异常，该通知都会执行。</li>
+<li>@DeclareParents 引介通知，相当于IntroductionInterceptor（不要求掌握）</li>
+</ul>
+<h4 id="切入点表达式的定义"><a href="#切入点表达式的定义" class="headerlink" title="切入点表达式的定义"></a>切入点表达式的定义</h4><ul>
+<li><p>通过execution函数，可以定义切点的方法切入</p>
+</li>
+<li><p>语法：</p>
+<ul>
+<li>execution ( &lt;访问修饰符&gt; ? &lt; 返回类型 &gt; &lt; 方法名 &gt; ( &lt; 参数 &gt; ) &lt; 异常 &gt; )</li>
+</ul>
+</li>
+<li><p>例如：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="XML"><figure class="iseeu highlight /xml"><table><tbody><tr><td class="code"><pre><span class="line">匹配所有类public方法 execution(public * * (..))</span><br><span class="line">匹配指定包下所有类方法 execution(* com.imooc.dao.*(..)) 不包含子包</span><br><span class="line">execution (* com.imooc.dao..*(..))   表示包、子包下所有类可以用..*来表示</span><br><span class="line">匹配指定类所有方法 execution(* com.imooc.service.UserService.*(..))</span><br><span class="line">匹配实现特定接口所有类方法 execution(* com.imooc.dao.GenericDAO+.*(..))</span><br><span class="line">匹配所有save开头的方法 execution(* save*(..))</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+</li>
+</ul>
+<h3 id="第3章-AspectJ的注解开发AOP（下）"><a href="#第3章-AspectJ的注解开发AOP（下）" class="headerlink" title="第3章 AspectJ的注解开发AOP（下）"></a>第3章 AspectJ的注解开发AOP（下）</h3><h4 id="入门案例"><a href="#入门案例" class="headerlink" title="入门案例"></a>入门案例</h4><h4 id="Before前置通知"><a href="#Before前置通知" class="headerlink" title="@Before前置通知"></a>@Before前置通知</h4><ul>
+<li>可以在方法中传入JoinPoint对象，用来获得切点信息</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspectAnno</span> </span>{</span><br><span class="line">   <span class="meta">@Before(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.save(..))")</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">(JoinPoint joinPoint)</span></span>{</span><br><span class="line">       System.out.println(<span class="string">"前置通知==========="</span>+joinPoint);</span><br><span class="line">   }</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<h4 id="AfterReturing后置通知"><a href="#AfterReturing后置通知" class="headerlink" title="@AfterReturing后置通知"></a>@AfterReturing后置通知</h4><ul>
+<li>通过returning属性，可以定义方法返回值，作为参数。</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@AfterReturning(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.update(..))",returning = "result")</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturing</span><span class="params">(Object result)</span></span>{</span><br><span class="line">    System.out.println(<span class="string">"后置通知==========="</span>+result);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<h4 id="Around环绕通知"><a href="#Around环绕通知" class="headerlink" title="@Around环绕通知"></a>@Around环绕通知</h4><ul>
+<li>around方法的返回值就是目标代理方法执行返回值。</li>
+<li>参数为ProceedingJoinPoint可以调用拦截目标方法执行。</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@Around(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.delete(..))")</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Object <span class="title">around</span><span class="params">(ProceedingJoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">    System.out.println(<span class="string">"环绕前通知"</span>);</span><br><span class="line">    Object obj = joinPoint.proceed();<span class="comment">//执行目标方法</span></span><br><span class="line">    System.out.println(<span class="string">"环绕后通知"</span>);</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<ul>
+<li>重点：如果不调用ProceedingJoinPoint的proceed方法，那么目标方法就被拦截了。</li>
+</ul>
+<h4 id="AfterThrowing异常抛出通知"><a href="#AfterThrowing异常抛出通知" class="headerlink" title="@AfterThrowing异常抛出通知"></a>@AfterThrowing异常抛出通知</h4><ul>
+<li>通过设置throwing属性，可以设置发生异常对象参数</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@AfterThrowing(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.findOne(..))",throwing = "e")</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowing</span><span class="params">(Throwable e)</span></span>{</span><br><span class="line">    System.out.println(<span class="string">"异常抛出通知"</span>+e.getMessage());</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<h4 id="After最终通知"><a href="#After最终通知" class="headerlink" title="@After最终通知"></a>@After最终通知</h4><ul>
+<li>无论是否出现异常，最终通知总是会被执行的</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="meta">@After(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.findAll(..))")</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span></span>{</span><br><span class="line">    System.out.println(<span class="string">"最终通知"</span>);</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<h4 id="切点命名"><a href="#切点命名" class="headerlink" title="切点命名"></a>切点命名</h4><ul>
+<li>在每个通知内定义切点，会造成工作量大，不易维护，对于重复的切点，可以使用@Pointcut进行定义。</li>
+<li>切点方法：private void 无参数方法，方法名为切点名</li>
+<li>当通知多个切点时，可以使用 || 进行连接。</li>
+</ul>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.aspectJ.demo1;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.JoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.ProceedingJoinPoint;</span><br><span class="line"><span class="keyword">import</span> org.aspectj.lang.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 切面类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Aspect</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAspectAnno</span> </span>{</span><br><span class="line">    <span class="meta">@Before(value = "myPointcut1()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">before</span><span class="params">(JoinPoint joinPoint)</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"前置通知==========="</span>+joinPoint);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AfterReturning(value = "myPointcut2()",returning = "result")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturing</span><span class="params">(Object result)</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"后置通知==========="</span>+result);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Around(value = "myPointcut3()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">around</span><span class="params">(ProceedingJoinPoint joinPoint)</span> <span class="keyword">throws</span> Throwable </span>{</span><br><span class="line">        System.out.println(<span class="string">"环绕前通知"</span>);</span><br><span class="line">        Object obj = joinPoint.proceed();<span class="comment">//执行目标方法</span></span><br><span class="line">        System.out.println(<span class="string">"环绕后通知"</span>);</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@AfterThrowing(value = "myPointcut4()",throwing = "e")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowing</span><span class="params">(Throwable e)</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"异常抛出通知"</span>+e.getMessage());</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@After(value = "myPointcut5()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">after</span><span class="params">()</span></span>{</span><br><span class="line">        System.out.println(<span class="string">"最终通知"</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.save(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut1</span><span class="params">()</span></span>{}</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.update(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut2</span><span class="params">()</span></span>{}</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.findOne(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut3</span><span class="params">()</span></span>{}</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.delete(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut4</span><span class="params">()</span></span>{}</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut(value = "execution(* com.imooc.aspectJ.demo1.ProductDao.findAll(..))")</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">myPointcut5</span><span class="params">()</span></span>{}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<h3 id="AspectJ的XML方式开发AOP"><a href="#AspectJ的XML方式开发AOP" class="headerlink" title="AspectJ的XML方式开发AOP"></a>AspectJ的XML方式开发AOP</h3><h4 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h4><h4 id="入门案例-1"><a href="#入门案例-1" class="headerlink" title="入门案例"></a>入门案例</h4><h4 id="各种通知类型的配置"><a href="#各种通知类型的配置" class="headerlink" title="各种通知类型的配置"></a>各种通知类型的配置</h4></body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -831,31 +831,6 @@
       </categories>
   </entry>
   <entry>
-    <title>JavaSpring4.1.7 项目：人员管理系统开发</title>
-    <url>/posts/3126862922/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>Spring的概述</li>
-<li>Spring的入门</li>
-</ul>
-<a id="more"></a>
-
-<p>项目实现时，先考虑数据库设计</p>
-<ul>
-<li>工具类<ul>
-<li>编码过滤器</li>
-<li>核心控制器<ul>
-<li>Servlet对象由Web容器管理、Service对象由IOC容器管理</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>JavaSpring4.2.1 Spring MVC</title>
     <url>/posts/3143609333/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -964,6 +939,31 @@
 <li>重定向使用 new ModelAndView ( “redirect:/index.jsp” )</li>
 </ul>
 <h4 id="编程练习（自由编程）-1"><a href="#编程练习（自由编程）-1" class="headerlink" title="编程练习（自由编程）"></a>编程练习（自由编程）</h4><h3 id="Spring-MVC整合FreeMarker"><a href="#Spring-MVC整合FreeMarker" class="headerlink" title="Spring MVC整合FreeMarker"></a>Spring MVC整合FreeMarker</h3><h4 id="SpringMVC整合Freemarker"><a href="#SpringMVC整合Freemarker" class="headerlink" title="SpringMVC整合Freemarker"></a>SpringMVC整合Freemarker</h4></body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>JavaSpring4.1.7 项目：人员管理系统开发</title>
+    <url>/posts/3126862922/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>Spring的概述</li>
+<li>Spring的入门</li>
+</ul>
+<a id="more"></a>
+
+<p>项目实现时，先考虑数据库设计</p>
+<ul>
+<li>工具类<ul>
+<li>编码过滤器</li>
+<li>核心控制器<ul>
+<li>Servlet对象由Web容器管理、Service对象由IOC容器管理</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -1101,38 +1101,6 @@
 <li> &lt; mvc:cor &gt; - Spring MVC全局跨域配置。</li>
 </ul>
 <h4 id="CORS全局配置"><a href="#CORS全局配置" class="headerlink" title="CORS全局配置"></a>CORS全局配置</h4></script></li></ul></body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>JavaSpring4.2.3 SpringMVC拦截器</title>
-    <url>/posts/222992809/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>Spring的概述</li>
-<li>Spring的入门</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="第1章-Interceptor拦截器入门及使用技巧"><a href="#第1章-Interceptor拦截器入门及使用技巧" class="headerlink" title="第1章 Interceptor拦截器入门及使用技巧"></a>第1章 Interceptor拦截器入门及使用技巧</h3><h4 id="Interceptor拦截器入门"><a href="#Interceptor拦截器入门" class="headerlink" title="Interceptor拦截器入门"></a>Interceptor拦截器入门</h4><ul>
-<li>拦截器（Interceptor）用于对URL请求进行前置、后置过滤。</li>
-<li>Interceptor与Filter用途相似，但实现方式不同。</li>
-<li>Interceptor底层就是基于Spring AOP面向切面编程实现。</li>
-</ul>
-<p>拦截器开发流程</p>
-<ul>
-<li>Maven依赖servlet-api</li>
-<li>实现Handlernterceptor接口</li>
-<li>applicationContext配置过滤地址。</li>
-</ul>
-<p><strong>HandlerInterceptor接口</strong></p>
-<ul>
-<li>preHandle - 前置执行处理。</li>
-<li>postHandle - 目标资源已被Spring MVC框架处理。</li>
-<li>afterCompletion - 响应文本已经产生。</li>
-</ul>
-<h4 id="Interceptor使用技巧"><a href="#Interceptor使用技巧" class="headerlink" title="Interceptor使用技巧"></a>Interceptor使用技巧</h4><p>多个拦截器按照配置顺序执行，</p>
-<h3 id="第2章-开发用户流量拦截器"><a href="#第2章-开发用户流量拦截器" class="headerlink" title="第2章 开发用户流量拦截器"></a>第2章 开发用户流量拦截器</h3><h4 id="开发用户流量拦截器-1"><a href="#开发用户流量拦截器-1" class="headerlink" title="开发用户流量拦截器-1"></a>开发用户流量拦截器-1</h4><h4 id="开发用户流量拦截器-2"><a href="#开发用户流量拦截器-2" class="headerlink" title="开发用户流量拦截器-2"></a>开发用户流量拦截器-2</h4><h3 id="第3章-Spring-MVC处理流程"><a href="#第3章-Spring-MVC处理流程" class="headerlink" title="第3章 Spring MVC处理流程"></a>第3章 Spring MVC处理流程</h3><h4 id="Spring-MVC处理流程"><a href="#Spring-MVC处理流程" class="headerlink" title="Spring MVC处理流程"></a>Spring MVC处理流程</h4></body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -1308,6 +1276,38 @@
 </li>
 </ul>
 <h4 id="logback的配置"><a href="#logback的配置" class="headerlink" title="logback的配置"></a>logback的配置</h4><h4 id="logback配置的验证"><a href="#logback配置的验证" class="headerlink" title="logback配置的验证"></a>logback配置的验证</h4></body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>JavaSpring4.2.3 SpringMVC拦截器</title>
+    <url>/posts/222992809/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>Spring的概述</li>
+<li>Spring的入门</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="第1章-Interceptor拦截器入门及使用技巧"><a href="#第1章-Interceptor拦截器入门及使用技巧" class="headerlink" title="第1章 Interceptor拦截器入门及使用技巧"></a>第1章 Interceptor拦截器入门及使用技巧</h3><h4 id="Interceptor拦截器入门"><a href="#Interceptor拦截器入门" class="headerlink" title="Interceptor拦截器入门"></a>Interceptor拦截器入门</h4><ul>
+<li>拦截器（Interceptor）用于对URL请求进行前置、后置过滤。</li>
+<li>Interceptor与Filter用途相似，但实现方式不同。</li>
+<li>Interceptor底层就是基于Spring AOP面向切面编程实现。</li>
+</ul>
+<p>拦截器开发流程</p>
+<ul>
+<li>Maven依赖servlet-api</li>
+<li>实现Handlernterceptor接口</li>
+<li>applicationContext配置过滤地址。</li>
+</ul>
+<p><strong>HandlerInterceptor接口</strong></p>
+<ul>
+<li>preHandle - 前置执行处理。</li>
+<li>postHandle - 目标资源已被Spring MVC框架处理。</li>
+<li>afterCompletion - 响应文本已经产生。</li>
+</ul>
+<h4 id="Interceptor使用技巧"><a href="#Interceptor使用技巧" class="headerlink" title="Interceptor使用技巧"></a>Interceptor使用技巧</h4><p>多个拦截器按照配置顺序执行，</p>
+<h3 id="第2章-开发用户流量拦截器"><a href="#第2章-开发用户流量拦截器" class="headerlink" title="第2章 开发用户流量拦截器"></a>第2章 开发用户流量拦截器</h3><h4 id="开发用户流量拦截器-1"><a href="#开发用户流量拦截器-1" class="headerlink" title="开发用户流量拦截器-1"></a>开发用户流量拦截器-1</h4><h4 id="开发用户流量拦截器-2"><a href="#开发用户流量拦截器-2" class="headerlink" title="开发用户流量拦截器-2"></a>开发用户流量拦截器-2</h4><h3 id="第3章-Spring-MVC处理流程"><a href="#第3章-Spring-MVC处理流程" class="headerlink" title="第3章 Spring MVC处理流程"></a>第3章 Spring MVC处理流程</h3><h4 id="Spring-MVC处理流程"><a href="#Spring-MVC处理流程" class="headerlink" title="Spring MVC处理流程"></a>Spring MVC处理流程</h4></body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -2021,6 +2021,35 @@
 </body></html>]]></content>
   </entry>
   <entry>
+    <title>《我会采更多的菊》 纳丁·斯特尔</title>
+    <url>/posts/4025597166/</url>
+    <content><![CDATA[<html><head></head><body><h4 id="译文："><a href="#译文：" class="headerlink" title="译文："></a>译文：</h4><p>如果我能够从头活过，<br>我会试着犯更多的错。<br>我会放松一点，我会灵活一点。<br>我会比这一趟过得傻。</p>
+<a id="more"></a>
+
+<p>很少有什么事情能让我当真。<br>我会疯狂一些，我会少讲点卫生。<br>我会冒更多的险。我会更经常的旅行。<br>我会爬更多的山，游更多的河，看更多的日落。<br>我会多吃冰激凌，少吃豆子。<br>我会惹更多的麻烦，可是不在想象中担忧。</p>
+<p>你看，我小心翼翼地稳健地理智地活着。<br>一个又一个小时，一天又一天。<br>噢，我有过难忘的时刻。<br>如果我能够重来一次，我会要更多这样的时刻。</p>
+<p>事实上，我不需要别的什么，<br>仅仅是时刻，一个接着一个。<br>而不是每天都操心着以后的漫长日子。</p>
+<p>我曾经不论到哪里都不忘记带上：<br>温度计，热水壶，雨衣和降落伞。<br>如果我能够重来一次，<br>我会到处走走，什么都试试，并且轻装上阵。</p>
+<p>如果我能够重头活过，<br>我会延长打赤脚的时光。<br>从尽早的春天到尽晚的秋天。<br>我会更经常的逃学。<br>我不会考那么高的分数，除非是一不小心。<br>我会多骑些旋转木马，<br>我会采更多的雏菊。</p>
+<h4 id="阅读随机："><a href="#阅读随机：" class="headerlink" title="阅读随机："></a>阅读随机：</h4><p>诗词永远是诗词，诗词是艺术的一种形式，而艺术是经过人刻意加工，有意识得去放大、缩小某些局部特性的，这无关好坏对错，这就是艺术，来源于生活，但永远不是生活。</p>
+<p>至于高不高于生活？我的态度：艺术仅是生活的一部分，即不高，也不低。它值得人民向往、期盼、欣赏。但不值得崇拜、神化、迷醉其中。</p>
+<p>此诗歌中的意境无意是轻松的、愉悦的、令人神往的。这是无可厚非且无需过多探讨的。</p>
+<p>但更想讨论的是，从现实意义出发，我个人的主观观点：</p>
+<p>如果我能从头活过，我会努力犯更少的错。</p>
+<p>原因无它，现实世界是有因有果，具有客观的事物发展规律的，且我们每个人和这个世界有着千丝万缕的联系，我少犯点错误，就能让别人少因我遭受些牵连、麻烦、甚至是痛苦，至少让和我亲近的人少受些。</p>
+<p>我指的这些牵连、麻烦、甚至是痛苦，是指那些无妄之灾，人在家中坐，锅从天上来的那种。</p>
+<p>虽然，我从小到大也没有给家中惹什么大麻烦，比较愧疚的是自己以前没努力学习，上了个三本大学，让家里承受了更多的经济压力，这是比较内疚的，让父母为我犯的错去买单，也有负于整个家庭对我的付出与关爱！</p>
+<p>少犯些错，也是为自己负责。尽量少的犯错，才能不断的向良性的方向发展，才能越来越好。</p>
+<p>加油！</p>
+</body></html>]]></content>
+      <categories>
+        <category>诗词美文</category>
+      </categories>
+      <tags>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java报警报错处理方案记录</title>
     <url>/posts/218316291/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -2108,26 +2137,23 @@
       </categories>
   </entry>
   <entry>
-    <title>《我会采更多的菊》 纳丁·斯特尔</title>
-    <url>/posts/4025597166/</url>
-    <content><![CDATA[<html><head></head><body><h4 id="译文："><a href="#译文：" class="headerlink" title="译文："></a>译文：</h4><p>如果我能够从头活过，<br>我会试着犯更多的错。<br>我会放松一点，我会灵活一点。<br>我会比这一趟过得傻。</p>
+    <title>《沙扬娜拉——赠日本女郎》徐志摩</title>
+    <url>/posts/2802668681/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>最是那一低头的温柔，</p>
+<p>象一朵水莲花不胜凉风的娇羞，</p>
+<p>道一声珍重，道一声珍重，</p>
+<p>那一声珍重里有蜜甜的忧愁——沙扬娜拉！</p>
 <a id="more"></a>
 
-<p>很少有什么事情能让我当真。<br>我会疯狂一些，我会少讲点卫生。<br>我会冒更多的险。我会更经常的旅行。<br>我会爬更多的山，游更多的河，看更多的日落。<br>我会多吃冰激凌，少吃豆子。<br>我会惹更多的麻烦，可是不在想象中担忧。</p>
-<p>你看，我小心翼翼地稳健地理智地活着。<br>一个又一个小时，一天又一天。<br>噢，我有过难忘的时刻。<br>如果我能够重来一次，我会要更多这样的时刻。</p>
-<p>事实上，我不需要别的什么，<br>仅仅是时刻，一个接着一个。<br>而不是每天都操心着以后的漫长日子。</p>
-<p>我曾经不论到哪里都不忘记带上：<br>温度计，热水壶，雨衣和降落伞。<br>如果我能够重来一次，<br>我会到处走走，什么都试试，并且轻装上阵。</p>
-<p>如果我能够重头活过，<br>我会延长打赤脚的时光。<br>从尽早的春天到尽晚的秋天。<br>我会更经常的逃学。<br>我不会考那么高的分数，除非是一不小心。<br>我会多骑些旋转木马，<br>我会采更多的雏菊。</p>
-<h4 id="阅读随机："><a href="#阅读随机：" class="headerlink" title="阅读随机："></a>阅读随机：</h4><p>诗词永远是诗词，诗词是艺术的一种形式，而艺术是经过人刻意加工，有意识得去放大、缩小某些局部特性的，这无关好坏对错，这就是艺术，来源于生活，但永远不是生活。</p>
-<p>至于高不高于生活？我的态度：艺术仅是生活的一部分，即不高，也不低。它值得人民向往、期盼、欣赏。但不值得崇拜、神化、迷醉其中。</p>
-<p>此诗歌中的意境无意是轻松的、愉悦的、令人神往的。这是无可厚非且无需过多探讨的。</p>
-<p>但更想讨论的是，从现实意义出发，我个人的主观观点：</p>
-<p>如果我能从头活过，我会努力犯更少的错。</p>
-<p>原因无它，现实世界是有因有果，具有客观的事物发展规律的，且我们每个人和这个世界有着千丝万缕的联系，我少犯点错误，就能让别人少因我遭受些牵连、麻烦、甚至是痛苦，至少让和我亲近的人少受些。</p>
-<p>我指的这些牵连、麻烦、甚至是痛苦，是指那些无妄之灾，人在家中坐，锅从天上来的那种。</p>
-<p>虽然，我从小到大也没有给家中惹什么大麻烦，比较愧疚的是自己以前没努力学习，上了个三本大学，让家里承受了更多的经济压力，这是比较内疚的，让父母为我犯的错去买单，也有负于整个家庭对我的付出与关爱！</p>
-<p>少犯些错，也是为自己负责。尽量少的犯错，才能不断的向良性的方向发展，才能越来越好。</p>
-<p>加油！</p>
+
+
+<hr>
+<h3 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h3><p>诗词中，徐志摩的文采是真的很好，现实中，他的名声是真的不好。</p>
+<p>可能徐是最有文化的渣男了吧，哈哈…</p>
+<p>其实人无完人，每个人都会犯错，特别是在年轻时、三观不够稳定的时候，甚至犯了错自己都不知道。但好在人是会成长的，人是可以去改变自己的。虽然做到不容易，但不是不可能做到。永远都有机会…</p>
+<p>作品之外，自有人评说。我只管欣赏他挥洒的才华就好了。</p>
+<p>读徐留下来的这些作品，真的很容易代入到他诗词中，文风轻柔，描绘却细腻准确，用词用字灵动情深，一读便能感受到字词情涌，才思飞扬。</p>
+<p>美！喜欢！</p>
 </body></html>]]></content>
       <categories>
         <category>诗词美文</category>
@@ -2189,32 +2215,6 @@
       <categories>
         <category>Java</category>
       </categories>
-  </entry>
-  <entry>
-    <title>《沙扬娜拉——赠日本女郎》徐志摩</title>
-    <url>/posts/2802668681/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>最是那一低头的温柔，</p>
-<p>象一朵水莲花不胜凉风的娇羞，</p>
-<p>道一声珍重，道一声珍重，</p>
-<p>那一声珍重里有蜜甜的忧愁——沙扬娜拉！</p>
-<a id="more"></a>
-
-
-
-<hr>
-<h3 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h3><p>诗词中，徐志摩的文采是真的很好，现实中，他的名声是真的不好。</p>
-<p>可能徐是最有文化的渣男了吧，哈哈…</p>
-<p>其实人无完人，每个人都会犯错，特别是在年轻时、三观不够稳定的时候，甚至犯了错自己都不知道。但好在人是会成长的，人是可以去改变自己的。虽然做到不容易，但不是不可能做到。永远都有机会…</p>
-<p>作品之外，自有人评说。我只管欣赏他挥洒的才华就好了。</p>
-<p>读徐留下来的这些作品，真的很容易代入到他诗词中，文风轻柔，描绘却细腻准确，用词用字灵动情深，一读便能感受到字词情涌，才思飞扬。</p>
-<p>美！喜欢！</p>
-</body></html>]]></content>
-      <categories>
-        <category>诗词美文</category>
-      </categories>
-      <tags>
-        <tag>诗词</tag>
-      </tags>
   </entry>
   <entry>
     <title>Java基础通识1.1.2 常量与变量</title>
@@ -3058,6 +3058,171 @@
       </categories>
   </entry>
   <entry>
+    <title>Java基础通识1.3.3 字符串</title>
+    <url>/posts/4120623261/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>一、Java的编译基础</li>
+<li>二、Java程序实际执行细节</li>
+<li>三、使用eclipse开发Java程序</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="第1章-概述"><a href="#第1章-概述" class="headerlink" title="第1章 概述"></a>第1章 概述</h3><h4 id="1-1-字符串概述"><a href="#1-1-字符串概述" class="headerlink" title="1-1 字符串概述"></a>1-1 字符串概述</h4><p><strong>主要内容</strong></p>
+<ul>
+<li>如何创建String对象</li>
+<li>String对象的常用方法</li>
+<li>==和equals方法的区别</li>
+<li>String的不可变性<h3 id="第2章-String类"><a href="#第2章-String类" class="headerlink" title="第2章 String类"></a>第2章 String类</h3><h4 id="2-1-String常用方法简介"><a href="#2-1-String常用方法简介" class="headerlink" title="2-1 String常用方法简介"></a>2-1 String常用方法简介</h4></li>
+</ul>
+<p><strong>创建String对象的方法</strong></p>
+<p><img src="en-resource://database/3497:1" alt="456f98211e8afb1a21eb2b6d6c382b09.png"></p>
+<p><img src="en-resource://database/3499:1" alt="bfb59d0cb9f2eb716dc6f112f7af0524.png"></p>
+<h4 id="2-2-String常用方法（上）"><a href="#2-2-String常用方法（上）" class="headerlink" title="2-2 String常用方法（上）"></a>2-2 String常用方法（上）</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo1</span> </span>{</span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">             <span class="comment">// 定义一个字符串"JAVA 编程 基础"</span></span><br><span class="line">             String str=<span class="string">"JAVA 编程 基础"</span>;</span><br><span class="line">             <span class="comment">//打印输出字符串的长度。</span></span><br><span class="line">             System.out.println(<span class="string">"字符串的长度是："</span>+str.length());</span><br><span class="line">             <span class="comment">//取出字符"程"并输出。</span></span><br><span class="line">             System.out.println(str.charAt(<span class="number">6</span>));</span><br><span class="line">             <span class="comment">//取出字符"编程 基础"并输出。</span></span><br><span class="line">             System.out.println(str.substring(<span class="number">5</span>));</span><br><span class="line">             <span class="comment">//取出字符"编程"并输出。</span></span><br><span class="line">             System.out.println(str.substring(<span class="number">5</span>,<span class="number">7</span>));<span class="comment">//第二个index值不是对应的值，而需要在对应值的基础上+1。</span></span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="2-3-选择题"><a href="#2-3-选择题" class="headerlink" title="2-3 选择题"></a>2-3 选择题</h4><p>单选题<br>给出如下语句，以下哪个结果是正确的（选择一项）<br><img src="en-resource://database/3501:1" alt="b84c1f37bf1e32fa68b2167eb5a481eb.png"></p>
+<p>A.  编译错误        B.  输出字符o       C.  输出字符l       D.  发生运行时异常</p>
+<p>正确答案： D</p>
+<p><strong>参考解析：</strong><br>本题考查String的charAt()方法的使用，charAt方法的参数最大值是字符串str的长度-1，超过长度范围会发生运行时异常。故D选项正确。</p>
+<h4 id="2-4-选择题"><a href="#2-4-选择题" class="headerlink" title="2-4 选择题"></a>2-4 选择题</h4><p>单选题<br>给出如下语句：以下哪个结果是正确的（选择一项）</p>
+<p>A.  输出字符c       B.  输出字符d<br>C.  输出字符e       D.  输出字符f</p>
+<p>正确答案： C</p>
+<p><strong>参考解析：</strong><br>本题考查substring()和charAt()方法的使用，str.substring(3,6)取出子串”def”，再调用charAt(1)，取出子串”def”中index值为1的字符，即第二个字符e。故C选项正确。</p>
+<h4 id="2-5-String常用方法（下）"><a href="#2-5-String常用方法（下）" class="headerlink" title="2-5 String常用方法（下）"></a>2-5 String常用方法（下）</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo2</span> </span>{</span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">             <span class="comment">// 定义一个字符串"JAVA编程基础,我喜欢java编程"</span></span><br><span class="line">             String str=<span class="keyword">new</span> String(<span class="string">"JAVA编程基础,我喜欢java编程"</span>);</span><br><span class="line">             <span class="comment">//查找字符"A"在字符串中第一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"字符'A'在字符串中第一次出现的位置"</span>+str.indexOf(<span class="string">'A'</span>));</span><br><span class="line">             <span class="comment">//查找子串"编程"在字符串中第一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"子串\"编程\"在字符串中第一次出现的位置"</span>+str.indexOf(<span class="string">"编程"</span>));<span class="comment">//在字符串中再次出现双引号需要用用转译字符。</span></span><br><span class="line">             <span class="comment">//查找子串"编程"在字符串中最后一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"字符'A'在字符串中最后一次出现的位置"</span>+str.lastIndexOf(<span class="string">'A'</span>));</span><br><span class="line">             <span class="comment">//查找子串"编程"在字符串中最后一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"子串\"编程\"在字符串中最后一次出现的位置"</span>+str.lastIndexOf(<span class="string">"编程"</span>));  </span><br><span class="line">             <span class="comment">//在字符串index值为8的位置开始，查找子串"编程"在字符串中第一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"在字符串index值为8的位置开始，查找子串\"编程\"在字符串中第一次出现的位置"</span>+str.indexOf(<span class="string">"编程"</span>,<span class="number">8</span>));</span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="2-6-编程练习"><a href="#2-6-编程练习" class="headerlink" title="2-6 编程练习"></a>2-6 编程练习</h4><p>使用String类常用方法完成字符串处理。<br><strong>任务</strong></p>
+<p>1、 定义一个字符串”abcdefg”<br>2、 取出子串cde并转换为大写<br>3、 将DE替换为MM<br>4、 最后得到结果CMM</p>
+<p><strong>原题</strong><br>StringDemo.java</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">/*已知字符串"abcdefg"，使之经过处理得到字符串"CDE",并进一步</span></span><br><span class="line"><span class="comment">        将“DE”替换为“MM”，得到结果：CMM */</span></span><br><span class="line">        </span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+
+<p><strong>作答</strong><br>StringDemo.java</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    </span><br><span class="line">        <span class="comment">//1、定义一个字符串。</span></span><br><span class="line">        String str=<span class="string">"abcdefg"</span>;</span><br><span class="line">        <span class="comment">//2、取出子串cde，substring（字符串开始位置，结束位置）。</span></span><br><span class="line">        str=str.substring(<span class="number">2</span>,<span class="number">5</span>);</span><br><span class="line">        <span class="comment">//将cde转换成大写的，使用toUpperCase();</span></span><br><span class="line">        str=str.toUpperCase();</span><br><span class="line">        <span class="comment">//将“DE”替换为“MM”，得到结果：CMM</span></span><br><span class="line">        System.out.println(str.replace(<span class="string">"DE"</span>,<span class="string">"MM"</span>));</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="2-7-选择题"><a href="#2-7-选择题" class="headerlink" title="2-7 选择题"></a>2-7 选择题</h4><p>单选题<br>给出如下语句：  以下哪个输出结果是正确的？（选择一项）</p>
+<p><img src="en-resource://database/3503:1" alt="14f155c7640f9cc45a37d506783f4a87.png"></p>
+<p>Anull<br>B编译错误<br>C没有任何输出结果<br>D发生运行时异常</p>
+<p>正确答案： A</p>
+<p><strong>参考解析：</strong><br>本题考查字符串引用赋值为null时的输出问题，null值将被直接输出，故A选项正确。</p>
+<h4 id="2-8-选择题"><a href="#2-8-选择题" class="headerlink" title="2-8 选择题"></a>2-8 选择题</h4><p>单选题<br>关于字符串的equals()和compareTo()方法，选项中描述错误的是（选择一项）</p>
+<p>A.  方法equels()比较两个字符串内容是否相等<br>B.  方法compareTo()比较两个字符串大小<br>C.  方法equels()返回值是boolean类型的值<br>D.  方法compareTo()返回值是String类型的值</p>
+<p>正确答案： D</p>
+<p><strong>参考解析：</strong><br>本题考查的是字符串方法equals()和compareTo()的区别，方法equels（）比较两个字符串内容是否相等，返回值是boolean类型的值；方法compareTo（）比较两个字符串大小，返回值是int的值。D选项的描述是错误的，故选D。</p>
+<h4 id="2-9-例：字符串与byte数组间的相互转换"><a href="#2-9-例：字符串与byte数组间的相互转换" class="headerlink" title="2-9 例：字符串与byte数组间的相互转换"></a>2-9 例：字符串与byte数组间的相互转换</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.UnsupportedEncodingException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo3</span> </span>{</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> UnsupportedEncodingException </span>{</span><br><span class="line"></span><br><span class="line">             <span class="comment">// 字符串和byte数组之间的相互转换。</span></span><br><span class="line"></span><br><span class="line">             <span class="comment">//定义一个字符串。</span></span><br><span class="line"></span><br><span class="line">             String str=<span class="keyword">new</span> String(<span class="string">"JAVA 编程 基础"</span>);</span><br><span class="line"></span><br><span class="line">             <span class="comment">//将字符串转换成byte数组，并打印输出。</span></span><br><span class="line"></span><br><span class="line">             <span class="keyword">byte</span>[] arrs=str.getBytes(<span class="string">"GBK"</span>);</span><br><span class="line"></span><br><span class="line">             <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arrs.length;i++) {</span><br><span class="line"></span><br><span class="line">                    System.out.println(arrs[i]+<span class="string">" "</span>);</span><br><span class="line"></span><br><span class="line">             }</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line">             System.out.println();</span><br><span class="line"></span><br><span class="line">             <span class="comment">//将byte数组转换为字符串。</span></span><br><span class="line"></span><br><span class="line">             String  str1=<span class="keyword">new</span> String(arrs,<span class="string">"GBK"</span>);</span><br><span class="line"></span><br><span class="line">             System.out.println(str1);</span><br><span class="line"></span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><img src="en-resource://database/3505:1" alt="458d0bc2cc1d668223df576d8d4fe137.png"></p>
+<p><strong>小结</strong></p>
+<ul>
+<li>字符串和byte数组间的相互转换。</li>
+<li>编码问题：GBK编码和UTF-8编码。</li>
+</ul>
+<p>可以更完善。</p>
+<h4 id="2-10-选择题"><a href="#2-10-选择题" class="headerlink" title="2-10 选择题"></a>2-10 选择题</h4><p>单选题<br>已知字符串的定义如下：以下哪个语句不能将字符串转换成byte数组？（选择一项）<br>String str=”Hello,Imooc!”;</p>
+<p>A.  byte[] arr=str.getBytes();<br>B.  byte[] arr=str.getBytes(“GBK”);<br>C.  byte[] arr=str.getBytes(“UTF-8”);<br>D.<br>byte[] arr;<br>str.getBytes(arr,”GBK”);</p>
+<p>正确答案： D</p>
+<p><strong>参考解析：</strong><br>本题考查getBytes()方法的使用，byte[] arr; str.getBytes(arr,“GBK”);中的getBytes方法时错误的，没有arr作为参数的方法。故D选项正确。</p>
+<h4 id="2-11-等于运算符与equals方法的区别"><a href="#2-11-等于运算符与equals方法的区别" class="headerlink" title="2-11 等于运算符与equals方法的区别"></a>2-11 等于运算符与equals方法的区别</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo5</span> </span>{</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line"></span><br><span class="line">             <span class="comment">// ==和equals方法的区别。</span></span><br><span class="line"></span><br><span class="line">             <span class="comment">//定义三个字符串，内容都是&lt;u&gt;imooc&lt;/u&gt;。</span></span><br><span class="line"></span><br><span class="line">             String str1=<span class="string">"imooc"</span>;</span><br><span class="line"></span><br><span class="line">             String str2=<span class="string">"imooc"</span>;</span><br><span class="line"></span><br><span class="line">             String str3=<span class="keyword">new</span> String(<span class="string">"inooc"</span>);</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"str1和str2的内容相同"</span>+(str1.equals(str2)));</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"str1和str2的内容相同"</span>+(str1.equals(str3)));</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"str1和str2的地址相同"</span>+(str1==str2));</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"str1和str2的地址相同"</span>+(str1==str3));</span><br><span class="line"></span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+<p><img src="en-resource://database/3507:1" alt="5d72aa685cf2fbd9ef80e42f1f430967.png"></p>
+<h4 id="2-12-选择题"><a href="#2-12-选择题" class="headerlink" title="2-12 选择题"></a>2-12 选择题</h4><p>单选题<br>给出如下语句：下面哪个选项返回值为true？（选择一项）</p>
+<p><img src="en-resource://database/3509:1" alt="294f97acb8a69ced504e4d4664ec460a.png"></p>
+<p>A.  s1.equals(s2);<br>B.  s1.equals(c);<br>C.  s1.equals(new String());<br>D.  s1==c;</p>
+<p>正确答案： A</p>
+<p><strong>参考解析：</strong><br>本题考查字符串的equals()方法的使用。A选项正确，s1和s2的值是相等的。B选项，s1.equals(c);，字符串和字符数组的存储方式不一样，因此调用equals方法二者不相等，返回false。C选项，s1.equals(new String());，new String()定义的是空串，与”imooc”不相等，返回值为false。D选项，s1==c;，s1和c是不同的对象，因此不相等，返回值为false。</p>
+<h4 id="2-13-选择题"><a href="#2-13-选择题" class="headerlink" title="2-13 选择题"></a>2-13 选择题</h4><p><strong>单选题</strong><br>下列运行结果是false的是（）（选择一项）</p>
+<p><img src="en-resource://database/3511:1" alt="87823168515780542eb1509a4b309a23.png"></p>
+<p>A.  System.out.println(str1.equals(str2));<br>B.  System.out.println(str1.equals(str3));<br>C.  System.out.println(str1==str2);<br>D.  System.out.println(str1==str3);</p>
+<p>正确答案： D</p>
+<p><strong>参考解析：</strong><br>本题考查的是==和equals方法的区别；str1和str2以及str3的内容是相同的，str1和str2的地址是相同的，因为他们指向的是同一个字符串常量。str1和str3的地址是不相同的，因此str1==str3的运行结果是false，故D选项正确。</p>
+<h4 id="2-14-字符串的不可变性"><a href="#2-14-字符串的不可变性" class="headerlink" title="2-14 字符串的不可变性"></a>2-14 字符串的不可变性</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo6</span> </span>{</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line"></span><br><span class="line">             <span class="comment">// String的不可变性。</span></span><br><span class="line"></span><br><span class="line">             <span class="comment">// String对象一旦被创建，则不能修改，是不可变得。</span></span><br><span class="line"></span><br><span class="line">             <span class="comment">//所谓的修改其实是创建了新的对象，所指向的内存空间不变。</span></span><br><span class="line"></span><br><span class="line">             String s1=<span class="string">"imooc"</span>;</span><br><span class="line"></span><br><span class="line">             String s2=<span class="string">"hello,"</span>+s1;</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line"></span><br><span class="line">             <span class="comment">//s1不再指向&lt;u&gt;imooc&lt;/u&gt;所在的内存空间，而是指向了"hello,&lt;u&gt;imooc&lt;/u&gt;"。</span></span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"s1="</span>+s1);</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"s2="</span>+s2);</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line"></span><br><span class="line">             String s3=<span class="keyword">new</span> String(<span class="string">"hello,imooc!"</span>);</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"子串："</span>+s3.substring(<span class="number">0</span>,<span class="number">5</span>));</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"s3="</span>+s3);</span><br><span class="line"></span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="2-15-选择题"><a href="#2-15-选择题" class="headerlink" title="2-15 选择题"></a>2-15 选择题</h4><p>多选题<br>已知如下代码：  以下哪个说法是正确的？（选择两项）</p>
+<p><img src="en-resource://database/3513:1" alt="04d32db1bbbb5bf9042aee4a226cafc7.png"></p>
+<p>A.  str1.equals(str2)的结果为true</p>
+<p>B.<br>输出结果为：<br>HelloHello<br>HelloHello</p>
+<p>C.  str1==str2的结果为true</p>
+<p>D.<br>输出结果为：<br>HelloHello<br>Hello</p>
+<p>正确答案： A,D</p>
+<p><strong>参考解析：</strong><br>本题考查字符串的不可变性，<br>A选项正确，str1和str2的内容是相等的，因此str1.equals(str2)的结果为true<br>B选项错误，str1.concat(str2)是把str1和str2的内容连接起来，然后把连接后的值输出，但是连接操作并没有改变str1和str2的值，一次str1的值还是Hello，也因此D选项正确<br>C选项错误，str1和str2不是同一个对象，因此str1==str2的结果为false</p>
+<h3 id="第3章-StringBuilder类"><a href="#第3章-StringBuilder类" class="headerlink" title="第3章 StringBuilder类"></a>第3章 StringBuilder类</h3><h4 id="3-1-StringBuilder概述"><a href="#3-1-StringBuilder概述" class="headerlink" title="3-1 StringBuilder概述"></a>3-1 StringBuilder概述</h4><p><strong>String和StringBuilder的区别：</strong><br>    String具有不可变性，而StringBuilder不具备。</p>
+<p><strong>建议：</strong><br>    当频繁操作字符串时，使用StringBuilder。</p>
+<p><strong>StringBuilder和StringBuffer</strong></p>
+<ul>
+<li>二者基本相似</li>
+<li>StringBuffer是线程安全的，StringBuilder则没有，所以性能略高。</li>
+</ul>
+<h4 id="3-2-StringBuilder常用方法"><a href="#3-2-StringBuilder常用方法" class="headerlink" title="3-2 StringBuilder常用方法"></a>3-2 StringBuilder常用方法</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringBuilderDemo1</span> </span>{</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">// 定义一个字符串"你好"</span></span><br><span class="line">		StringBuilder str=<span class="keyword">new</span> StringBuilder(<span class="string">"你好"</span>);</span><br><span class="line">		<span class="comment">//在"你好"后面添加内容，将字符串变成"你好,imooc!"。</span></span><br><span class="line"><span class="comment">//		str.append(',');</span></span><br><span class="line"><span class="comment">//		str.append("imooc!");</span></span><br><span class="line"><span class="comment">//		System.out.println("str="+str);</span></span><br><span class="line">		System.out.println(<span class="string">"str="</span>+str.append(<span class="string">','</span>).append(<span class="string">"imooc!"</span>));</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//将字符串变成“你好，iMOOC!”。</span></span><br><span class="line">		<span class="comment">//两种方式：</span></span><br><span class="line">		<span class="comment">//1、使用delete方法删除mooc，然后在插入MOOC</span></span><br><span class="line">		System.out.println(<span class="string">"替换后："</span>+str.delete(<span class="number">4</span>,<span class="number">8</span>).insert(<span class="number">4</span>,<span class="string">"MOOC"</span>));</span><br><span class="line">		<span class="comment">//2、使用replace方法直接替换。</span></span><br><span class="line">		System.out.println(<span class="string">"替换后："</span>+str.replace(<span class="number">4</span>,<span class="number">8</span>,<span class="string">"MOOC"</span>));</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//在字符串"你好,iMOOC"中取出"你好"并输出。</span></span><br><span class="line">		System.out.println(str.substring(<span class="number">0</span>,<span class="number">2</span>));</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>小结</strong></p>
+<ul>
+<li>StringBuilder append(String str)</li>
+<li>StringBuilder delete(int start, int end)</li>
+<li>StringBuilder insert(int offset, String str)</li>
+<li>StringBuilder replace(int start, int end, String str)</li>
+</ul>
+<h4 id="3-3-选择题"><a href="#3-3-选择题" class="headerlink" title="3-3 选择题"></a>3-3 选择题</h4><p>单选题<br>给出如下语句:</p>
+<p>上述代码的输出结果是什么?（选择一项）</p>
+<p><img src="en-resource://database/3515:1" alt="4fa9ccc451bf41bb8ff9227d5e4e76e7.png"></p>
+<p>A.  abeCDfg         B.  abCDefg<br>C.  abcCDefg        D.  abefCDg</p>
+<p>正确答案： A</p>
+<p><strong>参考解析：</strong><br>本题考查StringBuilder的常用方法，调用delete方法时，删除掉cd两个字符，字符串变为abefg，然后在第三个字符的后面插入CD两个字符，即为abeCDfg，故A选项正确。</p>
+<h4 id="3-4-编程练习"><a href="#3-4-编程练习" class="headerlink" title="3-4 编程练习"></a>3-4 编程练习</h4><p>定义一个字符串，利用StringBuilder完成如下效果。<br>效果图:</p>
+<p><img src="en-resource://database/3517:1" alt="cfd94b8d8fc54538d0df381dad55d5b0.png"></p>
+<p>任务</p>
+<ol>
+<li><pre><code> 定义一个字符串”欢迎来到“
+</code></pre>
+</li>
+<li><pre><code> 在"欢迎来到"后面添加内容，将字符串变成"欢迎来到imooc"
+</code></pre>
+</li>
+<li><pre><code> 使用delete方法删除"欢迎来到",然后插入“你好！”
+</code></pre>
+</li>
+<li><pre><code> 将字符串变成“你好，imooc”
+</code></pre>
+</li>
+<li><pre><code> 使用replace方法替换
+</code></pre>
+</li>
+</ol>
+<p><strong>原题</strong></p>
+<p>StringTest.java</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">//定义一个字符串"欢迎来到"</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//在"欢迎来到"后面添加内容，将字符串变成"欢迎来到imooc"</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//使用delete方法删除"欢迎来到",然后插入“你好！”</span></span><br><span class="line">        </span><br><span class="line">		<span class="comment">//将字符串变成“你好，imooc”</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//使用replace方法替换</span></span><br><span class="line">		</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+
+<p><strong>作答</strong></p>
+<p>StringTest.java</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">//定义一个字符串"欢迎来到"</span></span><br><span class="line">        StringBuilder str = <span class="keyword">new</span> StringBuilder(<span class="string">"欢迎来到"</span>);</span><br><span class="line">        <span class="comment">//在"欢迎来到"后面添加内容，将字符串变成"欢迎来到imooc"</span></span><br><span class="line">        System.out.println(str.append(<span class="string">"imooc"</span>));</span><br><span class="line">        <span class="comment">//使用delete方法删除"欢迎来到",然后插入“你好！”</span></span><br><span class="line">        str.delete(<span class="number">0</span>,<span class="number">4</span>).insert(<span class="number">0</span>,<span class="string">"你好！"</span>);</span><br><span class="line">        <span class="comment">//将字符串变成“你好，imooc”</span></span><br><span class="line">        System.out.println(<span class="string">"删除插入后 "</span> + str.insert(<span class="number">2</span>,<span class="string">","</span>));</span><br><span class="line">        <span class="comment">//使用replace方法替换</span></span><br><span class="line">        System.out.println(<span class="string">"替换后："</span> + str.replace(<span class="number">0</span>,<span class="number">3</span>,<span class="string">"欢迎来到"</span>));</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p>代码精炼性有待考究。</p>
+<h4 id="3-5-选择题"><a href="#3-5-选择题" class="headerlink" title="3-5 选择题"></a>3-5 选择题</h4><p>单选题<br>给出如下语句:下面哪个代码块, 插入到第3行，可以得到输出结果 “123abc 123abc”?（选择一项）</p>
+<p><img src="en-resource://database/3519:1" alt="ac9caa823e270aeecd77310d8342ecc9.png"></p>
+<p>A.<br>sb1.append(“abc”);<br>s1.append(“abc”);</p>
+<p>B.<br>sb1.append(“abc”);<br>s1.concat(“abc”);</p>
+<p>C.<br>sb1.concat(“abc”);<br>s1.append(“abc”);</p>
+<p>D.<br>sb1.concat(“abc”);<br>s1.concat(“abc”);</p>
+<p>E.<br>sb1.append(“abc”);<br>s1 = s1.concat(“abc”);</p>
+<p>F.<br>sb1.append(“abc”);<br>s1 = s1 + s1.concat(“abc”);</p>
+<p>正确答案： E</p>
+<p><strong>参考解析：</strong><br>本题考查StringBuilder常用方法的使用，<br>E选项正确，执行sb1.append(“abc”);,sb1变为123abc。执行 s1 = s1.concat(“abc”);，s1变为123abc。String类型没有append方法，故A、C选项错误。<br>D选项中：sb1.concat(“abc”);  ：sb1是StringBuilder对象，StringBuilder对象没有concat方法,故D选择错误，<br>B选项中：s1.concat(“abc”);：s1调用concat()方法后，没有把新生成的字符串赋值回s1，只是生成了一个新的字符串而已，所以，s1的值并不会发生变化。故B选项错误。<br>F选项，s1 = s1 + s1.concat(“abc”);执行完s1.concat(“abc”)后的值为”123abc”，再和前面的s1进行字符串连接，变成123123abc，因此最后s1的值就为123123abc，故F选项也是错误的。</p>
+<h3 id="第4章-课程总结"><a href="#第4章-课程总结" class="headerlink" title="第4章 课程总结"></a>第4章 课程总结</h3><h4 id="4-1-课程总结"><a href="#4-1-课程总结" class="headerlink" title="4-1 课程总结"></a>4-1 课程总结</h4><ul>
+<li>String和StringBuilder</li>
+<li>介绍了这两个类的常用方法。</li>
+<li>在String中介绍了==和equals()方法的区别</li>
+<li>介绍了String和StringBuilder的区别，主要是不可变性</li>
+<li>通过学习，进一步掌握java文档的使用。</li>
+</ul>
+<h4 id="4-2-选择题"><a href="#4-2-选择题" class="headerlink" title="4-2 选择题"></a>4-2 选择题</h4><p>单选题<br>给出如下语句：</p>
+<p>以下哪个结果是正确的？（选择一项）</p>
+<p><img src="en-resource://database/3521:1" alt="322439fe7b5340942567e6e15dab507c.png"></p>
+<p>A.  true true<br>B.  false true<br>C.  true false<br>D.  false false<br>E.  Compilation fails.<br>F.  An exception is thrown at runtime.</p>
+<p>正确答案： B</p>
+<p><strong>参考解析：</strong></p>
+<p> 本题考查StringBuilder的常用方法，B选项正确。<br>执行Integer x=400;这段代码会创建一个Integer对象，x的引用指向它；执行Integer y = x;这段代码，y的引用和x的引用指向了同一片内存空间。这时，x和y指向同一个对象。之后，执行x++，将会创建一个新的Integer对象401，然后x的引用指向新创建的对象。这时x和y不再指向同一个对象。执行x==y得到结果为false；<br>执行StringBuilder sb1 = new StringBuilder(“123”);这段代码时，在堆中生成一个StringBulider对 象，内容为：123，这时有一个sb1的引用指向”123”这个内容。执行StringBuilder sb2 = sb1;这段代 码，sb2的引用同样指向”123”这个内容。在执行sb1.append(“5”);时，会在内存中”123”这个位置变成 了”1235”，这时没有在内存当中生成新的对象，也没有新的字符串常量，而是在原来的基础上进行了修 改。sb1和sb2指向的是同一个对象，所以执行sb1==sb2得到结果为true。 </p>
+<h4 id="4-3-编程练习"><a href="#4-3-编程练习" class="headerlink" title="4-3 编程练习"></a>4-3 编程练习</h4><p>定义一个字符串，使用StringBuilder的常用方法对字符串进行操作。</p>
+<p>任务</p>
+<p>1、 定义字符串”abc”<br>2、 使之经过处理得到字符串”fed—cba”,并进一步得到字符串”fedcba”</p>
+<p><strong>原题</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">//定义字符串"abc"</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//经过处理得到字符串"fed---cba"</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//进一步变换得到字符串"fedcba"</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
+<p><strong>作答</strong></p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">//定义字符串"abc"</span></span><br><span class="line">        StringBuilder str=<span class="keyword">new</span> StringBuilder(<span class="string">"abc"</span>);</span><br><span class="line">        <span class="comment">//经过处理得到字符串"fed---cba"</span></span><br><span class="line">        System.out.println(str.reverse().insert(<span class="number">0</span>, <span class="string">"fed---"</span>));</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//进一步变换得到字符串"fedcba"</span></span><br><span class="line">        System.out.println(str.delete(<span class="number">3</span>, <span class="number">6</span>));</span><br><span class="line">        </span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Java基础通识1.3.2 包装类</title>
     <url>/posts/2589003794/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -3629,171 +3794,6 @@
 <p>作答</p>
 <p>HelloWorld.java</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">//定义float类型变量，赋值为88.99</span></span><br><span class="line">        <span class="keyword">float</span> f1 = <span class="number">88.99f</span>;</span><br><span class="line">        <span class="comment">//将基本类型转换为字符串</span></span><br><span class="line">        String str1=Float.toString(f1)+<span class="number">20</span>;</span><br><span class="line">        <span class="comment">//打印输出</span></span><br><span class="line">        System.out.println(<span class="string">"f1转换为String型后与整数20求和的结果为："</span>+str1);</span><br><span class="line">        <span class="comment">//定义String类型变量，赋值为&amp;quot;188.55&amp;quot;</span></span><br><span class="line">        String str = <span class="string">"188.55"</span>;</span><br><span class="line">        <span class="comment">// 将字符串转换为基本类型double</span></span><br><span class="line">        <span class="keyword">double</span> d1=Double.valueOf(str);</span><br><span class="line">        <span class="comment">//打印输出</span></span><br><span class="line">        System.out.println(<span class="string">"str转换为double型后与整数20求和的结果为："</span>+d1+<span class="number">20</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Java基础通识1.3.3 字符串</title>
-    <url>/posts/4120623261/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>一、Java的编译基础</li>
-<li>二、Java程序实际执行细节</li>
-<li>三、使用eclipse开发Java程序</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="第1章-概述"><a href="#第1章-概述" class="headerlink" title="第1章 概述"></a>第1章 概述</h3><h4 id="1-1-字符串概述"><a href="#1-1-字符串概述" class="headerlink" title="1-1 字符串概述"></a>1-1 字符串概述</h4><p><strong>主要内容</strong></p>
-<ul>
-<li>如何创建String对象</li>
-<li>String对象的常用方法</li>
-<li>==和equals方法的区别</li>
-<li>String的不可变性<h3 id="第2章-String类"><a href="#第2章-String类" class="headerlink" title="第2章 String类"></a>第2章 String类</h3><h4 id="2-1-String常用方法简介"><a href="#2-1-String常用方法简介" class="headerlink" title="2-1 String常用方法简介"></a>2-1 String常用方法简介</h4></li>
-</ul>
-<p><strong>创建String对象的方法</strong></p>
-<p><img src="en-resource://database/3497:1" alt="456f98211e8afb1a21eb2b6d6c382b09.png"></p>
-<p><img src="en-resource://database/3499:1" alt="bfb59d0cb9f2eb716dc6f112f7af0524.png"></p>
-<h4 id="2-2-String常用方法（上）"><a href="#2-2-String常用方法（上）" class="headerlink" title="2-2 String常用方法（上）"></a>2-2 String常用方法（上）</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo1</span> </span>{</span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">             <span class="comment">// 定义一个字符串"JAVA 编程 基础"</span></span><br><span class="line">             String str=<span class="string">"JAVA 编程 基础"</span>;</span><br><span class="line">             <span class="comment">//打印输出字符串的长度。</span></span><br><span class="line">             System.out.println(<span class="string">"字符串的长度是："</span>+str.length());</span><br><span class="line">             <span class="comment">//取出字符"程"并输出。</span></span><br><span class="line">             System.out.println(str.charAt(<span class="number">6</span>));</span><br><span class="line">             <span class="comment">//取出字符"编程 基础"并输出。</span></span><br><span class="line">             System.out.println(str.substring(<span class="number">5</span>));</span><br><span class="line">             <span class="comment">//取出字符"编程"并输出。</span></span><br><span class="line">             System.out.println(str.substring(<span class="number">5</span>,<span class="number">7</span>));<span class="comment">//第二个index值不是对应的值，而需要在对应值的基础上+1。</span></span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="2-3-选择题"><a href="#2-3-选择题" class="headerlink" title="2-3 选择题"></a>2-3 选择题</h4><p>单选题<br>给出如下语句，以下哪个结果是正确的（选择一项）<br><img src="en-resource://database/3501:1" alt="b84c1f37bf1e32fa68b2167eb5a481eb.png"></p>
-<p>A.  编译错误        B.  输出字符o       C.  输出字符l       D.  发生运行时异常</p>
-<p>正确答案： D</p>
-<p><strong>参考解析：</strong><br>本题考查String的charAt()方法的使用，charAt方法的参数最大值是字符串str的长度-1，超过长度范围会发生运行时异常。故D选项正确。</p>
-<h4 id="2-4-选择题"><a href="#2-4-选择题" class="headerlink" title="2-4 选择题"></a>2-4 选择题</h4><p>单选题<br>给出如下语句：以下哪个结果是正确的（选择一项）</p>
-<p>A.  输出字符c       B.  输出字符d<br>C.  输出字符e       D.  输出字符f</p>
-<p>正确答案： C</p>
-<p><strong>参考解析：</strong><br>本题考查substring()和charAt()方法的使用，str.substring(3,6)取出子串”def”，再调用charAt(1)，取出子串”def”中index值为1的字符，即第二个字符e。故C选项正确。</p>
-<h4 id="2-5-String常用方法（下）"><a href="#2-5-String常用方法（下）" class="headerlink" title="2-5 String常用方法（下）"></a>2-5 String常用方法（下）</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo2</span> </span>{</span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">             <span class="comment">// 定义一个字符串"JAVA编程基础,我喜欢java编程"</span></span><br><span class="line">             String str=<span class="keyword">new</span> String(<span class="string">"JAVA编程基础,我喜欢java编程"</span>);</span><br><span class="line">             <span class="comment">//查找字符"A"在字符串中第一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"字符'A'在字符串中第一次出现的位置"</span>+str.indexOf(<span class="string">'A'</span>));</span><br><span class="line">             <span class="comment">//查找子串"编程"在字符串中第一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"子串\"编程\"在字符串中第一次出现的位置"</span>+str.indexOf(<span class="string">"编程"</span>));<span class="comment">//在字符串中再次出现双引号需要用用转译字符。</span></span><br><span class="line">             <span class="comment">//查找子串"编程"在字符串中最后一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"字符'A'在字符串中最后一次出现的位置"</span>+str.lastIndexOf(<span class="string">'A'</span>));</span><br><span class="line">             <span class="comment">//查找子串"编程"在字符串中最后一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"子串\"编程\"在字符串中最后一次出现的位置"</span>+str.lastIndexOf(<span class="string">"编程"</span>));  </span><br><span class="line">             <span class="comment">//在字符串index值为8的位置开始，查找子串"编程"在字符串中第一次出现的位置。</span></span><br><span class="line">             System.out.println(<span class="string">"在字符串index值为8的位置开始，查找子串\"编程\"在字符串中第一次出现的位置"</span>+str.indexOf(<span class="string">"编程"</span>,<span class="number">8</span>));</span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="2-6-编程练习"><a href="#2-6-编程练习" class="headerlink" title="2-6 编程练习"></a>2-6 编程练习</h4><p>使用String类常用方法完成字符串处理。<br><strong>任务</strong></p>
-<p>1、 定义一个字符串”abcdefg”<br>2、 取出子串cde并转换为大写<br>3、 将DE替换为MM<br>4、 最后得到结果CMM</p>
-<p><strong>原题</strong><br>StringDemo.java</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">/*已知字符串"abcdefg"，使之经过处理得到字符串"CDE",并进一步</span></span><br><span class="line"><span class="comment">        将“DE”替换为“MM”，得到结果：CMM */</span></span><br><span class="line">        </span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-
-<p><strong>作答</strong><br>StringDemo.java</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    </span><br><span class="line">        <span class="comment">//1、定义一个字符串。</span></span><br><span class="line">        String str=<span class="string">"abcdefg"</span>;</span><br><span class="line">        <span class="comment">//2、取出子串cde，substring（字符串开始位置，结束位置）。</span></span><br><span class="line">        str=str.substring(<span class="number">2</span>,<span class="number">5</span>);</span><br><span class="line">        <span class="comment">//将cde转换成大写的，使用toUpperCase();</span></span><br><span class="line">        str=str.toUpperCase();</span><br><span class="line">        <span class="comment">//将“DE”替换为“MM”，得到结果：CMM</span></span><br><span class="line">        System.out.println(str.replace(<span class="string">"DE"</span>,<span class="string">"MM"</span>));</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="2-7-选择题"><a href="#2-7-选择题" class="headerlink" title="2-7 选择题"></a>2-7 选择题</h4><p>单选题<br>给出如下语句：  以下哪个输出结果是正确的？（选择一项）</p>
-<p><img src="en-resource://database/3503:1" alt="14f155c7640f9cc45a37d506783f4a87.png"></p>
-<p>Anull<br>B编译错误<br>C没有任何输出结果<br>D发生运行时异常</p>
-<p>正确答案： A</p>
-<p><strong>参考解析：</strong><br>本题考查字符串引用赋值为null时的输出问题，null值将被直接输出，故A选项正确。</p>
-<h4 id="2-8-选择题"><a href="#2-8-选择题" class="headerlink" title="2-8 选择题"></a>2-8 选择题</h4><p>单选题<br>关于字符串的equals()和compareTo()方法，选项中描述错误的是（选择一项）</p>
-<p>A.  方法equels()比较两个字符串内容是否相等<br>B.  方法compareTo()比较两个字符串大小<br>C.  方法equels()返回值是boolean类型的值<br>D.  方法compareTo()返回值是String类型的值</p>
-<p>正确答案： D</p>
-<p><strong>参考解析：</strong><br>本题考查的是字符串方法equals()和compareTo()的区别，方法equels（）比较两个字符串内容是否相等，返回值是boolean类型的值；方法compareTo（）比较两个字符串大小，返回值是int的值。D选项的描述是错误的，故选D。</p>
-<h4 id="2-9-例：字符串与byte数组间的相互转换"><a href="#2-9-例：字符串与byte数组间的相互转换" class="headerlink" title="2-9 例：字符串与byte数组间的相互转换"></a>2-9 例：字符串与byte数组间的相互转换</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.UnsupportedEncodingException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo3</span> </span>{</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> UnsupportedEncodingException </span>{</span><br><span class="line"></span><br><span class="line">             <span class="comment">// 字符串和byte数组之间的相互转换。</span></span><br><span class="line"></span><br><span class="line">             <span class="comment">//定义一个字符串。</span></span><br><span class="line"></span><br><span class="line">             String str=<span class="keyword">new</span> String(<span class="string">"JAVA 编程 基础"</span>);</span><br><span class="line"></span><br><span class="line">             <span class="comment">//将字符串转换成byte数组，并打印输出。</span></span><br><span class="line"></span><br><span class="line">             <span class="keyword">byte</span>[] arrs=str.getBytes(<span class="string">"GBK"</span>);</span><br><span class="line"></span><br><span class="line">             <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arrs.length;i++) {</span><br><span class="line"></span><br><span class="line">                    System.out.println(arrs[i]+<span class="string">" "</span>);</span><br><span class="line"></span><br><span class="line">             }</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line">             System.out.println();</span><br><span class="line"></span><br><span class="line">             <span class="comment">//将byte数组转换为字符串。</span></span><br><span class="line"></span><br><span class="line">             String  str1=<span class="keyword">new</span> String(arrs,<span class="string">"GBK"</span>);</span><br><span class="line"></span><br><span class="line">             System.out.println(str1);</span><br><span class="line"></span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p><img src="en-resource://database/3505:1" alt="458d0bc2cc1d668223df576d8d4fe137.png"></p>
-<p><strong>小结</strong></p>
-<ul>
-<li>字符串和byte数组间的相互转换。</li>
-<li>编码问题：GBK编码和UTF-8编码。</li>
-</ul>
-<p>可以更完善。</p>
-<h4 id="2-10-选择题"><a href="#2-10-选择题" class="headerlink" title="2-10 选择题"></a>2-10 选择题</h4><p>单选题<br>已知字符串的定义如下：以下哪个语句不能将字符串转换成byte数组？（选择一项）<br>String str=”Hello,Imooc!”;</p>
-<p>A.  byte[] arr=str.getBytes();<br>B.  byte[] arr=str.getBytes(“GBK”);<br>C.  byte[] arr=str.getBytes(“UTF-8”);<br>D.<br>byte[] arr;<br>str.getBytes(arr,”GBK”);</p>
-<p>正确答案： D</p>
-<p><strong>参考解析：</strong><br>本题考查getBytes()方法的使用，byte[] arr; str.getBytes(arr,“GBK”);中的getBytes方法时错误的，没有arr作为参数的方法。故D选项正确。</p>
-<h4 id="2-11-等于运算符与equals方法的区别"><a href="#2-11-等于运算符与equals方法的区别" class="headerlink" title="2-11 等于运算符与equals方法的区别"></a>2-11 等于运算符与equals方法的区别</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo5</span> </span>{</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line"></span><br><span class="line">             <span class="comment">// ==和equals方法的区别。</span></span><br><span class="line"></span><br><span class="line">             <span class="comment">//定义三个字符串，内容都是&lt;u&gt;imooc&lt;/u&gt;。</span></span><br><span class="line"></span><br><span class="line">             String str1=<span class="string">"imooc"</span>;</span><br><span class="line"></span><br><span class="line">             String str2=<span class="string">"imooc"</span>;</span><br><span class="line"></span><br><span class="line">             String str3=<span class="keyword">new</span> String(<span class="string">"inooc"</span>);</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"str1和str2的内容相同"</span>+(str1.equals(str2)));</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"str1和str2的内容相同"</span>+(str1.equals(str3)));</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"str1和str2的地址相同"</span>+(str1==str2));</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"str1和str2的地址相同"</span>+(str1==str3));</span><br><span class="line"></span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-<p><img src="en-resource://database/3507:1" alt="5d72aa685cf2fbd9ef80e42f1f430967.png"></p>
-<h4 id="2-12-选择题"><a href="#2-12-选择题" class="headerlink" title="2-12 选择题"></a>2-12 选择题</h4><p>单选题<br>给出如下语句：下面哪个选项返回值为true？（选择一项）</p>
-<p><img src="en-resource://database/3509:1" alt="294f97acb8a69ced504e4d4664ec460a.png"></p>
-<p>A.  s1.equals(s2);<br>B.  s1.equals(c);<br>C.  s1.equals(new String());<br>D.  s1==c;</p>
-<p>正确答案： A</p>
-<p><strong>参考解析：</strong><br>本题考查字符串的equals()方法的使用。A选项正确，s1和s2的值是相等的。B选项，s1.equals(c);，字符串和字符数组的存储方式不一样，因此调用equals方法二者不相等，返回false。C选项，s1.equals(new String());，new String()定义的是空串，与”imooc”不相等，返回值为false。D选项，s1==c;，s1和c是不同的对象，因此不相等，返回值为false。</p>
-<h4 id="2-13-选择题"><a href="#2-13-选择题" class="headerlink" title="2-13 选择题"></a>2-13 选择题</h4><p><strong>单选题</strong><br>下列运行结果是false的是（）（选择一项）</p>
-<p><img src="en-resource://database/3511:1" alt="87823168515780542eb1509a4b309a23.png"></p>
-<p>A.  System.out.println(str1.equals(str2));<br>B.  System.out.println(str1.equals(str3));<br>C.  System.out.println(str1==str2);<br>D.  System.out.println(str1==str3);</p>
-<p>正确答案： D</p>
-<p><strong>参考解析：</strong><br>本题考查的是==和equals方法的区别；str1和str2以及str3的内容是相同的，str1和str2的地址是相同的，因为他们指向的是同一个字符串常量。str1和str3的地址是不相同的，因此str1==str3的运行结果是false，故D选项正确。</p>
-<h4 id="2-14-字符串的不可变性"><a href="#2-14-字符串的不可变性" class="headerlink" title="2-14 字符串的不可变性"></a>2-14 字符串的不可变性</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo6</span> </span>{</span><br><span class="line"></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line"></span><br><span class="line">             <span class="comment">// String的不可变性。</span></span><br><span class="line"></span><br><span class="line">             <span class="comment">// String对象一旦被创建，则不能修改，是不可变得。</span></span><br><span class="line"></span><br><span class="line">             <span class="comment">//所谓的修改其实是创建了新的对象，所指向的内存空间不变。</span></span><br><span class="line"></span><br><span class="line">             String s1=<span class="string">"imooc"</span>;</span><br><span class="line"></span><br><span class="line">             String s2=<span class="string">"hello,"</span>+s1;</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line"></span><br><span class="line">             <span class="comment">//s1不再指向&lt;u&gt;imooc&lt;/u&gt;所在的内存空间，而是指向了"hello,&lt;u&gt;imooc&lt;/u&gt;"。</span></span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"s1="</span>+s1);</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"s2="</span>+s2);</span><br><span class="line"></span><br><span class="line">             </span><br><span class="line"></span><br><span class="line">             String s3=<span class="keyword">new</span> String(<span class="string">"hello,imooc!"</span>);</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"子串："</span>+s3.substring(<span class="number">0</span>,<span class="number">5</span>));</span><br><span class="line"></span><br><span class="line">             System.out.println(<span class="string">"s3="</span>+s3);</span><br><span class="line"></span><br><span class="line">       }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="2-15-选择题"><a href="#2-15-选择题" class="headerlink" title="2-15 选择题"></a>2-15 选择题</h4><p>多选题<br>已知如下代码：  以下哪个说法是正确的？（选择两项）</p>
-<p><img src="en-resource://database/3513:1" alt="04d32db1bbbb5bf9042aee4a226cafc7.png"></p>
-<p>A.  str1.equals(str2)的结果为true</p>
-<p>B.<br>输出结果为：<br>HelloHello<br>HelloHello</p>
-<p>C.  str1==str2的结果为true</p>
-<p>D.<br>输出结果为：<br>HelloHello<br>Hello</p>
-<p>正确答案： A,D</p>
-<p><strong>参考解析：</strong><br>本题考查字符串的不可变性，<br>A选项正确，str1和str2的内容是相等的，因此str1.equals(str2)的结果为true<br>B选项错误，str1.concat(str2)是把str1和str2的内容连接起来，然后把连接后的值输出，但是连接操作并没有改变str1和str2的值，一次str1的值还是Hello，也因此D选项正确<br>C选项错误，str1和str2不是同一个对象，因此str1==str2的结果为false</p>
-<h3 id="第3章-StringBuilder类"><a href="#第3章-StringBuilder类" class="headerlink" title="第3章 StringBuilder类"></a>第3章 StringBuilder类</h3><h4 id="3-1-StringBuilder概述"><a href="#3-1-StringBuilder概述" class="headerlink" title="3-1 StringBuilder概述"></a>3-1 StringBuilder概述</h4><p><strong>String和StringBuilder的区别：</strong><br>    String具有不可变性，而StringBuilder不具备。</p>
-<p><strong>建议：</strong><br>    当频繁操作字符串时，使用StringBuilder。</p>
-<p><strong>StringBuilder和StringBuffer</strong></p>
-<ul>
-<li>二者基本相似</li>
-<li>StringBuffer是线程安全的，StringBuilder则没有，所以性能略高。</li>
-</ul>
-<h4 id="3-2-StringBuilder常用方法"><a href="#3-2-StringBuilder常用方法" class="headerlink" title="3-2 StringBuilder常用方法"></a>3-2 StringBuilder常用方法</h4><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.imooc.string;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringBuilderDemo1</span> </span>{</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">// 定义一个字符串"你好"</span></span><br><span class="line">		StringBuilder str=<span class="keyword">new</span> StringBuilder(<span class="string">"你好"</span>);</span><br><span class="line">		<span class="comment">//在"你好"后面添加内容，将字符串变成"你好,imooc!"。</span></span><br><span class="line"><span class="comment">//		str.append(',');</span></span><br><span class="line"><span class="comment">//		str.append("imooc!");</span></span><br><span class="line"><span class="comment">//		System.out.println("str="+str);</span></span><br><span class="line">		System.out.println(<span class="string">"str="</span>+str.append(<span class="string">','</span>).append(<span class="string">"imooc!"</span>));</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//将字符串变成“你好，iMOOC!”。</span></span><br><span class="line">		<span class="comment">//两种方式：</span></span><br><span class="line">		<span class="comment">//1、使用delete方法删除mooc，然后在插入MOOC</span></span><br><span class="line">		System.out.println(<span class="string">"替换后："</span>+str.delete(<span class="number">4</span>,<span class="number">8</span>).insert(<span class="number">4</span>,<span class="string">"MOOC"</span>));</span><br><span class="line">		<span class="comment">//2、使用replace方法直接替换。</span></span><br><span class="line">		System.out.println(<span class="string">"替换后："</span>+str.replace(<span class="number">4</span>,<span class="number">8</span>,<span class="string">"MOOC"</span>));</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//在字符串"你好,iMOOC"中取出"你好"并输出。</span></span><br><span class="line">		System.out.println(str.substring(<span class="number">0</span>,<span class="number">2</span>));</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>小结</strong></p>
-<ul>
-<li>StringBuilder append(String str)</li>
-<li>StringBuilder delete(int start, int end)</li>
-<li>StringBuilder insert(int offset, String str)</li>
-<li>StringBuilder replace(int start, int end, String str)</li>
-</ul>
-<h4 id="3-3-选择题"><a href="#3-3-选择题" class="headerlink" title="3-3 选择题"></a>3-3 选择题</h4><p>单选题<br>给出如下语句:</p>
-<p>上述代码的输出结果是什么?（选择一项）</p>
-<p><img src="en-resource://database/3515:1" alt="4fa9ccc451bf41bb8ff9227d5e4e76e7.png"></p>
-<p>A.  abeCDfg         B.  abCDefg<br>C.  abcCDefg        D.  abefCDg</p>
-<p>正确答案： A</p>
-<p><strong>参考解析：</strong><br>本题考查StringBuilder的常用方法，调用delete方法时，删除掉cd两个字符，字符串变为abefg，然后在第三个字符的后面插入CD两个字符，即为abeCDfg，故A选项正确。</p>
-<h4 id="3-4-编程练习"><a href="#3-4-编程练习" class="headerlink" title="3-4 编程练习"></a>3-4 编程练习</h4><p>定义一个字符串，利用StringBuilder完成如下效果。<br>效果图:</p>
-<p><img src="en-resource://database/3517:1" alt="cfd94b8d8fc54538d0df381dad55d5b0.png"></p>
-<p>任务</p>
-<ol>
-<li><pre><code> 定义一个字符串”欢迎来到“
-</code></pre>
-</li>
-<li><pre><code> 在"欢迎来到"后面添加内容，将字符串变成"欢迎来到imooc"
-</code></pre>
-</li>
-<li><pre><code> 使用delete方法删除"欢迎来到",然后插入“你好！”
-</code></pre>
-</li>
-<li><pre><code> 将字符串变成“你好，imooc”
-</code></pre>
-</li>
-<li><pre><code> 使用replace方法替换
-</code></pre>
-</li>
-</ol>
-<p><strong>原题</strong></p>
-<p>StringTest.java</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">//定义一个字符串"欢迎来到"</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//在"欢迎来到"后面添加内容，将字符串变成"欢迎来到imooc"</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//使用delete方法删除"欢迎来到",然后插入“你好！”</span></span><br><span class="line">        </span><br><span class="line">		<span class="comment">//将字符串变成“你好，imooc”</span></span><br><span class="line">		</span><br><span class="line">		<span class="comment">//使用replace方法替换</span></span><br><span class="line">		</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-
-<p><strong>作答</strong></p>
-<p>StringTest.java</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringTest</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">//定义一个字符串"欢迎来到"</span></span><br><span class="line">        StringBuilder str = <span class="keyword">new</span> StringBuilder(<span class="string">"欢迎来到"</span>);</span><br><span class="line">        <span class="comment">//在"欢迎来到"后面添加内容，将字符串变成"欢迎来到imooc"</span></span><br><span class="line">        System.out.println(str.append(<span class="string">"imooc"</span>));</span><br><span class="line">        <span class="comment">//使用delete方法删除"欢迎来到",然后插入“你好！”</span></span><br><span class="line">        str.delete(<span class="number">0</span>,<span class="number">4</span>).insert(<span class="number">0</span>,<span class="string">"你好！"</span>);</span><br><span class="line">        <span class="comment">//将字符串变成“你好，imooc”</span></span><br><span class="line">        System.out.println(<span class="string">"删除插入后 "</span> + str.insert(<span class="number">2</span>,<span class="string">","</span>));</span><br><span class="line">        <span class="comment">//使用replace方法替换</span></span><br><span class="line">        System.out.println(<span class="string">"替换后："</span> + str.replace(<span class="number">0</span>,<span class="number">3</span>,<span class="string">"欢迎来到"</span>));</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p>代码精炼性有待考究。</p>
-<h4 id="3-5-选择题"><a href="#3-5-选择题" class="headerlink" title="3-5 选择题"></a>3-5 选择题</h4><p>单选题<br>给出如下语句:下面哪个代码块, 插入到第3行，可以得到输出结果 “123abc 123abc”?（选择一项）</p>
-<p><img src="en-resource://database/3519:1" alt="ac9caa823e270aeecd77310d8342ecc9.png"></p>
-<p>A.<br>sb1.append(“abc”);<br>s1.append(“abc”);</p>
-<p>B.<br>sb1.append(“abc”);<br>s1.concat(“abc”);</p>
-<p>C.<br>sb1.concat(“abc”);<br>s1.append(“abc”);</p>
-<p>D.<br>sb1.concat(“abc”);<br>s1.concat(“abc”);</p>
-<p>E.<br>sb1.append(“abc”);<br>s1 = s1.concat(“abc”);</p>
-<p>F.<br>sb1.append(“abc”);<br>s1 = s1 + s1.concat(“abc”);</p>
-<p>正确答案： E</p>
-<p><strong>参考解析：</strong><br>本题考查StringBuilder常用方法的使用，<br>E选项正确，执行sb1.append(“abc”);,sb1变为123abc。执行 s1 = s1.concat(“abc”);，s1变为123abc。String类型没有append方法，故A、C选项错误。<br>D选项中：sb1.concat(“abc”);  ：sb1是StringBuilder对象，StringBuilder对象没有concat方法,故D选择错误，<br>B选项中：s1.concat(“abc”);：s1调用concat()方法后，没有把新生成的字符串赋值回s1，只是生成了一个新的字符串而已，所以，s1的值并不会发生变化。故B选项错误。<br>F选项，s1 = s1 + s1.concat(“abc”);执行完s1.concat(“abc”)后的值为”123abc”，再和前面的s1进行字符串连接，变成123123abc，因此最后s1的值就为123123abc，故F选项也是错误的。</p>
-<h3 id="第4章-课程总结"><a href="#第4章-课程总结" class="headerlink" title="第4章 课程总结"></a>第4章 课程总结</h3><h4 id="4-1-课程总结"><a href="#4-1-课程总结" class="headerlink" title="4-1 课程总结"></a>4-1 课程总结</h4><ul>
-<li>String和StringBuilder</li>
-<li>介绍了这两个类的常用方法。</li>
-<li>在String中介绍了==和equals()方法的区别</li>
-<li>介绍了String和StringBuilder的区别，主要是不可变性</li>
-<li>通过学习，进一步掌握java文档的使用。</li>
-</ul>
-<h4 id="4-2-选择题"><a href="#4-2-选择题" class="headerlink" title="4-2 选择题"></a>4-2 选择题</h4><p>单选题<br>给出如下语句：</p>
-<p>以下哪个结果是正确的？（选择一项）</p>
-<p><img src="en-resource://database/3521:1" alt="322439fe7b5340942567e6e15dab507c.png"></p>
-<p>A.  true true<br>B.  false true<br>C.  true false<br>D.  false false<br>E.  Compilation fails.<br>F.  An exception is thrown at runtime.</p>
-<p>正确答案： B</p>
-<p><strong>参考解析：</strong></p>
-<p> 本题考查StringBuilder的常用方法，B选项正确。<br>执行Integer x=400;这段代码会创建一个Integer对象，x的引用指向它；执行Integer y = x;这段代码，y的引用和x的引用指向了同一片内存空间。这时，x和y指向同一个对象。之后，执行x++，将会创建一个新的Integer对象401，然后x的引用指向新创建的对象。这时x和y不再指向同一个对象。执行x==y得到结果为false；<br>执行StringBuilder sb1 = new StringBuilder(“123”);这段代码时，在堆中生成一个StringBulider对 象，内容为：123，这时有一个sb1的引用指向”123”这个内容。执行StringBuilder sb2 = sb1;这段代 码，sb2的引用同样指向”123”这个内容。在执行sb1.append(“5”);时，会在内存中”123”这个位置变成 了”1235”，这时没有在内存当中生成新的对象，也没有新的字符串常量，而是在原来的基础上进行了修 改。sb1和sb2指向的是同一个对象，所以执行sb1==sb2得到结果为true。 </p>
-<h4 id="4-3-编程练习"><a href="#4-3-编程练习" class="headerlink" title="4-3 编程练习"></a>4-3 编程练习</h4><p>定义一个字符串，使用StringBuilder的常用方法对字符串进行操作。</p>
-<p>任务</p>
-<p>1、 定义字符串”abc”<br>2、 使之经过处理得到字符串”fed—cba”,并进一步得到字符串”fedcba”</p>
-<p><strong>原题</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">//定义字符串"abc"</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//经过处理得到字符串"fed---cba"</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        <span class="comment">//进一步变换得到字符串"fedcba"</span></span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div>
-<p><strong>作答</strong></p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StringDemo</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">		<span class="comment">//定义字符串"abc"</span></span><br><span class="line">        StringBuilder str=<span class="keyword">new</span> StringBuilder(<span class="string">"abc"</span>);</span><br><span class="line">        <span class="comment">//经过处理得到字符串"fed---cba"</span></span><br><span class="line">        System.out.println(str.reverse().insert(<span class="number">0</span>, <span class="string">"fed---"</span>));</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//进一步变换得到字符串"fedcba"</span></span><br><span class="line">        System.out.println(str.delete(<span class="number">3</span>, <span class="number">6</span>));</span><br><span class="line">        </span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
