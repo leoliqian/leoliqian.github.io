@@ -1221,6 +1221,28 @@
       </categories>
   </entry>
   <entry>
+    <title>JavaSpring4.3。3 项目：校园商铺-店铺管理</title>
+    <url>/posts/3233767690/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>Spring的概述</li>
+<li>Spring的入门</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="第1章-店铺注册—DAO层和图片处理"><a href="#第1章-店铺注册—DAO层和图片处理" class="headerlink" title="第1章 店铺注册—DAO层和图片处理"></a>第1章 店铺注册—DAO层和图片处理</h3><h4 id="Dao层之新增店铺"><a href="#Dao层之新增店铺" class="headerlink" title="Dao层之新增店铺"></a>Dao层之新增店铺</h4><p>目标：</p>
+<ul>
+<li>连接数据库。</li>
+<li>Mybatis数据库表映射关系的配置。</li>
+<li>dao =&gt; service =&gt; controller层代码的编写，Junit的使用。</li>
+<li>Session，图片处理工具Thumbnailator的使用。</li>
+<li>suimobile前端设计与开发。</li>
+</ul>
+<h4 id="Dao层之更新店铺"><a href="#Dao层之更新店铺" class="headerlink" title="Dao层之更新店铺"></a>Dao层之更新店铺</h4><h4 id="Thumbnailator图片处理和封装Util（上）"><a href="#Thumbnailator图片处理和封装Util（上）" class="headerlink" title="Thumbnailator图片处理和封装Util（上）"></a>Thumbnailator图片处理和封装Util（上）</h4><h4 id="Thumbnailator图片处理和封装Util（下）"><a href="#Thumbnailator图片处理和封装Util（下）" class="headerlink" title="Thumbnailator图片处理和封装Util（下）"></a>Thumbnailator图片处理和封装Util（下）</h4><h4 id="Dto之ShopExecution的实现"><a href="#Dto之ShopExecution的实现" class="headerlink" title="Dto之ShopExecution的实现"></a>Dto之ShopExecution的实现</h4><h3 id="第2章-店铺注册—Service层和Controller层"><a href="#第2章-店铺注册—Service层和Controller层" class="headerlink" title="第2章 店铺注册—Service层和Controller层"></a>第2章 店铺注册—Service层和Controller层</h3><h4 id="2-1-店铺注册之Service层的实现-（28-03）"><a href="#2-1-店铺注册之Service层的实现-（28-03）" class="headerlink" title="2-1 店铺注册之Service层的实现 （28:03）"></a>2-1 店铺注册之Service层的实现 （28:03）</h4><h4 id="2-2-店铺注册功能之Controller层的实现（上）-（13-38）"><a href="#2-2-店铺注册功能之Controller层的实现（上）-（13-38）" class="headerlink" title="2-2 店铺注册功能之Controller层的实现（上） （13:38）"></a>2-2 店铺注册功能之Controller层的实现（上） （13:38）</h4><h4 id="2-3-店铺注册功能之Controller层的实现（下）-（15-52）"><a href="#2-3-店铺注册功能之Controller层的实现（下）-（15-52）" class="headerlink" title="2-3 店铺注册功能之Controller层的实现（下） （15:52）"></a>2-3 店铺注册功能之Controller层的实现（下） （15:52）</h4><h4 id="2-4-店铺注册功能之Controller层的改造-（13-21）"><a href="#2-4-店铺注册功能之Controller层的改造-（13-21）" class="headerlink" title="2-4 店铺注册功能之Controller层的改造 （13:21）"></a>2-4 店铺注册功能之Controller层的改造 （13:21）</h4><h3 id="第3章-店铺注册—前端和前后台联调"><a href="#第3章-店铺注册—前端和前后台联调" class="headerlink" title="第3章 店铺注册—前端和前后台联调"></a>第3章 店铺注册—前端和前后台联调</h3><h4 id="3-1-店铺注册之前端设计-（24-49）"><a href="#3-1-店铺注册之前端设计-（24-49）" class="headerlink" title="3-1 店铺注册之前端设计 （24:49）"></a>3-1 店铺注册之前端设计 （24:49）</h4><h4 id="3-2-店铺注册之js实现-（21-13）"><a href="#3-2-店铺注册之js实现-（21-13）" class="headerlink" title="3-2 店铺注册之js实现 （21:13）"></a>3-2 店铺注册之js实现 （21:13）</h4><h4 id="3-3-店铺类别区域信息的获取-（22-33）"><a href="#3-3-店铺类别区域信息的获取-（22-33）" class="headerlink" title="3-3 店铺类别区域信息的获取 （22:33）"></a>3-3 店铺类别区域信息的获取 （22:33）</h4><h4 id="3-4-引入kaptcha实现验证码-（19-14）"><a href="#3-4-引入kaptcha实现验证码-（19-14）" class="headerlink" title="3-4 引入kaptcha实现验证码 （19:14）"></a>3-4 引入kaptcha实现验证码 （19:14）</h4><h4 id="3-5-前后端联调验证整体模块功能-（14-28）"><a href="#3-5-前后端联调验证整体模块功能-（14-28）" class="headerlink" title="3-5 前后端联调验证整体模块功能 （14:28）"></a>3-5 前后端联调验证整体模块功能 （14:28）</h4><h3 id="第4章-店铺信息编辑模块"><a href="#第4章-店铺信息编辑模块" class="headerlink" title="第4章 店铺信息编辑模块"></a>第4章 店铺信息编辑模块</h3><h4 id="4-1-店铺信息编辑之Dao层开发-（11-24）"><a href="#4-1-店铺信息编辑之Dao层开发-（11-24）" class="headerlink" title="4-1 店铺信息编辑之Dao层开发 （11:24）"></a>4-1 店铺信息编辑之Dao层开发 （11:24）</h4><h4 id="4-2-店铺信息编辑之Service层的实现-（14-28）"><a href="#4-2-店铺信息编辑之Service层的实现-（14-28）" class="headerlink" title="4-2 店铺信息编辑之Service层的实现 （14:28）"></a>4-2 店铺信息编辑之Service层的实现 （14:28）</h4><h4 id="4-3-店铺信息编辑之Controller层实现-（14-57）"><a href="#4-3-店铺信息编辑之Controller层实现-（14-57）" class="headerlink" title="4-3 店铺信息编辑之Controller层实现 （14:57）"></a>4-3 店铺信息编辑之Controller层实现 （14:57）</h4><h4 id="4-4-店铺信息编辑之前端实现-（14-10）"><a href="#4-4-店铺信息编辑之前端实现-（14-10）" class="headerlink" title="4-4 店铺信息编辑之前端实现 （14:10）"></a>4-4 店铺信息编辑之前端实现 （14:10）</h4><h3 id="第5章-店铺列表展示功能"><a href="#第5章-店铺列表展示功能" class="headerlink" title="第5章 店铺列表展示功能"></a>第5章 店铺列表展示功能</h3><h4 id="5-1-店铺列表展示之Dao层的实现-（19-13）"><a href="#5-1-店铺列表展示之Dao层的实现-（19-13）" class="headerlink" title="5-1 店铺列表展示之Dao层的实现 （19:13）"></a>5-1 店铺列表展示之Dao层的实现 （19:13）</h4><h4 id="5-2-店铺列表展示之Service层的实现-（08-24）"><a href="#5-2-店铺列表展示之Service层的实现-（08-24）" class="headerlink" title="5-2 店铺列表展示之Service层的实现 （08:24）"></a>5-2 店铺列表展示之Service层的实现 （08:24）</h4><h4 id="5-3-店铺列表展示之Contoller层的实现-（14-09）"><a href="#5-3-店铺列表展示之Contoller层的实现-（14-09）" class="headerlink" title="5-3 店铺列表展示之Contoller层的实现 （14:09）"></a>5-3 店铺列表展示之Contoller层的实现 （14:09）</h4><h4 id="5-4-店铺列表展示前端开发-（10-07）"><a href="#5-4-店铺列表展示前端开发-（10-07）" class="headerlink" title="5-4 店铺列表展示前端开发 （10:07）"></a>5-4 店铺列表展示前端开发 （10:07）</h4><h4 id="5-5-店铺管理页面的前端开发-（06-42）"><a href="#5-5-店铺管理页面的前端开发-（06-42）" class="headerlink" title="5-5 店铺管理页面的前端开发 （06:42）"></a>5-5 店铺管理页面的前端开发 （06:42）</h4></body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
     <title>JavaSpring4.3.2 项目：校园商铺-项目准备</title>
     <url>/posts/2261132808/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -1308,28 +1330,6 @@
 </li>
 </ul>
 <h4 id="logback的配置"><a href="#logback的配置" class="headerlink" title="logback的配置"></a>logback的配置</h4><h4 id="logback配置的验证"><a href="#logback配置的验证" class="headerlink" title="logback配置的验证"></a>logback配置的验证</h4></body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>JavaSpring4.3。3 项目：校园商铺-店铺管理</title>
-    <url>/posts/3233767690/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>Spring的概述</li>
-<li>Spring的入门</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="第1章-店铺注册—DAO层和图片处理"><a href="#第1章-店铺注册—DAO层和图片处理" class="headerlink" title="第1章 店铺注册—DAO层和图片处理"></a>第1章 店铺注册—DAO层和图片处理</h3><h4 id="Dao层之新增店铺"><a href="#Dao层之新增店铺" class="headerlink" title="Dao层之新增店铺"></a>Dao层之新增店铺</h4><p>目标：</p>
-<ul>
-<li>连接数据库。</li>
-<li>Mybatis数据库表映射关系的配置。</li>
-<li>dao =&gt; service =&gt; controller层代码的编写，Junit的使用。</li>
-<li>Session，图片处理工具Thumbnailator的使用。</li>
-<li>suimobile前端设计与开发。</li>
-</ul>
-<h4 id="Dao层之更新店铺"><a href="#Dao层之更新店铺" class="headerlink" title="Dao层之更新店铺"></a>Dao层之更新店铺</h4><h4 id="Thumbnailator图片处理和封装Util（上）"><a href="#Thumbnailator图片处理和封装Util（上）" class="headerlink" title="Thumbnailator图片处理和封装Util（上）"></a>Thumbnailator图片处理和封装Util（上）</h4><h4 id="Thumbnailator图片处理和封装Util（下）"><a href="#Thumbnailator图片处理和封装Util（下）" class="headerlink" title="Thumbnailator图片处理和封装Util（下）"></a>Thumbnailator图片处理和封装Util（下）</h4><h4 id="Dto之ShopExecution的实现"><a href="#Dto之ShopExecution的实现" class="headerlink" title="Dto之ShopExecution的实现"></a>Dto之ShopExecution的实现</h4><h3 id="第2章-店铺注册—Service层和Controller层"><a href="#第2章-店铺注册—Service层和Controller层" class="headerlink" title="第2章 店铺注册—Service层和Controller层"></a>第2章 店铺注册—Service层和Controller层</h3><h4 id="2-1-店铺注册之Service层的实现-（28-03）"><a href="#2-1-店铺注册之Service层的实现-（28-03）" class="headerlink" title="2-1 店铺注册之Service层的实现 （28:03）"></a>2-1 店铺注册之Service层的实现 （28:03）</h4><h4 id="2-2-店铺注册功能之Controller层的实现（上）-（13-38）"><a href="#2-2-店铺注册功能之Controller层的实现（上）-（13-38）" class="headerlink" title="2-2 店铺注册功能之Controller层的实现（上） （13:38）"></a>2-2 店铺注册功能之Controller层的实现（上） （13:38）</h4><h4 id="2-3-店铺注册功能之Controller层的实现（下）-（15-52）"><a href="#2-3-店铺注册功能之Controller层的实现（下）-（15-52）" class="headerlink" title="2-3 店铺注册功能之Controller层的实现（下） （15:52）"></a>2-3 店铺注册功能之Controller层的实现（下） （15:52）</h4><h4 id="2-4-店铺注册功能之Controller层的改造-（13-21）"><a href="#2-4-店铺注册功能之Controller层的改造-（13-21）" class="headerlink" title="2-4 店铺注册功能之Controller层的改造 （13:21）"></a>2-4 店铺注册功能之Controller层的改造 （13:21）</h4><h3 id="第3章-店铺注册—前端和前后台联调"><a href="#第3章-店铺注册—前端和前后台联调" class="headerlink" title="第3章 店铺注册—前端和前后台联调"></a>第3章 店铺注册—前端和前后台联调</h3><h4 id="3-1-店铺注册之前端设计-（24-49）"><a href="#3-1-店铺注册之前端设计-（24-49）" class="headerlink" title="3-1 店铺注册之前端设计 （24:49）"></a>3-1 店铺注册之前端设计 （24:49）</h4><h4 id="3-2-店铺注册之js实现-（21-13）"><a href="#3-2-店铺注册之js实现-（21-13）" class="headerlink" title="3-2 店铺注册之js实现 （21:13）"></a>3-2 店铺注册之js实现 （21:13）</h4><h4 id="3-3-店铺类别区域信息的获取-（22-33）"><a href="#3-3-店铺类别区域信息的获取-（22-33）" class="headerlink" title="3-3 店铺类别区域信息的获取 （22:33）"></a>3-3 店铺类别区域信息的获取 （22:33）</h4><h4 id="3-4-引入kaptcha实现验证码-（19-14）"><a href="#3-4-引入kaptcha实现验证码-（19-14）" class="headerlink" title="3-4 引入kaptcha实现验证码 （19:14）"></a>3-4 引入kaptcha实现验证码 （19:14）</h4><h4 id="3-5-前后端联调验证整体模块功能-（14-28）"><a href="#3-5-前后端联调验证整体模块功能-（14-28）" class="headerlink" title="3-5 前后端联调验证整体模块功能 （14:28）"></a>3-5 前后端联调验证整体模块功能 （14:28）</h4><h3 id="第4章-店铺信息编辑模块"><a href="#第4章-店铺信息编辑模块" class="headerlink" title="第4章 店铺信息编辑模块"></a>第4章 店铺信息编辑模块</h3><h4 id="4-1-店铺信息编辑之Dao层开发-（11-24）"><a href="#4-1-店铺信息编辑之Dao层开发-（11-24）" class="headerlink" title="4-1 店铺信息编辑之Dao层开发 （11:24）"></a>4-1 店铺信息编辑之Dao层开发 （11:24）</h4><h4 id="4-2-店铺信息编辑之Service层的实现-（14-28）"><a href="#4-2-店铺信息编辑之Service层的实现-（14-28）" class="headerlink" title="4-2 店铺信息编辑之Service层的实现 （14:28）"></a>4-2 店铺信息编辑之Service层的实现 （14:28）</h4><h4 id="4-3-店铺信息编辑之Controller层实现-（14-57）"><a href="#4-3-店铺信息编辑之Controller层实现-（14-57）" class="headerlink" title="4-3 店铺信息编辑之Controller层实现 （14:57）"></a>4-3 店铺信息编辑之Controller层实现 （14:57）</h4><h4 id="4-4-店铺信息编辑之前端实现-（14-10）"><a href="#4-4-店铺信息编辑之前端实现-（14-10）" class="headerlink" title="4-4 店铺信息编辑之前端实现 （14:10）"></a>4-4 店铺信息编辑之前端实现 （14:10）</h4><h3 id="第5章-店铺列表展示功能"><a href="#第5章-店铺列表展示功能" class="headerlink" title="第5章 店铺列表展示功能"></a>第5章 店铺列表展示功能</h3><h4 id="5-1-店铺列表展示之Dao层的实现-（19-13）"><a href="#5-1-店铺列表展示之Dao层的实现-（19-13）" class="headerlink" title="5-1 店铺列表展示之Dao层的实现 （19:13）"></a>5-1 店铺列表展示之Dao层的实现 （19:13）</h4><h4 id="5-2-店铺列表展示之Service层的实现-（08-24）"><a href="#5-2-店铺列表展示之Service层的实现-（08-24）" class="headerlink" title="5-2 店铺列表展示之Service层的实现 （08:24）"></a>5-2 店铺列表展示之Service层的实现 （08:24）</h4><h4 id="5-3-店铺列表展示之Contoller层的实现-（14-09）"><a href="#5-3-店铺列表展示之Contoller层的实现-（14-09）" class="headerlink" title="5-3 店铺列表展示之Contoller层的实现 （14:09）"></a>5-3 店铺列表展示之Contoller层的实现 （14:09）</h4><h4 id="5-4-店铺列表展示前端开发-（10-07）"><a href="#5-4-店铺列表展示前端开发-（10-07）" class="headerlink" title="5-4 店铺列表展示前端开发 （10:07）"></a>5-4 店铺列表展示前端开发 （10:07）</h4><h4 id="5-5-店铺管理页面的前端开发-（06-42）"><a href="#5-5-店铺管理页面的前端开发-（06-42）" class="headerlink" title="5-5 店铺管理页面的前端开发 （06:42）"></a>5-5 店铺管理页面的前端开发 （06:42）</h4></body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -1973,35 +1973,6 @@
       </categories>
   </entry>
   <entry>
-    <title>《一颗开花的树》席慕蓉</title>
-    <url>/posts/303255476/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>如何让你遇见我，<br>在我最美丽的时刻。</p>
-<a id="more"></a>
-
-<p>为这，<br>我已在佛前求了五百年，<br>求佛让我们结一段尘缘，<br>佛於是把我化做一棵树，<br>长在你必经的路旁。</p>
-<p>阳光下，<br>慎重地开满了花，<br>朵朵都是我前世的盼望。</p>
-<p>当你走近，<br>请你细听，<br>那颤抖的叶，<br>是我等待的热情。</p>
-<p>而当你终於无视地走过，<br>在你身後落了一地的，<br>朋友啊，<br>那不是花瓣，<br>那是我凋零的心。</p>
-<hr>
-<h3 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h3><p>“如何让你遇见我，在我最美的时刻？”</p>
-<p>每个人都会遇到这个问题，</p>
-<p>每个人都有属于自己的答案。</p>
-<p>我：</p>
-<p>“如何让我遇见你，在那任何一个时刻。”</p>
-<p>其实只要是喜欢的人，她任何时刻都应该是最美的，随着阅历的增长，确实会明白这一点。因为这种美，是超越了物理层面的美，她美在你们一起所经历的一切，她美在你们心有灵犀，她美在你们之间感情的不可分割，美在她望向你的那一汪秋水。</p>
-<p>你见过她盛装打扮，你也见过她不修边幅，你见过她的一切，你接受她的一切，好的，坏的，你都接受，你也都爱。她亦是如此。</p>
-<p>那…</p>
-<p>这相逢，</p>
-<p>又何必是在那最美的时刻？</p>
-</body></html>]]></content>
-      <categories>
-        <category>诗词美文</category>
-      </categories>
-      <tags>
-        <tag>诗词</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《个人博客介绍》</title>
     <url>/posts/2643675631/</url>
     <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>这个博客的搭建主要有两个初衷：</p>
@@ -2041,6 +2012,35 @@
 <p>虽然，我从小到大也没有给家中惹什么大麻烦，比较愧疚的是自己以前没努力学习，上了个三本大学，让家里承受了更多的经济压力，这是比较内疚的，让父母为我犯的错去买单，也有负于整个家庭对我的付出与关爱！</p>
 <p>少犯些错，也是为自己负责。尽量少的犯错，才能不断的向良性的方向发展，才能越来越好。</p>
 <p>加油！</p>
+</body></html>]]></content>
+      <categories>
+        <category>诗词美文</category>
+      </categories>
+      <tags>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《一颗开花的树》席慕蓉</title>
+    <url>/posts/303255476/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>如何让你遇见我，<br>在我最美丽的时刻。</p>
+<a id="more"></a>
+
+<p>为这，<br>我已在佛前求了五百年，<br>求佛让我们结一段尘缘，<br>佛於是把我化做一棵树，<br>长在你必经的路旁。</p>
+<p>阳光下，<br>慎重地开满了花，<br>朵朵都是我前世的盼望。</p>
+<p>当你走近，<br>请你细听，<br>那颤抖的叶，<br>是我等待的热情。</p>
+<p>而当你终於无视地走过，<br>在你身後落了一地的，<br>朋友啊，<br>那不是花瓣，<br>那是我凋零的心。</p>
+<hr>
+<h3 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h3><p>“如何让你遇见我，在我最美的时刻？”</p>
+<p>每个人都会遇到这个问题，</p>
+<p>每个人都有属于自己的答案。</p>
+<p>我：</p>
+<p>“如何让我遇见你，在那任何一个时刻。”</p>
+<p>其实只要是喜欢的人，她任何时刻都应该是最美的，随着阅历的增长，确实会明白这一点。因为这种美，是超越了物理层面的美，她美在你们一起所经历的一切，她美在你们心有灵犀，她美在你们之间感情的不可分割，美在她望向你的那一汪秋水。</p>
+<p>你见过她盛装打扮，你也见过她不修边幅，你见过她的一切，你接受她的一切，好的，坏的，你都接受，你也都爱。她亦是如此。</p>
+<p>那…</p>
+<p>这相逢，</p>
+<p>又何必是在那最美的时刻？</p>
 </body></html>]]></content>
       <categories>
         <category>诗词美文</category>
@@ -2137,23 +2137,6 @@
       </categories>
   </entry>
   <entry>
-    <title>《断章》卞之琳</title>
-    <url>/posts/435292665/</url>
-    <content><![CDATA[<html><head></head><body><h4 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h4><p>你站在桥上看风景，<br>看风景的人在楼上看你。 </p>
-<p>明月装饰了你的窗，<br>你装饰了别人的梦。</p>
-<a id="more"></a>
-
-<hr>
-<h4 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h4><p>其实我发现我会比较喜欢这种简单的文字，每一句单独拉出来，似乎很平常，但是组合在一起，这当中勾勒出的意境，就很美。</p>
-</body></html>]]></content>
-      <categories>
-        <category>诗词美文</category>
-      </categories>
-      <tags>
-        <tag>诗词</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《沙扬娜拉——赠日本女郎》徐志摩</title>
     <url>/posts/2802668681/</url>
     <content><![CDATA[<html><head></head><body><h3 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h3><p>最是那一低头的温柔，</p>
@@ -2171,6 +2154,23 @@
 <p>作品之外，自有人评说。我只管欣赏他挥洒的才华就好了。</p>
 <p>读徐留下来的这些作品，真的很容易代入到他诗词中，文风轻柔，描绘却细腻准确，用词用字灵动情深，一读便能感受到字词情涌，才思飞扬。</p>
 <p>美！喜欢！</p>
+</body></html>]]></content>
+      <categories>
+        <category>诗词美文</category>
+      </categories>
+      <tags>
+        <tag>诗词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《断章》卞之琳</title>
+    <url>/posts/435292665/</url>
+    <content><![CDATA[<html><head></head><body><h4 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h4><p>你站在桥上看风景，<br>看风景的人在楼上看你。 </p>
+<p>明月装饰了你的窗，<br>你装饰了别人的梦。</p>
+<a id="more"></a>
+
+<hr>
+<h4 id="阅读随记："><a href="#阅读随记：" class="headerlink" title="阅读随记："></a>阅读随记：</h4><p>其实我发现我会比较喜欢这种简单的文字，每一句单独拉出来，似乎很平常，但是组合在一起，这当中勾勒出的意境，就很美。</p>
 </body></html>]]></content>
       <categories>
         <category>诗词美文</category>
@@ -2959,105 +2959,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Java基础通识1.3.1 异常</title>
-    <url>/posts/3048259575/</url>
-    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li>一、Java的编译基础</li>
-<li>二、Java程序实际执行细节</li>
-<li>三、使用eclipse开发Java程序</li>
-</ul>
-<a id="more"></a>
-
-<h3 id="导学"><a href="#导学" class="headerlink" title="导学"></a>导学</h3><ul>
-<li>如何应用异常处理程序中的问题？难度：♥</li>
-<li>如何通过包装器类实现基本数据类型的对象化处理？难度：♥</li>
-<li>String、StringBuilder是如何进行字符串信息操作的？难度：♥</li>
-<li>常用集合框架及实现类的使用。难度:♥♥♥</li>
-<li>如何使用Java输入输出流进行文件读写？难度：♥♥♥♥♥</li>
-<li>如何使用多线程实现数据并发通信。难度：♥♥♥♥♥♥♥♥♥♥</li>
-</ul>
-<h4 id="1-2-课程介绍（00-58）"><a href="#1-2-课程介绍（00-58）" class="headerlink" title="1-2 课程介绍（00:58）"></a>1-2 课程介绍（00:58）</h4><p><strong>内容提要</strong></p>
-<ul>
-<li>什么是异常</li>
-<li>如何处理异常<ul>
-<li>try-catch-finally</li>
-<li>throw</li>
-<li>throws</li>
-<li>自定义异常</li>
-<li>异常链</li>
-</ul>
-</li>
-</ul>
-<h3 id="第2章-异常简介"><a href="#第2章-异常简介" class="headerlink" title="第2章 异常简介"></a>第2章 异常简介</h3><h4 id="2-1-什么是异常（03-06）"><a href="#2-1-什么是异常（03-06）" class="headerlink" title="2-1 什么是异常（03:06）"></a>2-1 什么是异常（03:06）</h4><p>异常本质上是程序上的错误。</p>
-<ul>
-<li>错误在我们编写程序的过程中会经常发生，包括编译期间和运行期间的错误。</li>
-<li>在程序运行过程中，意外发生的情况，背离我们程序本身的意图的表现，都可以理解为异常。</li>
-</ul>
-<h4 id="2-2-异常分类（03-45）"><a href="#2-2-异常分类（03-45）" class="headerlink" title="2-2 异常分类（03:45）"></a>2-2 异常分类（03:45）</h4><p><img src="en-resource://database/6073:1" alt="d6c3e424794aad6dda971840414c11f4.png"></p>
-<p>Error是程序无法处理的错误，表示运行应用程序中较严重问题。<br>这些错误是不可查的，它们是在应用程序的控制和处理能力之外，而且绝大多数是程序运行时不允许出现的状况。<br>对于设计合理的应用程序来说，即使确实发生了错误，本质上也不应该试图去处理它所引起的异常状况。</p>
-<p>Exception是程序本身可以处理的异常。<br>异常处理通常指针对这种类型异常的处理。<br>Unchecked Exception编译器不要求强制处置的异常。包含RuntimeException以及相关子类。<br>Checked Exception编译器要求必须处置的异常。</p>
-<h4 id="2-3-选择练习"><a href="#2-3-选择练习" class="headerlink" title="2-3 选择练习"></a>2-3 选择练习</h4><p>多选题下列代码中的异常属于（）（选择两项）<img src="en-resource://database/3387:1" alt="0edcc427be23fa3806b7ae0a9fe6b27b.png"><br>A.非检查型异常<br>B.检查型异常<br>C.Error<br>D.Exception<br>正确答案： A,D 参考解析：本题考查非检查异常。代码中为除0溢出，属于算术异常，是非检查异常，属于RuntimeException，而RuntimeException是Exception的子类。故AD选项正确。</p>
-<h3 id="第3章-异常处理简介"><a href="#第3章-异常处理简介" class="headerlink" title="第3章 异常处理简介"></a>第3章 异常处理简介</h3><h4 id="3-1-异常处理分类（02-39）"><a href="#3-1-异常处理分类（02-39）" class="headerlink" title="3-1 异常处理分类（02:39）"></a>3-1 异常处理分类（02:39）</h4><p>在Java应用程序中，异常处理机制为：</p>
-<p>抛出异常。<br>出现错误，引发异常时，创建异常对象，交付给运行时系统进行处理。<br>异常对象会包括异常类型、异常出现时的程序状态、··· ···</p>
-<p>捕捉异常。</p>
-<ul>
-<li>对于运行时异常、错误或可查异常，Java技术所要求的异常处理方式有所不同。</li>
-</ul>
-<p>Java规定：</p>
-<ul>
-<li>对于可查异常必须捕捉、或者声明抛出。</li>
-<li>允许忽略不可查的RuntimeException（含子类）和Error（含子类）。<br><img src="en-resource://database/6075:1" alt="680919518fd3315ff9be2c43be53d993.png"></li>
-</ul>
-<h4 id="3-2-选择练习"><a href="#3-2-选择练习" class="headerlink" title="3-2 选择练习"></a>3-2 选择练习</h4><p>单选题<br>（）类及其子类所表示的异常是用户程序无法处理的。（选择一项）<br>A、NumberFormatException<br>B、Exception<br>C、Error<br>D、RuntimeException</p>
-<p>正确答案： C </p>
-<p>参考解析：<br>本题考查异常分类，Error类用于处理致命的、用户程序无法处理的系统程序错误，这些错误用户程序是不需要关注的，故选C。</p>
-<h3 id="第4章-使用try…catch…finally实现异常处理"><a href="#第4章-使用try…catch…finally实现异常处理" class="headerlink" title="第4章 使用try…catch…finally实现异常处理"></a>第4章 使用try…catch…finally实现异常处理</h3><h4 id="4-1-try-catch-finally简介（08-39）"><a href="#4-1-try-catch-finally简介（08-39）" class="headerlink" title="4-1 try-catch-finally简介（08:39）"></a>4-1 try-catch-finally简介（08:39）</h4><ul>
-<li>try块：用于捕获异常。</li>
-<li>catch块：用于处理try捕获到的异常。</li>
-<li>finally块：无论是否捕获到异常处理，在这个块的语句都将会被执行。</li>
-<li>try块后可接零个或多个catch块，如果没有catch块，则必须跟一个finally块。（即，try必须跟catch或者finally组合使用，不能够单独存在）</li>
-</ul>
-<p>TryDemoOne.java</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></tbody></table></figure></div>
-<h4 id="4-2-使用try-catch结构处理异常（09-06）"><a href="#4-2-使用try-catch结构处理异常（09-06）" class="headerlink" title="4-2 使用try-catch结构处理异常（09:06）"></a>4-2 使用try-catch结构处理异常（09:06）</h4><p>TryDemoOne.java<br>package com.imooc.test;import java.util.Scanner;public class TryDemoOne {       public static void main(String[] args) {             // 要求：定义两个整数，输出两数之商。//           int one=12;//           int two=2;//           System.out.println("one和two的商是："+(one/two));             //要求：定义两个整数，接受用户的键盘输入，输出两数之商。             Scanner input=new Scanner(System.in);             System.out.println("======运算开始=====");             try {                    System.out.println("请输入第一个整数：");                    int one=input.nextInt();                    System.out.println("请输入第二个整数：");                    int two=input.nextInt();                    System.out.println("one和two的商是："+(one/two));             }catch(Exception e) {                    System.out.println("程序出错啦~~~");                    e.printStackTrace();             }finally {                    System.out.println("======运算结束======");             }       }}</p>
-<h4 id="4-3-选择练习"><a href="#4-3-选择练习" class="headerlink" title="4-3 选择练习"></a>4-3 选择练习</h4><p>单选题数组下标越界，则发生异常，提示为（）（选择一项）<br>A.  IOException<br>B.  ArithmeticException<br>C.  SQLException<br>D.  ArrayIndexOutOfBoundsException</p>
-<p>正确答案： D<br>参考解析：本题考查异常使用，数组下标越界时，提示的异常为ArrayIndexOutOfBoundsException。故D选项正确。</p>
-<h4 id="4-4-选择练习"><a href="#4-4-选择练习" class="headerlink" title="4-4 选择练习"></a>4-4 选择练习</h4><p>单选题<br>运行下列代码，当输入的num值为a时，系统会输出（）（选择一项）<img src="en-resource://database/3393:1" alt="8f84955c0f71c388dd55412cf92e74a2.png"><br>A、<img src="en-resource://database/3395:1" alt="8ad517538ad4c3b483f5861052fb0fc3.png"><br>B、<img src="en-resource://database/3397:1" alt="289660c3d51d335aeac2e1fea912ef40.png"><br>C、<img src="en-resource://database/3399:1" alt="842c3f7e2f8678340715bfbfad177afe.png"><br>D、<img src="en-resource://database/3401:1" alt="a205dbbe993158ee03e86fcd82d26a78.png"></p>
-<p>正确答案： B</p>
-<p>参考解析：<br>本题考查try-catch-finally结构的使用，输入字符a后会产生异常，所以会输出catch字段内容，而finally字段无论是否发生异常代码总能执行，最后一条输出语句正常执行。因此选项B选项正确。</p>
-<h4 id="4-5-使用多重catch结构处理异常（05-00）"><a href="#4-5-使用多重catch结构处理异常（05-00）" class="headerlink" title="4-5 使用多重catch结构处理异常（05:00）"></a>4-5 使用多重catch结构处理异常（05:00）</h4><p>TryDemoOne.java<br>package com.imooc.test;import java.util.InputMismatchException;import java.util.Scanner;public class TryDemoOne {       public static void main(String[] args) {             //要求：定义两个整数，接受用户的键盘输入，输出两数之商。             Scanner input=new Scanner(System.in);             System.out.println("======运算开始=====");             try {                    System.out.println("请输入第一个整数：");                    int one=input.nextInt();                    System.out.println("请输入第二个整数：");                    int two=input.nextInt();                    System.out.println("one和two的商是："+(one/two));             }catch(ArithmeticException e) {                    System.out.println("除数不允许为零");                    e.printStackTrace();             }catch(InputMismatchException e) {                    System.out.println("请输入整数");                    e.printStackTrace();             }catch(Exception e) {                    System.out.println("出错啦~~~");                    e.printStackTrace();             }finally {                    System.out.println("======运算结束======");             }       }}高光部分父类做参数的catch块一定要放在最后一个，做一个收底，如果把它放在前面，后面的的catch块就会失效。</p>
-<h4 id="4-6-选择练习"><a href="#4-6-选择练习" class="headerlink" title="4-6 选择练习"></a>4-6 选择练习</h4><p>单选题运行下列代码，输出结果为（）（选择一项）<br><img src="en-resource://database/3403:1" alt="3be685d038239acbefccaa863086cea6.png"><br>A.  a  =  0<br>B.  a  =  0     除数不允许为零<br>C.  a  =  1     数组越界<br>D.  a  =  0     除数不允许为零     数组越界</p>
-<p>正确答案： B<br>参考解析：<br>本题考查多重catch语句的异常捕获，捕获的顺序和catch语句的执行顺序有关，当捕获到了一个异常时，剩下的catch语句就不再进行匹配。本题是除数不允许为0的异常，因此B选项正确。</p>
-<h4 id="4-7-选择练习"><a href="#4-7-选择练习" class="headerlink" title="4-7 选择练习"></a>4-7 选择练习</h4><p>多选题下列关于异常的描述，错误的是（）（选择两项）<br>A.多重catch应用时，父类异常捕获需要写在子类异常之后。<br>B.    catch块中可以出现同类型异常<br>C.    一个try块可以包含多个catch块<br>D.    捕获到异常后将输出所有catch语句块的内容<br>正确答案： B,D<br>参考解析：<br>本题考查多重catch结构，catch块中不可以出现同类型异常，捕获到异常后将只会输出最先匹配异常的那个catch块内容，故BD选项的说法是错误的。</p>
-<h4 id="4-8-终止finally执行的方法（05-48）"><a href="#4-8-终止finally执行的方法（05-48）" class="headerlink" title="4-8 终止finally执行的方法（05:48）"></a>4-8 终止finally执行的方法（05:48）</h4><p>TryDemoOne.javapackage com.imooc.test;import java.util.InputMismatchException;import java.util.Scanner;public class TryDemoOne {       public static void main(String[] args) {             // 要求：定义两个整数，输出两数之商。//           int one=12;//           int two=2;//           System.out.println("one和two的商是："+(one/two));             //要求：定义两个整数，接受用户的键盘输入，输出两数之商。             Scanner input=new Scanner(System.in);             System.out.println("======运算开始=====");             try {                    System.out.println("请输入第一个整数：");                    int one=input.nextInt();                    System.out.println("请输入第二个整数：");                    int two=input.nextInt();                    System.out.println("one和two的商是："+(one/two));             }catch(ArithmeticException e) {                    System.exit(1);//程序无条件终止运行。                    System.out.println("除数不允许为零");                    e.printStackTrace();             }catch(InputMismatchException e) {                    System.out.println("请输入整数");                    e.printStackTrace();             }catch(Exception e) {                    System.out.println("出错啦~~~");                    e.printStackTrace();             }finally {                    System.out.println("======运算结束======");             }       }}</p>
-<h4 id="4-9-选择练习"><a href="#4-9-选择练习" class="headerlink" title="4-9 选择练习"></a>4-9 选择练习</h4><p>单选题假设要输入的id值为a101，name值为Tom，程序的执行结果为（）（选择一项）<img src="en-resource://database/3405:1" alt="512c92f79792d21bfdeddef1f76a9b64.png"><br>       A<img src="en-resource://database/3407:1" alt="2967d466ccf1007926d724d6b59bc5fc.png"><br>       B<img src="en-resource://database/3409:1" alt="de0450d700ff46b2c1c994d876d7003b.png"><br>       C<img src="en-resource://database/3411:1" alt="229d8911d8cdf485cb6ca34e8848271f.png"><br>       D<img src="en-resource://database/3413:1" alt="c8c4c7cba8cd2e451fc624c4c849be70.png"><br>       正确答案： C 参考解析：本题考查try-catch-finally语句，输入的id不是整数，所以会产生异常，因为语句System.exit(1)会终止程序的运行，所以程序只会输出catch块中的第一条打印信息，故C选项正确。</p>
-<h4 id="4-10-return关键字在异常处理中的作用（11-48）"><a href="#4-10-return关键字在异常处理中的作用（11-48）" class="headerlink" title="4-10 return关键字在异常处理中的作用（11:48）"></a>4-10 return关键字在异常处理中的作用（11:48）</h4><p>笔记有待完善finally语句块中不要使用return语句，不然始终执行finally中return语句块。</p>
-<h4 id="4-11-选择练习"><a href="#4-11-选择练习" class="headerlink" title="4-11 选择练习"></a>4-11 选择练习</h4><p>单选题下列代码的运行结果为（）（选择一项）<img src="en-resource://database/3415:1" alt="25d1108890130194792a17485fbc145c.png"><br>       A.  1        B.  10          C.  20        D.  30正确答案： D参考解析：本题考查return关键字在异常处理中的作用。此段代码先执行了try块中的语句，执行return语句，并将加10后的结果20缓存起来，接着跳转到finally语句块执行，由于finally语句块中有return语句，程序就将finally块中新修改的值即30返回了。故选D。</p>
-<h3 id="第5章-使用throw和throws实现异常处理"><a href="#第5章-使用throw和throws实现异常处理" class="headerlink" title="第5章 使用throw和throws实现异常处理"></a>第5章 使用throw和throws实现异常处理</h3><h4 id="5-1-使用throws声明异常类（16-53）"><a href="#5-1-使用throws声明异常类（16-53）" class="headerlink" title="5-1 使用throws声明异常类（16:53）"></a>5-1 使用throws声明异常类（16:53）</h4><p>可以通过throws声明将要抛出何种类型的异常，通过throw将产生的异常抛出。如果一个方法可能会出现异常，但没有能力处理这种异常，可以在方法声明处用throws子句来声明抛出异常。throws语句用在方法定义时声明该方法要抛出的异常类型。在throws后面我们可以跟单个或多个异常类型，注意此处跟的是异常类型，而不是异常对象。<img src="en-resource://database/3417:1" alt="38f2a089235ab1b3778ab8d159aaf74a.png"><br>       当方法抛出异常列表中的异常时，方法将不对这些类型及其子类类型的异常作处理，而抛向调用该方法的方法，由他去处理。笔记有待完善。</p>
-<h4 id="5-2-使用throw抛出异常对象（15-36）"><a href="#5-2-使用throw抛出异常对象（15-36）" class="headerlink" title="5-2 使用throw抛出异常对象（15:36）"></a>5-2 使用throw抛出异常对象（15:36）</h4><p>throw用来抛出一个异常。例如：throw new IOException();throw抛出的只能够是可抛出类Throwable或者其子类的实例对象。例如：throw new String("出错啦");是错误的。<img src="en-resource://database/3419:1" alt="70b45c60233a97aa14f038ed35592718.png"><br>       对程序异常的处理：规避可能出现的风险。完成一些程序的逻辑。笔记未完成，需分解两个方法，做好笔记记录。</p>
-<h4 id="5-3-选择练习"><a href="#5-3-选择练习" class="headerlink" title="5-3 选择练习"></a>5-3 选择练习</h4><pre><code>   多选题下列关于这段代码的说法正确的是（）（选择两项）![2af88df6620d5aa64756deb93a78c09a.png](en-resource://database/3421:1)
-   备注：上图代码中 length() 方法，表示求指定字符串长度；nextLine() 方法，表示接收键盘输入，以换行为结束A.  代码错误，没有对test()方法中抛出的异常进行处理B.  若产生异常，将由系统进行异常处理C.  本段代码对throw抛出异常对象的处理方案为自己抛出异常自己处理D.  若输入空字符串，代码运行结果为：![d486b71491ce121610dcc48fac59960e.png](en-resource://database/3423:1)
-   正确答案： B,D 参考解析：本题考查使用throw抛出异常，这段代码中若产生异常最终是由主方法声明抛出异常，由系统进行异常处理，故B选项正确，AC选项错误。D选项是正确的，当输入空字符串时，将执行test方法中的throw语句，将抛出参数不能为空的异常。
-</code></pre>
-<h4 id="5-4-关于通过throw抛出异常类型问题的逼逼叨（03-44）"><a href="#5-4-关于通过throw抛出异常类型问题的逼逼叨（03-44）" class="headerlink" title="5-4 关于通过throw抛出异常类型问题的逼逼叨（03:44）"></a>5-4 关于通过throw抛出异常类型问题的逼逼叨（03:44）</h4><h4 id="5-5-选择练习"><a href="#5-5-选择练习" class="headerlink" title="5-5 选择练习"></a>5-5 选择练习</h4><pre><code>   单选题在下列代码划线处不可以填入选项中的哪一个异常类型（）（选择一项）![12b446788041f60ff6182555725d6b1f.png](en-resource://database/3425:1)
-   A.  ThrowableB.  ExceptionC.  InputMismatchExceptionD.  ArithmeticException正确答案： C参考解析：在划线处可以声明抛出与throw对象相同的类型或者其父类，此处是throw后是ArithmeticException，所以应该抛出ArithmeticException或它的父类Throwable和Exception。因此InputMismatchException是不可以写在划线处的，故C选项正确。
-</code></pre>
-<h3 id="第6章-自定义异常"><a href="#第6章-自定义异常" class="headerlink" title="第6章 自定义异常"></a>第6章 自定义异常</h3><h4 id="6-1-自定义异常类（06-53）"><a href="#6-1-自定义异常类（06-53）" class="headerlink" title="6-1 自定义异常类（06:53）"></a>6-1 自定义异常类（06:53）</h4><p>使用Java内置的异常类可以描述在编程时出现的大部分异常情况。也可以通过自定义异常描述特定业务产生的异常类型。所谓自定义异常，就是定义一个类，去继承Throwable类或者它的子类。HotelAgeException.javapackage com.imooc.test;public class HotelAgeException extends Exception {       public HotelAgeException() {             super("18岁以下，80岁以上的住客必须由亲友陪同。");       }}笔记未完成，需要和DemoFour联动。</p>
-<h4 id="6-2-选择练习"><a href="#6-2-选择练习" class="headerlink" title="6-2 选择练习"></a>6-2 选择练习</h4><p>单选题关于下列代码说法正确的是（）（选择一项）<img src="en-resource://database/3427:1" alt="9a7013029f89e8f585a736564b17760a.png"><br>       A.  编译出错，因为没有捕获Exception异常B.  当输入price的值为10时，运行结果为：        The price is too low!C.  当输入price的值为9时，运行结果为：        the price is 9.0D.  当输入price的值为0时，运行结果为：        The price is too low!正确答案： D参考解析：本题考查自定义异常，分析代码可得，当输入的price值小于10时，会产生MyException异常，故D选项正确。</p>
-<h4 id="6-3-选择练习"><a href="#6-3-选择练习" class="headerlink" title="6-3 选择练习"></a>6-3 选择练习</h4><p>单选题假设有自定义异常类MyException，那么抛出该异常的语句正确的是（）（选择一项）A.  throw new Exception()B.  throw new MyException()C.  throw MyExceptionD.  throws Exception正确答案： B 参考解析：本题考查自定义异常，抛出异常时抛出的是异常对象，故B选项正确。</p>
-<h3 id="第7章-异常链"><a href="#第7章-异常链" class="headerlink" title="第7章 异常链"></a>第7章 异常链</h3><h4 id="7-1-异常链简介（07-45）"><a href="#7-1-异常链简介（07-45）" class="headerlink" title="7-1 异常链简介（07:45）"></a>7-1 异常链简介（07:45）</h4><p>异常链有时候我们会捕获一个异常后再抛出另一个异常。顾名思义就是：将异常发生的原因一个传一个串起来，即把底层的异常信息传给上层，这样逐层抛出。TryDemoFive.javapackage com.imooc.test;public class TryDemoFive {       public static void main(String[] args) {             // TODO Auto-generated method stub             try {                    testThree();             } catch (Exception e) {                    // TODO Auto-generated catch block                    e.printStackTrace();             }       }              public static void testOne() throws HotelAgeException {             throw new HotelAgeException();       }              public static void testTwo() throws Exception {             try {                    testOne();             }catch(HotelAgeException e) {                    throw new Exception("我是新产生的异常1",e);             }       }              public static void testThree() throws Exception{             try {                    testTwo();             } catch(Exception e) {                    Exception e1=new Exception("我是新产生的异常2");                    e1.initCause(e);                    throw e1;//                  throw new Exception("我是新产生的异常2");             }       }}<img src="en-resource://database/3429:1" alt="1e39aa24d3209d6a4116c394c25283df.png"></p>
-<h4 id="7-2-选择练习"><a href="#7-2-选择练习" class="headerlink" title="7-2 选择练习"></a>7-2 选择练习</h4><p>单选题若我们想要在位置1处抛出异常的同时保留MyException中的异常信息，则可以在位置1中添加哪句代码（）（选择一项）<img src="en-resource://database/3431:1" alt="4776af0a0165f3112d80c1e175caa0df.png"><br>       A<img src="en-resource://database/3433:1" alt="a0e46fbe30e61700952592686ad39c09.png"><br>       B<img src="en-resource://database/3435:1" alt="94e02e9d563bb6767feb20add415d8eb.png"><br>       C<img src="en-resource://database/3437:1" alt="3d013b8c93110bae144415e6de38eb3d.png"><br>       D<img src="en-resource://database/3439:1" alt="b19dd82e76a78e86d1f682711de2d580.png"><br>       正确答案： A参考解析：本题考查异常链，可以调用Throwable(String message，Throwable cause)来保留底层异常的异常信息。故A选项正确。</p>
-<h4 id="7-3-选择练习"><a href="#7-3-选择练习" class="headerlink" title="7-3 选择练习"></a>7-3 选择练习</h4><p>单选题在划线处填入选项中的哪段代码可以实现抛出异常的同时保留原始的异常信息（）（选择一项）<img src="en-resource://database/3441:1" alt="1ec762c08554d11998770749e663e426.png"><br>       A<img src="en-resource://database/3443:1" alt="9a20b165b57b3767764e1059fba60668.png"><br>       B<img src="en-resource://database/3445:1" alt="e977ae559ce758553f085e767d26c2e0.png"><br>       C<img src="en-resource://database/3447:1" alt="54170409a1e1a484e9e1a89066a8efbd.png"><br>       D<img src="en-resource://database/3449:1" alt="464a38d1e93079b4a479148ecf01fa49.png"><br>       正确答案： B参考解析：本题考查异常链，initCause(Throwable cause) 方法用来获取原始异常的描述信息，其中cause是原始异常的对象，故B选项正确。</p>
-<h3 id="第8章-课程总结"><a href="#第8章-课程总结" class="headerlink" title="第8章 课程总结"></a>第8章 课程总结</h3><h4 id="8-1-课程总结（05-50）"><a href="#8-1-课程总结（05-50）" class="headerlink" title="8-1 课程总结（05:50）"></a>8-1 课程总结（05:50）</h4><pre><code>   程序中的异常在程序运行过程中，意外发生的情况，背离我们程序本身的意图的表现，都可以理解为异常。利用Java中的异常机制，我们可以更好地提升程序的健壮性。在Java中，通过Throwable及其子类描述各种不同的异常类型。![96c3caec66384a892d9dacf4fa843c7e.png](en-resource://database/3451:1)
-   笔记未完成。《Java常见异常类型及原因分析（上）》《Java常见异常类型及原因分析（下）》
-</code></pre>
-<p><img src="en-resource://database/3453:1" alt="6b67605db9c800b16d7f5e56fff59ea3.png"></p>
-</body></html>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Java基础通识1.3.2 包装类</title>
     <url>/posts/2589003794/</url>
     <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
@@ -3629,6 +3530,105 @@
 <p>作答</p>
 <p>HelloWorld.java</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>{</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">        <span class="comment">//定义float类型变量，赋值为88.99</span></span><br><span class="line">        <span class="keyword">float</span> f1 = <span class="number">88.99f</span>;</span><br><span class="line">        <span class="comment">//将基本类型转换为字符串</span></span><br><span class="line">        String str1=Float.toString(f1)+<span class="number">20</span>;</span><br><span class="line">        <span class="comment">//打印输出</span></span><br><span class="line">        System.out.println(<span class="string">"f1转换为String型后与整数20求和的结果为："</span>+str1);</span><br><span class="line">        <span class="comment">//定义String类型变量，赋值为&amp;quot;188.55&amp;quot;</span></span><br><span class="line">        String str = <span class="string">"188.55"</span>;</span><br><span class="line">        <span class="comment">// 将字符串转换为基本类型double</span></span><br><span class="line">        <span class="keyword">double</span> d1=Double.valueOf(str);</span><br><span class="line">        <span class="comment">//打印输出</span></span><br><span class="line">        System.out.println(<span class="string">"str转换为double型后与整数20求和的结果为："</span>+d1+<span class="number">20</span>);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></div></body></html>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Java基础通识1.3.1 异常</title>
+    <url>/posts/3048259575/</url>
+    <content><![CDATA[<html><head></head><body><h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li>一、Java的编译基础</li>
+<li>二、Java程序实际执行细节</li>
+<li>三、使用eclipse开发Java程序</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="导学"><a href="#导学" class="headerlink" title="导学"></a>导学</h3><ul>
+<li>如何应用异常处理程序中的问题？难度：♥</li>
+<li>如何通过包装器类实现基本数据类型的对象化处理？难度：♥</li>
+<li>String、StringBuilder是如何进行字符串信息操作的？难度：♥</li>
+<li>常用集合框架及实现类的使用。难度:♥♥♥</li>
+<li>如何使用Java输入输出流进行文件读写？难度：♥♥♥♥♥</li>
+<li>如何使用多线程实现数据并发通信。难度：♥♥♥♥♥♥♥♥♥♥</li>
+</ul>
+<h4 id="1-2-课程介绍（00-58）"><a href="#1-2-课程介绍（00-58）" class="headerlink" title="1-2 课程介绍（00:58）"></a>1-2 课程介绍（00:58）</h4><p><strong>内容提要</strong></p>
+<ul>
+<li>什么是异常</li>
+<li>如何处理异常<ul>
+<li>try-catch-finally</li>
+<li>throw</li>
+<li>throws</li>
+<li>自定义异常</li>
+<li>异常链</li>
+</ul>
+</li>
+</ul>
+<h3 id="第2章-异常简介"><a href="#第2章-异常简介" class="headerlink" title="第2章 异常简介"></a>第2章 异常简介</h3><h4 id="2-1-什么是异常（03-06）"><a href="#2-1-什么是异常（03-06）" class="headerlink" title="2-1 什么是异常（03:06）"></a>2-1 什么是异常（03:06）</h4><p>异常本质上是程序上的错误。</p>
+<ul>
+<li>错误在我们编写程序的过程中会经常发生，包括编译期间和运行期间的错误。</li>
+<li>在程序运行过程中，意外发生的情况，背离我们程序本身的意图的表现，都可以理解为异常。</li>
+</ul>
+<h4 id="2-2-异常分类（03-45）"><a href="#2-2-异常分类（03-45）" class="headerlink" title="2-2 异常分类（03:45）"></a>2-2 异常分类（03:45）</h4><p><img src="en-resource://database/6073:1" alt="d6c3e424794aad6dda971840414c11f4.png"></p>
+<p>Error是程序无法处理的错误，表示运行应用程序中较严重问题。<br>这些错误是不可查的，它们是在应用程序的控制和处理能力之外，而且绝大多数是程序运行时不允许出现的状况。<br>对于设计合理的应用程序来说，即使确实发生了错误，本质上也不应该试图去处理它所引起的异常状况。</p>
+<p>Exception是程序本身可以处理的异常。<br>异常处理通常指针对这种类型异常的处理。<br>Unchecked Exception编译器不要求强制处置的异常。包含RuntimeException以及相关子类。<br>Checked Exception编译器要求必须处置的异常。</p>
+<h4 id="2-3-选择练习"><a href="#2-3-选择练习" class="headerlink" title="2-3 选择练习"></a>2-3 选择练习</h4><p>多选题下列代码中的异常属于（）（选择两项）<img src="en-resource://database/3387:1" alt="0edcc427be23fa3806b7ae0a9fe6b27b.png"><br>A.非检查型异常<br>B.检查型异常<br>C.Error<br>D.Exception<br>正确答案： A,D 参考解析：本题考查非检查异常。代码中为除0溢出，属于算术异常，是非检查异常，属于RuntimeException，而RuntimeException是Exception的子类。故AD选项正确。</p>
+<h3 id="第3章-异常处理简介"><a href="#第3章-异常处理简介" class="headerlink" title="第3章 异常处理简介"></a>第3章 异常处理简介</h3><h4 id="3-1-异常处理分类（02-39）"><a href="#3-1-异常处理分类（02-39）" class="headerlink" title="3-1 异常处理分类（02:39）"></a>3-1 异常处理分类（02:39）</h4><p>在Java应用程序中，异常处理机制为：</p>
+<p>抛出异常。<br>出现错误，引发异常时，创建异常对象，交付给运行时系统进行处理。<br>异常对象会包括异常类型、异常出现时的程序状态、··· ···</p>
+<p>捕捉异常。</p>
+<ul>
+<li>对于运行时异常、错误或可查异常，Java技术所要求的异常处理方式有所不同。</li>
+</ul>
+<p>Java规定：</p>
+<ul>
+<li>对于可查异常必须捕捉、或者声明抛出。</li>
+<li>允许忽略不可查的RuntimeException（含子类）和Error（含子类）。<br><img src="en-resource://database/6075:1" alt="680919518fd3315ff9be2c43be53d993.png"></li>
+</ul>
+<h4 id="3-2-选择练习"><a href="#3-2-选择练习" class="headerlink" title="3-2 选择练习"></a>3-2 选择练习</h4><p>单选题<br>（）类及其子类所表示的异常是用户程序无法处理的。（选择一项）<br>A、NumberFormatException<br>B、Exception<br>C、Error<br>D、RuntimeException</p>
+<p>正确答案： C </p>
+<p>参考解析：<br>本题考查异常分类，Error类用于处理致命的、用户程序无法处理的系统程序错误，这些错误用户程序是不需要关注的，故选C。</p>
+<h3 id="第4章-使用try…catch…finally实现异常处理"><a href="#第4章-使用try…catch…finally实现异常处理" class="headerlink" title="第4章 使用try…catch…finally实现异常处理"></a>第4章 使用try…catch…finally实现异常处理</h3><h4 id="4-1-try-catch-finally简介（08-39）"><a href="#4-1-try-catch-finally简介（08-39）" class="headerlink" title="4-1 try-catch-finally简介（08:39）"></a>4-1 try-catch-finally简介（08:39）</h4><ul>
+<li>try块：用于捕获异常。</li>
+<li>catch块：用于处理try捕获到的异常。</li>
+<li>finally块：无论是否捕获到异常处理，在这个块的语句都将会被执行。</li>
+<li>try块后可接零个或多个catch块，如果没有catch块，则必须跟一个finally块。（即，try必须跟catch或者finally组合使用，不能够单独存在）</li>
+</ul>
+<p>TryDemoOne.java</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVA"><figure class="iseeu highlight /java"><table><tbody><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></tbody></table></figure></div>
+<h4 id="4-2-使用try-catch结构处理异常（09-06）"><a href="#4-2-使用try-catch结构处理异常（09-06）" class="headerlink" title="4-2 使用try-catch结构处理异常（09:06）"></a>4-2 使用try-catch结构处理异常（09:06）</h4><p>TryDemoOne.java<br>package com.imooc.test;import java.util.Scanner;public class TryDemoOne {       public static void main(String[] args) {             // 要求：定义两个整数，输出两数之商。//           int one=12;//           int two=2;//           System.out.println("one和two的商是："+(one/two));             //要求：定义两个整数，接受用户的键盘输入，输出两数之商。             Scanner input=new Scanner(System.in);             System.out.println("======运算开始=====");             try {                    System.out.println("请输入第一个整数：");                    int one=input.nextInt();                    System.out.println("请输入第二个整数：");                    int two=input.nextInt();                    System.out.println("one和two的商是："+(one/two));             }catch(Exception e) {                    System.out.println("程序出错啦~~~");                    e.printStackTrace();             }finally {                    System.out.println("======运算结束======");             }       }}</p>
+<h4 id="4-3-选择练习"><a href="#4-3-选择练习" class="headerlink" title="4-3 选择练习"></a>4-3 选择练习</h4><p>单选题数组下标越界，则发生异常，提示为（）（选择一项）<br>A.  IOException<br>B.  ArithmeticException<br>C.  SQLException<br>D.  ArrayIndexOutOfBoundsException</p>
+<p>正确答案： D<br>参考解析：本题考查异常使用，数组下标越界时，提示的异常为ArrayIndexOutOfBoundsException。故D选项正确。</p>
+<h4 id="4-4-选择练习"><a href="#4-4-选择练习" class="headerlink" title="4-4 选择练习"></a>4-4 选择练习</h4><p>单选题<br>运行下列代码，当输入的num值为a时，系统会输出（）（选择一项）<img src="en-resource://database/3393:1" alt="8f84955c0f71c388dd55412cf92e74a2.png"><br>A、<img src="en-resource://database/3395:1" alt="8ad517538ad4c3b483f5861052fb0fc3.png"><br>B、<img src="en-resource://database/3397:1" alt="289660c3d51d335aeac2e1fea912ef40.png"><br>C、<img src="en-resource://database/3399:1" alt="842c3f7e2f8678340715bfbfad177afe.png"><br>D、<img src="en-resource://database/3401:1" alt="a205dbbe993158ee03e86fcd82d26a78.png"></p>
+<p>正确答案： B</p>
+<p>参考解析：<br>本题考查try-catch-finally结构的使用，输入字符a后会产生异常，所以会输出catch字段内容，而finally字段无论是否发生异常代码总能执行，最后一条输出语句正常执行。因此选项B选项正确。</p>
+<h4 id="4-5-使用多重catch结构处理异常（05-00）"><a href="#4-5-使用多重catch结构处理异常（05-00）" class="headerlink" title="4-5 使用多重catch结构处理异常（05:00）"></a>4-5 使用多重catch结构处理异常（05:00）</h4><p>TryDemoOne.java<br>package com.imooc.test;import java.util.InputMismatchException;import java.util.Scanner;public class TryDemoOne {       public static void main(String[] args) {             //要求：定义两个整数，接受用户的键盘输入，输出两数之商。             Scanner input=new Scanner(System.in);             System.out.println("======运算开始=====");             try {                    System.out.println("请输入第一个整数：");                    int one=input.nextInt();                    System.out.println("请输入第二个整数：");                    int two=input.nextInt();                    System.out.println("one和two的商是："+(one/two));             }catch(ArithmeticException e) {                    System.out.println("除数不允许为零");                    e.printStackTrace();             }catch(InputMismatchException e) {                    System.out.println("请输入整数");                    e.printStackTrace();             }catch(Exception e) {                    System.out.println("出错啦~~~");                    e.printStackTrace();             }finally {                    System.out.println("======运算结束======");             }       }}高光部分父类做参数的catch块一定要放在最后一个，做一个收底，如果把它放在前面，后面的的catch块就会失效。</p>
+<h4 id="4-6-选择练习"><a href="#4-6-选择练习" class="headerlink" title="4-6 选择练习"></a>4-6 选择练习</h4><p>单选题运行下列代码，输出结果为（）（选择一项）<br><img src="en-resource://database/3403:1" alt="3be685d038239acbefccaa863086cea6.png"><br>A.  a  =  0<br>B.  a  =  0     除数不允许为零<br>C.  a  =  1     数组越界<br>D.  a  =  0     除数不允许为零     数组越界</p>
+<p>正确答案： B<br>参考解析：<br>本题考查多重catch语句的异常捕获，捕获的顺序和catch语句的执行顺序有关，当捕获到了一个异常时，剩下的catch语句就不再进行匹配。本题是除数不允许为0的异常，因此B选项正确。</p>
+<h4 id="4-7-选择练习"><a href="#4-7-选择练习" class="headerlink" title="4-7 选择练习"></a>4-7 选择练习</h4><p>多选题下列关于异常的描述，错误的是（）（选择两项）<br>A.多重catch应用时，父类异常捕获需要写在子类异常之后。<br>B.    catch块中可以出现同类型异常<br>C.    一个try块可以包含多个catch块<br>D.    捕获到异常后将输出所有catch语句块的内容<br>正确答案： B,D<br>参考解析：<br>本题考查多重catch结构，catch块中不可以出现同类型异常，捕获到异常后将只会输出最先匹配异常的那个catch块内容，故BD选项的说法是错误的。</p>
+<h4 id="4-8-终止finally执行的方法（05-48）"><a href="#4-8-终止finally执行的方法（05-48）" class="headerlink" title="4-8 终止finally执行的方法（05:48）"></a>4-8 终止finally执行的方法（05:48）</h4><p>TryDemoOne.javapackage com.imooc.test;import java.util.InputMismatchException;import java.util.Scanner;public class TryDemoOne {       public static void main(String[] args) {             // 要求：定义两个整数，输出两数之商。//           int one=12;//           int two=2;//           System.out.println("one和two的商是："+(one/two));             //要求：定义两个整数，接受用户的键盘输入，输出两数之商。             Scanner input=new Scanner(System.in);             System.out.println("======运算开始=====");             try {                    System.out.println("请输入第一个整数：");                    int one=input.nextInt();                    System.out.println("请输入第二个整数：");                    int two=input.nextInt();                    System.out.println("one和two的商是："+(one/two));             }catch(ArithmeticException e) {                    System.exit(1);//程序无条件终止运行。                    System.out.println("除数不允许为零");                    e.printStackTrace();             }catch(InputMismatchException e) {                    System.out.println("请输入整数");                    e.printStackTrace();             }catch(Exception e) {                    System.out.println("出错啦~~~");                    e.printStackTrace();             }finally {                    System.out.println("======运算结束======");             }       }}</p>
+<h4 id="4-9-选择练习"><a href="#4-9-选择练习" class="headerlink" title="4-9 选择练习"></a>4-9 选择练习</h4><p>单选题假设要输入的id值为a101，name值为Tom，程序的执行结果为（）（选择一项）<img src="en-resource://database/3405:1" alt="512c92f79792d21bfdeddef1f76a9b64.png"><br>       A<img src="en-resource://database/3407:1" alt="2967d466ccf1007926d724d6b59bc5fc.png"><br>       B<img src="en-resource://database/3409:1" alt="de0450d700ff46b2c1c994d876d7003b.png"><br>       C<img src="en-resource://database/3411:1" alt="229d8911d8cdf485cb6ca34e8848271f.png"><br>       D<img src="en-resource://database/3413:1" alt="c8c4c7cba8cd2e451fc624c4c849be70.png"><br>       正确答案： C 参考解析：本题考查try-catch-finally语句，输入的id不是整数，所以会产生异常，因为语句System.exit(1)会终止程序的运行，所以程序只会输出catch块中的第一条打印信息，故C选项正确。</p>
+<h4 id="4-10-return关键字在异常处理中的作用（11-48）"><a href="#4-10-return关键字在异常处理中的作用（11-48）" class="headerlink" title="4-10 return关键字在异常处理中的作用（11:48）"></a>4-10 return关键字在异常处理中的作用（11:48）</h4><p>笔记有待完善finally语句块中不要使用return语句，不然始终执行finally中return语句块。</p>
+<h4 id="4-11-选择练习"><a href="#4-11-选择练习" class="headerlink" title="4-11 选择练习"></a>4-11 选择练习</h4><p>单选题下列代码的运行结果为（）（选择一项）<img src="en-resource://database/3415:1" alt="25d1108890130194792a17485fbc145c.png"><br>       A.  1        B.  10          C.  20        D.  30正确答案： D参考解析：本题考查return关键字在异常处理中的作用。此段代码先执行了try块中的语句，执行return语句，并将加10后的结果20缓存起来，接着跳转到finally语句块执行，由于finally语句块中有return语句，程序就将finally块中新修改的值即30返回了。故选D。</p>
+<h3 id="第5章-使用throw和throws实现异常处理"><a href="#第5章-使用throw和throws实现异常处理" class="headerlink" title="第5章 使用throw和throws实现异常处理"></a>第5章 使用throw和throws实现异常处理</h3><h4 id="5-1-使用throws声明异常类（16-53）"><a href="#5-1-使用throws声明异常类（16-53）" class="headerlink" title="5-1 使用throws声明异常类（16:53）"></a>5-1 使用throws声明异常类（16:53）</h4><p>可以通过throws声明将要抛出何种类型的异常，通过throw将产生的异常抛出。如果一个方法可能会出现异常，但没有能力处理这种异常，可以在方法声明处用throws子句来声明抛出异常。throws语句用在方法定义时声明该方法要抛出的异常类型。在throws后面我们可以跟单个或多个异常类型，注意此处跟的是异常类型，而不是异常对象。<img src="en-resource://database/3417:1" alt="38f2a089235ab1b3778ab8d159aaf74a.png"><br>       当方法抛出异常列表中的异常时，方法将不对这些类型及其子类类型的异常作处理，而抛向调用该方法的方法，由他去处理。笔记有待完善。</p>
+<h4 id="5-2-使用throw抛出异常对象（15-36）"><a href="#5-2-使用throw抛出异常对象（15-36）" class="headerlink" title="5-2 使用throw抛出异常对象（15:36）"></a>5-2 使用throw抛出异常对象（15:36）</h4><p>throw用来抛出一个异常。例如：throw new IOException();throw抛出的只能够是可抛出类Throwable或者其子类的实例对象。例如：throw new String("出错啦");是错误的。<img src="en-resource://database/3419:1" alt="70b45c60233a97aa14f038ed35592718.png"><br>       对程序异常的处理：规避可能出现的风险。完成一些程序的逻辑。笔记未完成，需分解两个方法，做好笔记记录。</p>
+<h4 id="5-3-选择练习"><a href="#5-3-选择练习" class="headerlink" title="5-3 选择练习"></a>5-3 选择练习</h4><pre><code>   多选题下列关于这段代码的说法正确的是（）（选择两项）![2af88df6620d5aa64756deb93a78c09a.png](en-resource://database/3421:1)
+   备注：上图代码中 length() 方法，表示求指定字符串长度；nextLine() 方法，表示接收键盘输入，以换行为结束A.  代码错误，没有对test()方法中抛出的异常进行处理B.  若产生异常，将由系统进行异常处理C.  本段代码对throw抛出异常对象的处理方案为自己抛出异常自己处理D.  若输入空字符串，代码运行结果为：![d486b71491ce121610dcc48fac59960e.png](en-resource://database/3423:1)
+   正确答案： B,D 参考解析：本题考查使用throw抛出异常，这段代码中若产生异常最终是由主方法声明抛出异常，由系统进行异常处理，故B选项正确，AC选项错误。D选项是正确的，当输入空字符串时，将执行test方法中的throw语句，将抛出参数不能为空的异常。
+</code></pre>
+<h4 id="5-4-关于通过throw抛出异常类型问题的逼逼叨（03-44）"><a href="#5-4-关于通过throw抛出异常类型问题的逼逼叨（03-44）" class="headerlink" title="5-4 关于通过throw抛出异常类型问题的逼逼叨（03:44）"></a>5-4 关于通过throw抛出异常类型问题的逼逼叨（03:44）</h4><h4 id="5-5-选择练习"><a href="#5-5-选择练习" class="headerlink" title="5-5 选择练习"></a>5-5 选择练习</h4><pre><code>   单选题在下列代码划线处不可以填入选项中的哪一个异常类型（）（选择一项）![12b446788041f60ff6182555725d6b1f.png](en-resource://database/3425:1)
+   A.  ThrowableB.  ExceptionC.  InputMismatchExceptionD.  ArithmeticException正确答案： C参考解析：在划线处可以声明抛出与throw对象相同的类型或者其父类，此处是throw后是ArithmeticException，所以应该抛出ArithmeticException或它的父类Throwable和Exception。因此InputMismatchException是不可以写在划线处的，故C选项正确。
+</code></pre>
+<h3 id="第6章-自定义异常"><a href="#第6章-自定义异常" class="headerlink" title="第6章 自定义异常"></a>第6章 自定义异常</h3><h4 id="6-1-自定义异常类（06-53）"><a href="#6-1-自定义异常类（06-53）" class="headerlink" title="6-1 自定义异常类（06:53）"></a>6-1 自定义异常类（06:53）</h4><p>使用Java内置的异常类可以描述在编程时出现的大部分异常情况。也可以通过自定义异常描述特定业务产生的异常类型。所谓自定义异常，就是定义一个类，去继承Throwable类或者它的子类。HotelAgeException.javapackage com.imooc.test;public class HotelAgeException extends Exception {       public HotelAgeException() {             super("18岁以下，80岁以上的住客必须由亲友陪同。");       }}笔记未完成，需要和DemoFour联动。</p>
+<h4 id="6-2-选择练习"><a href="#6-2-选择练习" class="headerlink" title="6-2 选择练习"></a>6-2 选择练习</h4><p>单选题关于下列代码说法正确的是（）（选择一项）<img src="en-resource://database/3427:1" alt="9a7013029f89e8f585a736564b17760a.png"><br>       A.  编译出错，因为没有捕获Exception异常B.  当输入price的值为10时，运行结果为：        The price is too low!C.  当输入price的值为9时，运行结果为：        the price is 9.0D.  当输入price的值为0时，运行结果为：        The price is too low!正确答案： D参考解析：本题考查自定义异常，分析代码可得，当输入的price值小于10时，会产生MyException异常，故D选项正确。</p>
+<h4 id="6-3-选择练习"><a href="#6-3-选择练习" class="headerlink" title="6-3 选择练习"></a>6-3 选择练习</h4><p>单选题假设有自定义异常类MyException，那么抛出该异常的语句正确的是（）（选择一项）A.  throw new Exception()B.  throw new MyException()C.  throw MyExceptionD.  throws Exception正确答案： B 参考解析：本题考查自定义异常，抛出异常时抛出的是异常对象，故B选项正确。</p>
+<h3 id="第7章-异常链"><a href="#第7章-异常链" class="headerlink" title="第7章 异常链"></a>第7章 异常链</h3><h4 id="7-1-异常链简介（07-45）"><a href="#7-1-异常链简介（07-45）" class="headerlink" title="7-1 异常链简介（07:45）"></a>7-1 异常链简介（07:45）</h4><p>异常链有时候我们会捕获一个异常后再抛出另一个异常。顾名思义就是：将异常发生的原因一个传一个串起来，即把底层的异常信息传给上层，这样逐层抛出。TryDemoFive.javapackage com.imooc.test;public class TryDemoFive {       public static void main(String[] args) {             // TODO Auto-generated method stub             try {                    testThree();             } catch (Exception e) {                    // TODO Auto-generated catch block                    e.printStackTrace();             }       }              public static void testOne() throws HotelAgeException {             throw new HotelAgeException();       }              public static void testTwo() throws Exception {             try {                    testOne();             }catch(HotelAgeException e) {                    throw new Exception("我是新产生的异常1",e);             }       }              public static void testThree() throws Exception{             try {                    testTwo();             } catch(Exception e) {                    Exception e1=new Exception("我是新产生的异常2");                    e1.initCause(e);                    throw e1;//                  throw new Exception("我是新产生的异常2");             }       }}<img src="en-resource://database/3429:1" alt="1e39aa24d3209d6a4116c394c25283df.png"></p>
+<h4 id="7-2-选择练习"><a href="#7-2-选择练习" class="headerlink" title="7-2 选择练习"></a>7-2 选择练习</h4><p>单选题若我们想要在位置1处抛出异常的同时保留MyException中的异常信息，则可以在位置1中添加哪句代码（）（选择一项）<img src="en-resource://database/3431:1" alt="4776af0a0165f3112d80c1e175caa0df.png"><br>       A<img src="en-resource://database/3433:1" alt="a0e46fbe30e61700952592686ad39c09.png"><br>       B<img src="en-resource://database/3435:1" alt="94e02e9d563bb6767feb20add415d8eb.png"><br>       C<img src="en-resource://database/3437:1" alt="3d013b8c93110bae144415e6de38eb3d.png"><br>       D<img src="en-resource://database/3439:1" alt="b19dd82e76a78e86d1f682711de2d580.png"><br>       正确答案： A参考解析：本题考查异常链，可以调用Throwable(String message，Throwable cause)来保留底层异常的异常信息。故A选项正确。</p>
+<h4 id="7-3-选择练习"><a href="#7-3-选择练习" class="headerlink" title="7-3 选择练习"></a>7-3 选择练习</h4><p>单选题在划线处填入选项中的哪段代码可以实现抛出异常的同时保留原始的异常信息（）（选择一项）<img src="en-resource://database/3441:1" alt="1ec762c08554d11998770749e663e426.png"><br>       A<img src="en-resource://database/3443:1" alt="9a20b165b57b3767764e1059fba60668.png"><br>       B<img src="en-resource://database/3445:1" alt="e977ae559ce758553f085e767d26c2e0.png"><br>       C<img src="en-resource://database/3447:1" alt="54170409a1e1a484e9e1a89066a8efbd.png"><br>       D<img src="en-resource://database/3449:1" alt="464a38d1e93079b4a479148ecf01fa49.png"><br>       正确答案： B参考解析：本题考查异常链，initCause(Throwable cause) 方法用来获取原始异常的描述信息，其中cause是原始异常的对象，故B选项正确。</p>
+<h3 id="第8章-课程总结"><a href="#第8章-课程总结" class="headerlink" title="第8章 课程总结"></a>第8章 课程总结</h3><h4 id="8-1-课程总结（05-50）"><a href="#8-1-课程总结（05-50）" class="headerlink" title="8-1 课程总结（05:50）"></a>8-1 课程总结（05:50）</h4><pre><code>   程序中的异常在程序运行过程中，意外发生的情况，背离我们程序本身的意图的表现，都可以理解为异常。利用Java中的异常机制，我们可以更好地提升程序的健壮性。在Java中，通过Throwable及其子类描述各种不同的异常类型。![96c3caec66384a892d9dacf4fa843c7e.png](en-resource://database/3451:1)
+   笔记未完成。《Java常见异常类型及原因分析（上）》《Java常见异常类型及原因分析（下）》
+</code></pre>
+<p><img src="en-resource://database/3453:1" alt="6b67605db9c800b16d7f5e56fff59ea3.png"></p>
+</body></html>]]></content>
       <categories>
         <category>Java</category>
       </categories>
