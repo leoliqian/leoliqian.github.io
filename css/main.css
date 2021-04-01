@@ -1220,7 +1220,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #45ed04;
+  background: #b53cff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2812,7 +2812,7 @@ body {
   background: rgba(255,255,255,0.85);
   border-radius: 10px;
 }
-.page-number .current {
+.page-number.current {
   background: #ccc;
   border-top-color: #ccc;
   color: #fff;
